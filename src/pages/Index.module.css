@@ -1,0 +1,10 @@
+.mainPage {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(#3f3f3f, #ffffff);
+}
+
+.mainPageWidth {
+  max-width: 800px;
+  margin: 0 auto;
+}

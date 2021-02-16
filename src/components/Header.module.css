@@ -1,0 +1,89 @@
+.header {
+  padding-top: 20px;
+  padding-bottom: 100px;
+}
+
+.LOGO {
+  text-decoration: none;
+  font-size: 0.6rem;
+  padding: 0;
+  margin: 0;
+}
+
+.LOGO:hover .mainLink {
+  color: #790028;
+  text-decoration: underline;
+}
+
+.mainLink {
+  color: #680727;
+  text-decoration: underline;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+.nav {
+  display: flex;
+  padding-top: 10px;
+  font-size: 0.8rem;
+}
+
+.navItem {
+  list-style-type: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 14px 16px;
+}
+
+.navItem:hover {
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.navItem:hover .navLink {
+  color: #680727;
+}
+
+.navLink {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.navLink:hover {
+  color: #680727;
+}
+
+.dropdown:hover .dropbtn {
+  color: #680727;
+  background-color: #ffffff;
+}
+
+.dropdown:hover .dropdownContent {
+  display: block;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  margin-left: -16px; /** Same as the padding of the navItem */
+}
+
+.dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+.dropLink {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
