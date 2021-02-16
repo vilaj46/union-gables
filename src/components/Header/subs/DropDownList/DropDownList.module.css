@@ -1,0 +1,51 @@
+.dropdown {
+  position: relative;
+}
+
+.dropdown:hover .dropbtn {
+  color: #790028;
+  background-color: #ffffff;
+}
+  
+.dropdown:hover .dropdownContent {
+  display: block;
+}
+  
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  /** margin-left is same as the padding of the navItem.
+      top is the calculated height of the navItem.
+  */
+  margin-left: -16px; 
+  top: 31px;
+}
+  
+  .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .dropLink {
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    background-color: #e4e4e4;
+    /** Figure out where this comes from. 
+        Used to align the dropdown links and the main dropdown text.
+    */
+    margin-left: -40px;  
+  }
+  
+  .dropLink:hover {
+    color: #790028;
+    background-color: #ffffff;
+  }

@@ -1,0 +1,22 @@
+/** Book Now Button Styling */
+.bookNowLink {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+.bookNow {
+    background-color: #790028;
+    color: #ffffff; 
+    /** NEEDS TO BE THE SAME AS navItem */
+    list-style-type: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 14px 16px;
+}
+
+.bookNow:hover {
+    background-color: #680727;
+    cursor: pointer;
+}
+
+/** Book Now Button Styling Ends */
