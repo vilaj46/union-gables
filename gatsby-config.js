@@ -3,6 +3,7 @@ module.exports = {
     title: "Union Gables",
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
