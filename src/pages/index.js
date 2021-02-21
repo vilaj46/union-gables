@@ -24,7 +24,7 @@ import * as React from "react";
 // import HomePage from "./HomePage";
 
 // Components
-import Header from "../components/Header/Header.js";
+import Header from "../styledComponents/Header/Header";
 // import Footer from "../components/Footer/Footer.js";
 
 // styles

@@ -1,9 +1,7 @@
 import * as React from "react";
-import styled from "styled-components";
 
-// Sub Components
-import DropDownList from "../DropDownList/DropDownList";
-import RegularItem from "../RegularItem/RegularItem";
+import DropDownList from "./DropDownList";
+import RegularItem from "./RegularItem";
 
 const NavigationItem = ({ item }) => {
   if (item.links.length > 0) {
