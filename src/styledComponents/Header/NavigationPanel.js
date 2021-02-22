@@ -13,6 +13,7 @@ const Container = styled.nav`
 
   @media screen and (max-width: 600px) {
     flex-direction: column;
+    display: none;
   }
 `;
 

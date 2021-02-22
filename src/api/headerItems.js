@@ -1,5 +1,4 @@
 const items = [
-  // About Us Links
   {
     text: "About Us",
     url: "/aboutus",
@@ -35,7 +34,6 @@ const items = [
       },
     ],
   },
-  // About Us Ends here------------------------------------------------------
   {
     text: "Rooms",
     url: "/rooms",

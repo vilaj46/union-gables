@@ -118,21 +118,21 @@ const TextContainer = styled.div`
   height: 100%;
 `;
 
-const SideLinksContainer = styled.ul`
-  display: none;
-  position: absolute;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  margin-left: -16px;
-  background-color: rgba(255, 255, 255, 0.5);
-  left: 216px;
-  top: 0;
+// const SideLinksContainer = styled.ul`
+//   display: none;
+//   position: absolute;
+//   min-width: 160px;
+//   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+//   z-index: 1;
+//   margin-left: -16px;
+//   background-color: rgba(255, 255, 255, 0.5);
+//   left: 216px;
+//   top: 0;
 
-  ${DownLinkContainer}:hover & {
-    display: block;
-  }
-`;
+//   ${DownLinkContainer}:hover & {
+//     display: block;
+//   }
+// `;
 
 const DropDownList = ({ item }) => {
   const { text, links } = item;
@@ -155,14 +155,18 @@ const DropDownList = ({ item }) => {
             sideLinks = [];
           }
           return (
-            <DownLinkContainer key={link} to={link.urk}>
+            <DownLinkContainer key={link.url} to={link.url}>
               {link.label}
               {sideLinks.length > 0 && <RightArrow />}
-              <SideLinksContainer>
+              {/* <SideLinksContainer>
                 {sideLinks.map((link) => {
-                  return <DownLinkContainer>{link.label}</DownLinkContainer>;
+                  return (
+                    <DownLinkContainer to={link.url} key={link.url}>
+                      {link.label}
+                    </DownLinkContainer>
+                  );
                 })}
-              </SideLinksContainer>
+              </SideLinksContainer> */}
             </DownLinkContainer>
           );
         })}

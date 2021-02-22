@@ -3,6 +3,8 @@ import styled from "styled-components";
 
 import Logo from "./Logo";
 import NavigationPanel from "./NavigationPanel";
+import NavigationHamburger from "./NavigationHamburger";
+import MessageButtons from "./MessageButtons.js";
 
 import mainImage from "../../images/main_image.jpg";
 
@@ -10,6 +12,7 @@ const Container = styled.header`
   width: 100%;
   max-width: 1350px;
   margin: 0 auto;
+  position: relative;
 
   @media screen and (max-width: 1400px) {
     max-width: 980px;
@@ -20,8 +23,20 @@ const Container = styled.header`
     max-width: 740px;
   }
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 600px) {
     min-width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  @media screen and (max-width: 500px) {
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media screen and (max-width: 350px) {
+    flex-direction: column;
   }
 `;
 
@@ -46,6 +61,8 @@ const Header = () => {
       <Logo />
       <Background src={mainImage} alt="Night Union Gables Inn" />
       <NavigationPanel />
+      <NavigationHamburger />
+      <MessageButtons />
     </Container>
   );
 };
