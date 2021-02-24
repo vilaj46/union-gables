@@ -22,6 +22,7 @@ import * as React from "react";
 
 // Pages
 // import HomePage from "./HomePage";
+import HomePage from "./HomePage/HomePage";
 
 // Components
 import Header from "../styledComponents/Header/Header";
@@ -33,10 +34,10 @@ import "./style.css";
 
 const IndexPage = () => {
   return (
-    <main className={styles.mainPage}>
+    <main className={styles.mainPage} id="main">
       <Header />
-      {/* <HomePage />
-      <Footer /> */}
+      <HomePage />
+      {/*<Footer /> */}
     </main>
   );
 };
