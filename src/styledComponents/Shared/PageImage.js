@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const ParagraphContainer = styled.img`
   max-width: 740px;
+  padding-top: 25px;
 `;
 
 const PageImage = (props) => {

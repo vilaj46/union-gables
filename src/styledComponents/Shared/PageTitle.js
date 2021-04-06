@@ -6,6 +6,22 @@ const H1Container = styled.h1`
   font-size: 36px;
   text-transform: uppercase;
   text-align: center;
+
+  @media screen and (max-width: 500px) {
+    height: 75%;
+    width: 75%;
+    margin: 0 auto;
+    font-size: 1.8rem;
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 1.7rem;
+  }
+
+  @media screen and (max-width: 300px) {
+    font-size: 1.5rem;
+    padding-top: 25px;
+  }
 `;
 
 const PageTitle = (props) => {

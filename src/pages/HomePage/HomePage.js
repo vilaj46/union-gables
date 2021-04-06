@@ -16,12 +16,21 @@ import mainImage2 from "../../images/main_image2.jpg";
 import mainImage3 from "../../images/main_image3.jpg";
 
 const Container = styled.div`
-  padding-top: 300px;
+  padding-top: 45%;
+
+
+  @media screen and (max-width: 1400px) {
+    padding-top: 47%;
+  }
 `;
 
 const CustomContainer = styled.div`
   max-width: 740px;
   margin: 0 auto;
+
+  @media screen and (max-width: 300px) {
+    padding-top: 25px;
+  }
 `;
 
 const title = "Award-Winning Bed & Breakfast in Saratoga Springs, New York";

@@ -10,12 +10,14 @@ const Container = styled.div`
   text-decoration: underline;
   z-index: 10;
 
-  @media screen and (max-width: 400px) {
-    width: 25%;
+  @media screen and (max-width: 600px) {
+    width: 52%;
+    margin: 0 auto;
   }
 
-  @media screen and (max-width: 350px) {
-    height: 15%;
+  @media screen and (max-width: 450px) {
+    width: 55%;
+    margin: 0 auto;
   }
 `;
 
@@ -24,12 +26,8 @@ const Image = styled.img`
   display: block;
   height: auto;
 
-  @media screen and (max-width: 400px) {
-    height: 75%;
-  }
-
-  @media screen and (max-width: 350px) {
-    width: 200%;
+  @media screen and (max-width: 450px) {
+    width: 98%;
   }
 `;
 
