@@ -24,6 +24,12 @@ const ParagraphContainer = styled.p`
   color: #ffffff;
   font-size: 20px;
   font-weight: 600;
+  height: 100px;
+
+  @media screen and (max-width: 550px) {
+    width: 90%;
+    margin: 0 auto;
+  }
 `;
 
 const ImageContainer = styled.img`
@@ -34,6 +40,7 @@ const ImageContainer = styled.img`
   height: 100%;
   z-index: -1;
   filter: brightness(50%);
+  transform: scale(1.1);
 `;
 
 const NumbersContainer = styled.div`
@@ -54,6 +61,11 @@ const ButtonContainer = styled.div`
     background-color: #2a0511;
     opacity: 0.6;
   }
+
+  @media screen and (max-width: 500px) {
+    height: 75px;
+    width: 75px;
+  }
 `;
 
 const ActivatedContainer = styled.div`
@@ -68,6 +80,11 @@ const ActivatedContainer = styled.div`
     cursor: pointer;
     opacity: 0.6;
   }
+
+  @media screen and (max-width: 500px) {
+    height: 75px;
+    width: 75px;
+  }
 `;
 
 const Button = styled.div`
@@ -75,13 +92,17 @@ const Button = styled.div`
   text-align: center;
   margin: auto;
   font-size: 72px;
+
+  @media screen and (max-width: 500px) {
+    font-size: 60px;
+  }
 `;
 
 const reasons = [
   {
     img: mainImage5,
     text:
-      "Easily walk to over 125 restaurants, music venues, bars, museums, galleries, and adowntown shopping.",
+      "Easily walk to over 125 restaurants, music venues, bars, museums, galleries, and downtown shopping.",
   },
   {
     img: mainImage4,

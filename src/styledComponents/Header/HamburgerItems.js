@@ -13,7 +13,6 @@ const Container = styled.ul`
 const LinkContainer = styled.li`
   list-style-type: none;
   text-transform: uppercase;
-  padding: 4px 0;
 
   &:last-child {
     background-color: #b25a75;
@@ -23,13 +22,18 @@ const LinkContainer = styled.li`
   &:last-child:hover {
     background-color: #680727;
   }
+
+  @media screen and (max-width: 450px) {
+    font-size: .7rem;
+  }
 `;
 
 const HamburgerLink = styled(Link)`
   display: block;
   color: #ffffff;
   text-decoration: none;
-  padding: 8px 0;
+  padding: 8px;
+  wrap: nowrap;
 
   &:hover {
     color: #b25a75;
@@ -41,13 +45,8 @@ const BookNowLink = styled(Link)`
   display: block;
   color: #ffffff;
   text-decoration: none;
-  padding: 8px 0;
+  padding: 8px;
 `;
-
-// const BookNowLink = styled(Link)`
-//   color: #ffffff;
-//   text-decoration: none;
-// `;
 
 const HamburgerItems = () => {
   return (

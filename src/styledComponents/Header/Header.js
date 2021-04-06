@@ -15,27 +15,11 @@ const Container = styled.header`
   position: relative;
 
   @media screen and (max-width: 1400px) {
-    max-width: 980px;
     font-size: 0.8rem;
   }
 
-  @media screen and (max-width: 1000px) {
-    max-width: 740px;
-  }
-
   @media screen and (max-width: 600px) {
-    min-width: 100%;
     display: flex;
-    justify-content: space-around;
-  }
-
-  @media screen and (max-width: 500px) {
-    min-width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  @media screen and (max-width: 350px) {
     flex-direction: column;
   }
 `;
@@ -48,8 +32,38 @@ const BackgroundImage = styled.img`
   max-width: 100%;
   height: auto;
   width: auto;
-  transform: scale(1.1);
+  transform: scale(1.1); 
+
+  @media screen and (max-width: 730px) {
+    height: 225%;
+  }
+
+  @media screen and (max-width: 350px) {
+    height: 260%;
+  }
+
+  @media screen and (max-width: 300px) {
+    height: 270%;
+  }
 `;
+
+const BelowContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  justify-content: flex-end;
+  padding-top: 15px;
+  
+  @media screen and (max-width: 600px) {
+    width: 85%;
+    margin: 0 auto;
+    justify-content: space-around;
+  }
+
+  @media screen and (max-width: 350px) {
+    padding-top: 0;
+  }
+`
 
 const Background = (props) => {
   return <BackgroundImage src={props.src} alt={props.alt} />;
@@ -61,8 +75,10 @@ const Header = () => {
       <Logo />
       <Background src={mainImage} alt="Night Union Gables Inn" />
       <NavigationPanel />
-      <NavigationHamburger />
-      <MessageButtons />
+      <BelowContainer>
+        <NavigationHamburger />
+        <MessageButtons />
+      </BelowContainer>
     </Container>
   );
 };

@@ -3,12 +3,22 @@ import styled from "styled-components";
 
 const Container = styled.ul`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  padding-left: 0;
+  margin-left: 0;
 `;
 
 const Item = styled.li`
   text-align: center;
   list-style-type: none;
+  
+  @media screen and (max-width: 435px) {
+    font-size: .7rem;
+  }
+
+  @media screen and (max-width: 310px) {
+    font-size: .6rem;
+  }
 `;
 
 const Circle = styled.i`

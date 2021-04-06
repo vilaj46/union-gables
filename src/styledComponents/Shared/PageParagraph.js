@@ -3,6 +3,11 @@ import styled from "styled-components";
 
 const ParagraphContainer = styled.p`
   color: #333;
+
+  @media screen and (max-width: 800px) {
+    margin: 0 auto;
+    width: 95%;
+  }
 `;
 
 const CenterContainer = styled.p`

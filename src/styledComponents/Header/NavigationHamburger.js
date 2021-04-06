@@ -5,25 +5,10 @@ import HamburgerItems from "./HamburgerItems";
 
 const Container = styled.div`
   display: block;
-  margin-top: 50px;
-  margin-bottom: 50px;
   position: relative;
-
-  @media screen and (min-width: 600px) {
+  
+  @media screen and (min-width: 601px) {
     display: none;
-  }
-
-  @media screen and (max-width: 500px) {
-    margin-right: 55px;
-  }
-
-  @media screen and (max-width: 450px) {
-    margin-right: 50px;
-  }
-
-  @media screen and (max-width: 350px) {
-    margin-top: 20px;
-    margin-left: 10px;
   }
 `;
 
