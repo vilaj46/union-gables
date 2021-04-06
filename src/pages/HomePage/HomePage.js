@@ -18,7 +18,6 @@ import mainImage3 from "../../images/main_image3.jpg";
 const Container = styled.div`
   padding-top: 45%;
 
-
   @media screen and (max-width: 1400px) {
     padding-top: 47%;
   }
@@ -38,7 +37,7 @@ const title = "Award-Winning Bed & Breakfast in Saratoga Springs, New York";
 const HomePage = () => {
   return (
     <Container>
-      <title>Home Page</title>
+      <title>Home Page!</title>
       <PageTitle>{title}</PageTitle>
       <CustomContainer>
         <PageParagraph>
