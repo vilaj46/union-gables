@@ -55,9 +55,11 @@ const BookNowLink = styled(Link)`
 const RegularItem = ({ item }) => {
   if (item.text === "Book Now") {
     return (
-      <BookNowContainer key={item.url}>
-        <BookNowLink to={item.url}>{item.text}</BookNowLink>
-      </BookNowContainer>
+      // <BookNowContainer key={item.url}>
+      <BookNowLink key={item.url} to={item.url}>
+        <BookNowContainer>{item.text}</BookNowContainer>
+      </BookNowLink>
+      // </BookNowContainer>
     );
   } else {
     return (
