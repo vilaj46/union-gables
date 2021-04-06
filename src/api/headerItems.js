@@ -151,7 +151,8 @@ const items = [
   },
   {
     text: "Book Now",
-    url: "./booknow",
+    url:
+      "https://reserve1.resnexus.com/resnexus/reservations/lodging/5888F13B-7306-4082-89C2-B6F42CC9CD92?ID=2704",
     description: "Book Now",
     links: [],
   },
