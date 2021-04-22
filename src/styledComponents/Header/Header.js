@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
+import GatsbyImage from "gatsby-image";
 
 import Logo from "./Logo";
 import NavigationPanel from "./NavigationPanel";
@@ -32,7 +33,13 @@ const BackgroundImage = styled.img`
   max-width: 100%;
   height: auto;
   width: auto;
-  transform: scale(1.1); 
+  transform: scale(1.1);
+  border: 5px solid black;
+
+  @media screen and (min-width: 1500px) {
+    border: 3px solid cyan;
+    max-width: 100vw;
+  }
 
   @media screen and (max-width: 730px) {
     height: 225%;
@@ -53,7 +60,8 @@ const BelowContainer = styled.div`
   margin: 0 auto;
   justify-content: flex-end;
   padding-top: 15px;
-  
+  border: 2px solid black;
+
   @media screen and (max-width: 600px) {
     width: 85%;
     margin: 0 auto;
@@ -63,7 +71,7 @@ const BelowContainer = styled.div`
   @media screen and (max-width: 350px) {
     padding-top: 0;
   }
-`
+`;
 
 const Background = (props) => {
   return <BackgroundImage src={props.src} alt={props.alt} />;

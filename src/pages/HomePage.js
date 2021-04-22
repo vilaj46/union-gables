@@ -1,7 +1,7 @@
 import * as React from "react";
 
 // styles
-import styles from "./HomePage.module.css";
+// import styles from "./HomePage.module.css";
 
 import PageTitle from "../styledComponents/Shared/PageTitle";
 
@@ -70,75 +70,75 @@ const HomePage = () => {
   );
 };
 
-const DiscoverSaratogaSprings = () => {
-  return (
-    <div className={styles.discoverContainer}>
-      <ul>
-        <li className={styles.discoverItem}>Congress Park</li>
-        <li className={styles.discoverItem}>Saratoga Race Course</li>
-        <li className={styles.discoverItem}>Saratoga Performing Arts Center</li>
-      </ul>
-      <ul>
-        <li className={styles.discoverItem}>Saratoga Springs City Center</li>
-        <li className={styles.discoverItem}>Saratoga Spa State Park</li>
-        <li className={styles.discoverItem}>
-          Annual festivals and events in Downtown Saratoga Springs
-        </li>
-      </ul>
-    </div>
-  );
-};
+// const DiscoverSaratogaSprings = () => {
+//   return (
+//     <div className={styles.discoverContainer}>
+//       <ul>
+//         <li className={styles.discoverItem}>Congress Park</li>
+//         <li className={styles.discoverItem}>Saratoga Race Course</li>
+//         <li className={styles.discoverItem}>Saratoga Performing Arts Center</li>
+//       </ul>
+//       <ul>
+//         <li className={styles.discoverItem}>Saratoga Springs City Center</li>
+//         <li className={styles.discoverItem}>Saratoga Spa State Park</li>
+//         <li className={styles.discoverItem}>
+//           Annual festivals and events in Downtown Saratoga Springs
+//         </li>
+//       </ul>
+//     </div>
+//   );
+// };
 
-const GoodToKnow = () => {
-  return (
-    <div className={styles.goodContainer}>
-      <h3 className={styles.h3}>Good to Know</h3>
-      <p className={`${styles.description} ${styles.centerAlign}`}>
-        Built in 1901 and nicknamed the ‘Sunnyside House’
-      </p>
-      <p className={`${styles.description} ${styles.centerAlign}`}>
-        Best of Saratoga Region for Six Years in a Row
-      </p>
-      <p className={`${styles.description} ${styles.centerAlign}`}>
-        Tripadvisor Award of Excellence and Green Leader Hotel Awards
-      </p>
-      <p className={`${styles.description} ${styles.centerAlign}`}>
-        Glorious Gardens Award and Soroptimist Best Garden Award
-      </p>
-    </div>
-  );
-};
+// const GoodToKnow = () => {
+//   return (
+//     <div className={styles.goodContainer}>
+//       <h3 className={styles.h3}>Good to Know</h3>
+//       <p className={`${styles.description} ${styles.centerAlign}`}>
+//         Built in 1901 and nicknamed the ‘Sunnyside House’
+//       </p>
+//       <p className={`${styles.description} ${styles.centerAlign}`}>
+//         Best of Saratoga Region for Six Years in a Row
+//       </p>
+//       <p className={`${styles.description} ${styles.centerAlign}`}>
+//         Tripadvisor Award of Excellence and Green Leader Hotel Awards
+//       </p>
+//       <p className={`${styles.description} ${styles.centerAlign}`}>
+//         Glorious Gardens Award and Soroptimist Best Garden Award
+//       </p>
+//     </div>
+//   );
+// };
 
-const Offers = () => {
-  return (
-    <div>
-      <p>Unlock Exclusive Offers</p>
-      <p>Fresh Gourmet Breakfasts</p>
-      <p>Private Events</p>
-    </div>
-  );
-};
+// const Offers = () => {
+//   return (
+//     <div>
+//       <p>Unlock Exclusive Offers</p>
+//       <p>Fresh Gourmet Breakfasts</p>
+//       <p>Private Events</p>
+//     </div>
+//   );
+// };
 
-const ReasonsToStay = () => {
-  return (
-    <div className={styles.reasonsContainer}>
-      <p>3 Reasons to stay with us</p>
-      <p>
-        Easily walk to over 125 restaurants, music venues, bars, museums and
-        downtown shopping.
-      </p>
-      {/** Add the three numbered buttons */}
-    </div>
-  );
-};
+// const ReasonsToStay = () => {
+//   return (
+//     <div className={styles.reasonsContainer}>
+//       <p>3 Reasons to stay with us</p>
+//       <p>
+//         Easily walk to over 125 restaurants, music venues, bars, museums and
+//         downtown shopping.
+//       </p>
+//       {/** Add the three numbered buttons */}
+//     </div>
+//   );
+// };
 
-const WhereWeAre = () => {
-  return (
-    <div>
-      <h3>Where we are</h3>
-      {/** Add spinner + google api or something? */}
-    </div>
-  );
-};
+// const WhereWeAre = () => {
+//   return (
+//     <div>
+//       <h3>Where we are</h3>
+//       {/** Add spinner + google api or something? */}
+//     </div>
+//   );
+// };
 
 export default HomePage;

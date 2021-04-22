@@ -10,6 +10,7 @@ import HomePage from "./HomePage/HomePage";
 
 // Components
 import Header from "../styledComponents/Header/Header";
+import TestHeader from "../styledComponents/TestHeader/TestHeader";
 // import Footer from "../components/Footer/Footer.js";
 
 // styles
@@ -19,8 +20,9 @@ import "./style.css";
 const IndexPage = () => {
   return (
     <main className={styles.mainPage} id="main">
-      <Header />
-      {/* <HomePage /> */}
+      {/* <Header /> */}
+      <TestHeader />
+      <HomePage />
       {/*<Footer /> */}
     </main>
   );

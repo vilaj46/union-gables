@@ -16,11 +16,7 @@ import mainImage2 from "../../images/main_image2.jpg";
 import mainImage3 from "../../images/main_image3.jpg";
 
 const Container = styled.div`
-  padding-top: 45%;
-
-  @media screen and (max-width: 1400px) {
-    padding-top: 47%;
-  }
+  border: 2px solid black;
 `;
 
 const CustomContainer = styled.div`
@@ -39,7 +35,7 @@ const HomePage = () => {
     <Container>
       <title>Home Page!</title>
       <PageTitle>{title}</PageTitle>
-      <CustomContainer>
+      {/* <CustomContainer>
         <PageParagraph>
           Experience old world hospitality at its finest at Union Gables Inn,
           our luxurious bed and breakfast in Saratoga Springs, New York. Built
@@ -92,8 +88,8 @@ const HomePage = () => {
         <PageParagraph center={true}>
           Glorious Gardens Award and Soroptimist Best Garden Award
         </PageParagraph>
-      </CustomContainer>
-      <ThreeReasons />
+      </CustomContainer> */}
+      {/* <ThreeReasons /> */}
     </Container>
   );
 };
