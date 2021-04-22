@@ -29,7 +29,7 @@ const items = [
         url: "/location",
       },
       {
-        label: "Contact Now!",
+        label: "Contact Now",
         url: "/contact",
       },
     ],
