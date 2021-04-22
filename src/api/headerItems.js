@@ -5,7 +5,7 @@ const items = [
     description: "About Us.",
     links: [
       {
-        label: "Breakfast",
+        label: "Breakfast Basket",
         url: "/breakfast",
       },
       {
