@@ -22,6 +22,7 @@ const NavItemContainer = styled.li`
 const NavItemLink = styled(Link)`
   color: #ffffff;
   text-decoration: none;
+  pointer-events: none;
 
   ${NavItemContainer}:hover & {
     color: #b25a75;
@@ -55,11 +56,9 @@ const BookNowLink = styled(Link)`
 const RegularItem = ({ item }) => {
   if (item.text === "Book Now") {
     return (
-      // <BookNowContainer key={item.url}>
-      <BookNowLink key={item.url} to={item.url}>
+      <BookNowLink key={item.url} to={item.url} target="_blank">
         <BookNowContainer>{item.text}</BookNowContainer>
       </BookNowLink>
-      // </BookNowContainer>
     );
   } else {
     return (

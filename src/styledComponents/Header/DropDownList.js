@@ -67,6 +67,7 @@ const DownLinkContainer = styled(Link)`
   margin-left: -40px;
   white-space: nowrap;
   position: relative;
+  pointer-events: none;
 
   &:hover {
     color: #790028;

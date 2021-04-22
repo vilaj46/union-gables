@@ -1,5 +1,5 @@
 import * as React from "react";
-import styled from "styled-components";
+// import styled from "styled-components";
 import Modal from "react-modal";
 
 const customStyles = {
@@ -10,6 +10,7 @@ const customStyles = {
     bottom: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
+    overflow: "auto",
   },
 };
 
@@ -32,7 +33,7 @@ const CoronaModal = (props) => {
       contentLabel="Example Modal"
       ariaHideApp={false}
     >
-      <p>
+      {/* <p>
         The health & safety of our guests and staff are our highest priority.
         Please see below our updated policies and procedures in response to
         COVID-19.
@@ -70,7 +71,7 @@ const CoronaModal = (props) => {
         flexibility. Should your travel plans change due to COVID-19, we will
         allow you to move your reservation to future dates. Learn more about New
         York's COVID-19 Travel Advisory.
-      </p>
+      </p> */}
     </Modal>
   );
 };

@@ -3,6 +3,8 @@ import styled from "styled-components";
 
 const ParagraphContainer = styled.p`
   color: #333;
+  font-size: 16px;
+  line-height: 30px;
 
   @media screen and (max-width: 800px) {
     margin: 0 auto;

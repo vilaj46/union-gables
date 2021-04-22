@@ -1,8 +1,18 @@
 import * as React from "react";
 
 /**
- * Corona Virus Modal:
- * No scrolling available and not scaling properly.
+ * TestHeader component needs many more media queries for scaling.
+ * Percent not working.
+ *
+ * Not using ThreeReasons, instead using ThreeReason2.
+ * Delete ThreeReasons.
+ *
+ * Not using Header, instead using TestHeader.
+ * Delete Header.
+ *
+ * Need Page page links.
+ *
+ * ThreeReasons image on full screen is too zoomed in.
  */
 
 // Pages

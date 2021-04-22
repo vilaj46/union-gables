@@ -9,10 +9,54 @@ import MessageButtons from "../Header/MessageButtons.js";
 import mainImage from "../../images/main_image.jpg";
 
 const Container = styled.header`
-  width: 100%;
-  //   max-width: 1350px;
   margin: 0 auto;
   position: relative;
+  width: 100%;
+  height: 100vh;
+
+  @media screen and (max-width: 1300px) {
+    height: 97vh;
+  }
+
+  @media screen and (max-width: 1200px) {
+    height: 96vh;
+  }
+
+  @media screen and (max-width: 1100px) {
+    height: 92vh;
+  }
+
+  @media screen and (max-width: 1000px) {
+    height: 80vh;
+  }
+
+  @media screen and (max-width: 900px) {
+    height: 75vh;
+  }
+
+  @media screen and (max-width: 800px) {
+    height: 70vh;
+  }
+
+  @media screen and (max-width: 700px) {
+    height: 65vh;
+  }
+
+  @media screen and (max-width: 600px) {
+    height: 60vh;
+  }
+
+  @media screen and (max-width: 500px) {
+    height: 55vh;
+  }
+
+  @media screen and (max-width: 400px) {
+    height: 50vh;
+  }
+
+  @media screen and (max-width: 300px) {
+    height: 45vh;
+  }
 `;
 
 const BackgroundImage = styled.div`

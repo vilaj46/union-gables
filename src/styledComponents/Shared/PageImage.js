@@ -2,8 +2,10 @@ import * as React from "react";
 import styled from "styled-components";
 
 const ParagraphContainer = styled.img`
-  max-width: 740px;
+  // max-width: 960px;
+  max-width: 100%;
   padding-top: 25px;
+  margin: 0 auto;
 `;
 
 const PageImage = (props) => {

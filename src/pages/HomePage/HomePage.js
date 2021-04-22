@@ -7,20 +7,22 @@ import PageImage from "../../styledComponents/Shared/PageImage";
 import PageQuote from "../../styledComponents/Shared/PageQuote";
 import PageSubTitle from "../../styledComponents/Shared/PageSubTitle";
 import PageParagraph from "../../styledComponents/Shared/PageParagraph";
+import HorizontalRule from "../../styledComponents/Shared/HorizontalRule";
 
 // HomePage Components
 import ThreeReasons from "../../styledComponents/HomePage/ThreeReasons";
+import ThreeReasons2 from "../../styledComponents/HomePage/ThreeReasons2";
 import DiscoverLinks from "../../styledComponents/HomePage/DiscoverLinks";
 
 import mainImage2 from "../../images/main_image2.jpg";
 import mainImage3 from "../../images/main_image3.jpg";
 
 const Container = styled.div`
-  border: 2px solid black;
+  // border: 2px solid black;
 `;
 
 const CustomContainer = styled.div`
-  max-width: 740px;
+  max-width: 960px;
   margin: 0 auto;
 
   @media screen and (max-width: 300px) {
@@ -35,7 +37,7 @@ const HomePage = () => {
     <Container>
       <title>Home Page!</title>
       <PageTitle>{title}</PageTitle>
-      {/* <CustomContainer>
+      <CustomContainer>
         <PageParagraph>
           Experience old world hospitality at its finest at Union Gables Inn,
           our luxurious bed and breakfast in Saratoga Springs, New York. Built
@@ -70,7 +72,8 @@ const HomePage = () => {
           to visit:
         </PageParagraph>
         <DiscoverLinks />
-        <hr />
+        {/* <hr /> */}
+        <HorizontalRule />
         <PageQuote>
           Reserve your stay today at our historic and romantic bed and breakfast
           in Saratoga Springs, New York!
@@ -88,8 +91,8 @@ const HomePage = () => {
         <PageParagraph center={true}>
           Glorious Gardens Award and Soroptimist Best Garden Award
         </PageParagraph>
-      </CustomContainer> */}
-      {/* <ThreeReasons /> */}
+      </CustomContainer>
+      <ThreeReasons2 />
     </Container>
   );
 };
