@@ -14,49 +14,49 @@ const Container = styled.header`
   width: 100%;
   height: 100vh;
 
-  @media screen and (max-width: 1300px) {
-    height: 97vh;
-  }
+  // @media screen and (max-width: 1300px) {
+  //   height: 97vh;
+  // }
 
-  @media screen and (max-width: 1200px) {
-    height: 96vh;
-  }
+  // @media screen and (max-width: 1200px) {
+  //   height: 96vh;
+  // }
 
-  @media screen and (max-width: 1100px) {
-    height: 92vh;
-  }
+  // @media screen and (max-width: 1100px) {
+  //   height: 92vh;
+  // }
 
-  @media screen and (max-width: 1000px) {
-    height: 80vh;
-  }
+  // @media screen and (max-width: 1000px) {
+  //   height: 80vh;
+  // }
 
-  @media screen and (max-width: 900px) {
-    height: 75vh;
-  }
+  // @media screen and (max-width: 900px) {
+  //   height: 75vh;
+  // }
 
-  @media screen and (max-width: 800px) {
-    height: 70vh;
-  }
+  // @media screen and (max-width: 800px) {
+  //   height: 70vh;
+  // }
 
-  @media screen and (max-width: 700px) {
-    height: 65vh;
-  }
+  // @media screen and (max-width: 700px) {
+  //   height: 65vh;
+  // }
 
-  @media screen and (max-width: 600px) {
-    height: 60vh;
-  }
+  // @media screen and (max-width: 600px) {
+  //   height: 60vh;
+  // }
 
-  @media screen and (max-width: 500px) {
-    height: 55vh;
-  }
+  // @media screen and (max-width: 500px) {
+  //   height: 55vh;
+  // }
 
-  @media screen and (max-width: 400px) {
-    height: 50vh;
-  }
+  // @media screen and (max-width: 400px) {
+  //   height: 50vh;
+  // }
 
-  @media screen and (max-width: 300px) {
-    height: 45vh;
-  }
+  // @media screen and (max-width: 300px) {
+  //   height: 45vh;
+  // }
 `;
 
 const BackgroundImage = styled.div`
@@ -91,10 +91,37 @@ const BelowContainer = styled.div`
 `;
 
 const TestHeader = () => {
+  const [height, setHeight] = React.useState(0);
+  const [loaded, setLoaded] = React.useState(false);
+
+  React.useEffect(() => {
+    if (!loaded) {
+      setLoaded(true);
+      if (window.innerWidth > 1100) {
+        setHeight(document.getElementById("mainBackgroundImage").offsetHeight);
+      } else {
+        const percent = (63 * window.innerWidth) / 100 - 50;
+        setHeight(percent);
+      }
+    }
+
+    const handleResize = () => {
+      console.log("resized to: ", window.innerWidth, "x", window.innerHeight);
+      if (window.innerWidth > 1100) {
+        setHeight(document.getElementById("mainBackgroundImage").offsetHeight);
+      } else {
+        const percent = (63 * window.innerWidth) / 100 - 50;
+        setHeight(percent);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+  }, [loaded]);
+
   return (
-    <Container>
+    // <Container>
+    <Container style={{ height: height + "px" }}>
       <Logo />
-      <BackgroundImage />
+      <BackgroundImage id="mainBackgroundImage" />
       <NavigationPanel />
       <BelowContainer>
         <NavigationHamburger />
