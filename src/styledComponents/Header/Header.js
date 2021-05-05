@@ -1,57 +1,31 @@
 import * as React from "react";
 import styled from "styled-components";
-import GatsbyImage from "gatsby-image";
 
-import Logo from "./Logo";
-import NavigationPanel from "./NavigationPanel";
-import NavigationHamburger from "./NavigationHamburger";
-import MessageButtons from "./MessageButtons.js";
+import Logo from "../Header/Logo";
+import NavigationPanel from "../Header/NavigationPanel";
+import NavigationHamburger from "../Header/NavigationHamburger";
+import MessageButtons from "../Header/MessageButtons.js";
 
 import mainImage from "../../images/main_image.jpg";
 
 const Container = styled.header`
-  width: 100%;
-  max-width: 1350px;
   margin: 0 auto;
   position: relative;
-
-  @media screen and (max-width: 1400px) {
-    font-size: 0.8rem;
-  }
-
-  @media screen and (max-width: 600px) {
-    display: flex;
-    flex-direction: column;
-  }
+  width: 100%;
+  height: 100vh;
 `;
 
-const BackgroundImage = styled.img`
+const BackgroundImage = styled.div`
+  background-image: url(${mainImage});
+  background-size: 100%;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
   position: absolute;
-  z-index: -1;
   top: 0;
-  left: 0;
-  max-width: 100%;
-  height: auto;
-  width: auto;
-  transform: scale(1.1);
-  border: 5px solid black;
-
-  @media screen and (min-width: 1500px) {
-    border: 3px solid cyan;
-    max-width: 100vw;
-  }
-
-  @media screen and (max-width: 730px) {
-    height: 225%;
-  }
-
-  @media screen and (max-width: 350px) {
-    height: 260%;
-  }
-
-  @media screen and (max-width: 300px) {
-    height: 270%;
-  }
+  z-index: -1;
 `;
 
 const BelowContainer = styled.div`
@@ -60,7 +34,6 @@ const BelowContainer = styled.div`
   margin: 0 auto;
   justify-content: flex-end;
   padding-top: 15px;
-  border: 2px solid black;
 
   @media screen and (max-width: 600px) {
     width: 85%;
@@ -73,15 +46,36 @@ const BelowContainer = styled.div`
   }
 `;
 
-const Background = (props) => {
-  return <BackgroundImage src={props.src} alt={props.alt} />;
-};
-
 const Header = () => {
+  const [height, setHeight] = React.useState(0);
+  const [loaded, setLoaded] = React.useState(false);
+
+  React.useEffect(() => {
+    if (!loaded) {
+      setLoaded(true);
+      if (window.innerWidth > 1100) {
+        setHeight(document.getElementById("mainBackgroundImage").offsetHeight);
+      } else {
+        const percent = (63 * window.innerWidth) / 100 - 50;
+        setHeight(percent);
+      }
+    }
+
+    const handleResize = () => {
+      if (window.innerWidth > 1100) {
+        setHeight(document.getElementById("mainBackgroundImage").offsetHeight);
+      } else {
+        const percent = (63 * window.innerWidth) / 100 - 50;
+        setHeight(percent);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+  }, [loaded]);
+
   return (
-    <Container>
+    <Container style={{ height: height + "px" }}>
       <Logo />
-      <Background src={mainImage} alt="Night Union Gables Inn" />
+      <BackgroundImage id="mainBackgroundImage" />
       <NavigationPanel />
       <BelowContainer>
         <NavigationHamburger />
