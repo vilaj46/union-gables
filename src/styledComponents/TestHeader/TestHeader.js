@@ -13,10 +13,6 @@ const Container = styled.header`
   position: relative;
   width: 100%;
   height: 100vh;
-
-  @media screen and (min-width: 485px) {
-    border: 2px solid red;
-  }
 `;
 
 const BackgroundImage = styled.div`
