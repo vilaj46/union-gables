@@ -8,23 +8,14 @@ import mainImage6 from "../../images/main_image6.jpg";
 const Container = styled.div`
   position: relative;
   min-height: 450px;
+  display: flex;
+  justify-content: center;
 `;
 
 const H3Container = styled.h3`
   text-transform: uppercase;
   text-align: center;
   color: #ffffff;
-  padding-top: 100px;
-  font-size: 24px;
-  font-weight: 600;
-
-  @media screen and (max-width: 600px) {
-    padding-top: 50px;
-  }
-
-  @media screen and (max-width: 450px) {
-    padding-top: 25px;
-  }
 `;
 
 const ParagraphContainer = styled.p`
@@ -32,7 +23,6 @@ const ParagraphContainer = styled.p`
   color: #ffffff;
   font-size: 20px;
   font-weight: 600;
-  height: 100px;
 
   @media screen and (max-width: 550px) {
     width: 90%;
@@ -51,7 +41,6 @@ const BackgroundImage = styled.div`
   z-index: -1;
   overflow: hidden;
   filter: brightness(50%);
-  // transform: scale(1.5);
 `;
 
 const NumbersContainer = styled.div`
@@ -109,6 +98,11 @@ const Button = styled.div`
   }
 `;
 
+const Center = styled.div`
+  height: 50%;
+  margin: auto;
+`;
+
 const reasons = [
   {
     img: mainImage5,
@@ -135,29 +129,30 @@ const ThreeReasons = () => {
       <BackgroundImage
         style={{ backgroundImage: `url(${reasons[reason].img})` }}
       />
-      {/* <ImageContainer src={reasons[reason].img} alt="Heyyy" /> */}
-      <H3Container>3 Reasons to Stay with us</H3Container>
-      <ParagraphContainer>{reasons[reason].text}</ParagraphContainer>
-      <NumbersContainer>
-        <Number
-          text="1"
-          activated={reason === 0 ? true : false}
-          setReason={setReason}
-          num={0}
-        />
-        <Number
-          text="2"
-          num={1}
-          activated={reason === 1 ? true : false}
-          setReason={setReason}
-        />
-        <Number
-          text="3"
-          num={2}
-          activated={reason === 2 ? true : false}
-          setReason={setReason}
-        />
-      </NumbersContainer>
+      <Center>
+        <H3Container>3 Reasons to Stay with us</H3Container>
+        <ParagraphContainer>{reasons[reason].text}</ParagraphContainer>
+        <NumbersContainer>
+          <Number
+            text="1"
+            activated={reason === 0 ? true : false}
+            setReason={setReason}
+            num={0}
+          />
+          <Number
+            text="2"
+            num={1}
+            activated={reason === 1 ? true : false}
+            setReason={setReason}
+          />
+          <Number
+            text="3"
+            num={2}
+            activated={reason === 2 ? true : false}
+            setReason={setReason}
+          />
+        </NumbersContainer>
+      </Center>
     </Container>
   );
 };
