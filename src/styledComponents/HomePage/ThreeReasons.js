@@ -17,6 +17,14 @@ const H3Container = styled.h3`
   padding-top: 100px;
   font-size: 24px;
   font-weight: 600;
+
+  @media screen and (max-width: 600px) {
+    padding-top: 50px;
+  }
+
+  @media screen and (max-width: 450px) {
+    padding-top: 25px;
+  }
 `;
 
 const ParagraphContainer = styled.p`
@@ -32,15 +40,16 @@ const ParagraphContainer = styled.p`
   }
 `;
 
-const ImageContainer = styled.img`
-  background-size: cover;
-  background-position: center;
-  position: absolute;
-  min-width: 100%;
+const BackgroundImage = styled.div`
+  background-image: url(${mainImage4});
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
   height: 100%;
+  position: absolute;
   z-index: -1;
+  overflow: hidden;
   filter: brightness(50%);
-  transform: scale(1.1);
 `;
 
 const NumbersContainer = styled.div`
@@ -118,10 +127,13 @@ const reasons = [
 
 const ThreeReasons = () => {
   const [reason, setReason] = React.useState(0);
-
+  console.log(reasons[reason].img);
   return (
     <Container>
-      <ImageContainer src={reasons[reason].img} alt="Heyyy" />
+      <BackgroundImage
+        style={{ backgroundImage: `url(${reasons[reason].img})` }}
+      />
+      {/* <ImageContainer src={reasons[reason].img} alt="Heyyy" /> */}
       <H3Container>3 Reasons to Stay with us</H3Container>
       <ParagraphContainer>{reasons[reason].text}</ParagraphContainer>
       <NumbersContainer>

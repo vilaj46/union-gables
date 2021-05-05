@@ -11,7 +11,6 @@ import HorizontalRule from "../../styledComponents/Shared/HorizontalRule";
 
 // HomePage Components
 import ThreeReasons from "../../styledComponents/HomePage/ThreeReasons";
-import ThreeReasons2 from "../../styledComponents/HomePage/ThreeReasons2";
 import DiscoverLinks from "../../styledComponents/HomePage/DiscoverLinks";
 
 import mainImage2 from "../../images/main_image2.jpg";
@@ -92,7 +91,7 @@ const HomePage = () => {
           Glorious Gardens Award and Soroptimist Best Garden Award
         </PageParagraph>
       </CustomContainer>
-      <ThreeReasons2 />
+      <ThreeReasons />
     </Container>
   );
 };
