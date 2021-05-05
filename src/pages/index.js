@@ -1,15 +1,7 @@
 import * as React from "react";
 
 /**
- * Not using ThreeReasons, instead using ThreeReason2.
- * Delete ThreeReasons.
- *
- * Not using Header, instead using TestHeader.
- * Delete Header.
- *
  * Need Page page links.
- *
- * ThreeReasons image on full screen is too zoomed in.
  */
 
 // Pages

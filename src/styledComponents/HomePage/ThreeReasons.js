@@ -44,12 +44,14 @@ const BackgroundImage = styled.div`
   background-image: url(${mainImage4});
   background-size: 100%;
   background-repeat: no-repeat;
+  background-position: center center;
   width: 100%;
   height: 100%;
   position: absolute;
   z-index: -1;
   overflow: hidden;
   filter: brightness(50%);
+  // transform: scale(1.5);
 `;
 
 const NumbersContainer = styled.div`
