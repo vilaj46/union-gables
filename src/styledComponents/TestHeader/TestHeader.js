@@ -13,6 +13,10 @@ const Container = styled.header`
   position: relative;
   width: 100%;
   height: 100vh;
+
+  @media screen and (min-width: 485px) {
+    border: 2px solid red;
+  }
 `;
 
 const BackgroundImage = styled.div`
@@ -74,7 +78,6 @@ const TestHeader = () => {
   }, [loaded]);
 
   return (
-    // <Container>
     <Container style={{ height: height + "px" }}>
       <Logo />
       <BackgroundImage id="mainBackgroundImage" />
