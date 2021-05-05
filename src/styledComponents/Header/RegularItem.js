@@ -22,7 +22,7 @@ const NavItemContainer = styled.li`
 const NavItemLink = styled(Link)`
   color: #ffffff;
   text-decoration: none;
-  pointer-events: none;
+  // pointer-events: none;
 
   ${NavItemContainer}:hover & {
     color: #b25a75;
