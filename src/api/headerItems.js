@@ -1,3 +1,5 @@
+// Used in styledComponents/Header/NavigationPanel
+
 const items = [
   {
     text: "About Us",
@@ -6,31 +8,31 @@ const items = [
     links: [
       {
         label: "Breakfast Basket",
-        url: "/breakfast",
+        url: "/about-us/breakfast",
       },
       {
         label: "Amenities",
-        url: "/amenities",
+        url: "/about-us/amenities",
       },
       {
         label: "Pet Friendly",
-        url: "/pet-friendly",
+        url: "/about-us/pet-friendly",
       },
       {
         label: "Reservation  Policies",
-        url: "/reservation-policies",
+        url: "/about-us/reservation-policies",
       },
       {
         label: "Reviews",
-        url: "/reviews",
+        url: "/about-us/reviews",
       },
       {
         label: "Location",
-        url: "/location",
+        url: "/about-us/location",
       },
       {
         label: "Contact Now!",
-        url: "/contact",
+        url: "/about-us/contact",
       },
     ],
   },

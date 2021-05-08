@@ -67,7 +67,10 @@ const DownLinkContainer = styled(Link)`
   margin-left: -40px;
   white-space: nowrap;
   position: relative;
-  // pointer-events: none;
+  
+  @media screen and (max-width: 900px) {
+    padding: 7px 8px;
+  }
 
   &:hover {
     color: #790028;

@@ -8,6 +8,7 @@ import PageQuote from "../../styledComponents/Shared/PageQuote";
 import PageSubTitle from "../../styledComponents/Shared/PageSubTitle";
 import PageParagraph from "../../styledComponents/Shared/PageParagraph";
 import HorizontalRule from "../../styledComponents/Shared/HorizontalRule";
+import PageBodyContainer from "../../styledComponents/Shared/PageBodyContainer";
 
 // HomePage Components
 import ThreeReasons from "../../styledComponents/HomePage/ThreeReasons";
@@ -16,27 +17,14 @@ import DiscoverLinks from "../../styledComponents/HomePage/DiscoverLinks";
 import mainImage2 from "../../images/main_image2.jpg";
 import mainImage3 from "../../images/main_image3.jpg";
 
-const Container = styled.div`
-  // border: 2px solid black;
-`;
-
-const CustomContainer = styled.div`
-  max-width: 960px;
-  margin: 0 auto;
-
-  @media screen and (max-width: 300px) {
-    padding-top: 25px;
-  }
-`;
-
 const title = "Award-Winning Bed & Breakfast in Saratoga Springs, New York";
 
 const HomePage = () => {
   return (
-    <Container>
+    <div>
       <title>Home Page!</title>
       <PageTitle>{title}</PageTitle>
-      <CustomContainer>
+      <PageBodyContainer>
         <PageParagraph>
           Experience old world hospitality at its finest at Union Gables Inn,
           our luxurious bed and breakfast in Saratoga Springs, New York. Built
@@ -90,9 +78,9 @@ const HomePage = () => {
         <PageParagraph center={true}>
           Glorious Gardens Award and Soroptimist Best Garden Award
         </PageParagraph>
-      </CustomContainer>
+      </PageBodyContainer>
       <ThreeReasons />
-    </Container>
+    </div>
   );
 };
 
