@@ -63,7 +63,11 @@ const Header = () => {
   React.useEffect(() => {
     if (!loaded) {
       setLoaded(true);
-      if (window.innerWidth > 1100) {
+      if (window.innerWidth < 1675 && window.innerWidth > 1100) {
+        const body = document.querySelector("body");
+        const percent = (57 * body.clientWidth) / 100;
+        setHeight(percent);
+      } else if (window.innerWidth > 1100) {
         setHeight(document.getElementById("mainBackgroundImage").offsetHeight);
       } else {
         const percent = (63 * window.innerWidth) / 100 - 50;
@@ -72,7 +76,11 @@ const Header = () => {
     }
 
     const handleResize = () => {
-      if (window.innerWidth > 1100) {
+      if (window.innerWidth < 1675 && window.innerWidth > 1100) {
+        const body = document.querySelector("body");
+        const percent = (57 * body.clientWidth) / 100;
+        setHeight(percent);
+      } else if (window.innerWidth > 1100) {
         setHeight(document.getElementById("mainBackgroundImage").offsetHeight);
       } else {
         const percent = (63 * window.innerWidth) / 100 - 50;

@@ -19,6 +19,12 @@ import mainImage3 from "../../images/main_image3.jpg";
 
 const title = "Award-Winning Bed & Breakfast in Saratoga Springs, New York";
 
+// const PageSpacing = styled.div`
+//   @media screen and (max-width: 1530px) {
+//     border: 2px solid black;
+//   }
+// `;
+
 const HomePage = () => {
   return (
     <div>
