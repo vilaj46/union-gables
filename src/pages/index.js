@@ -1,17 +1,14 @@
 import * as React from "react";
 
 /**
- * Need Page page links.
+ * Discover Saratoga Links
+ * Add Space in Good to Know
+ * Gray block above 3 reasons
+ * Footer
  *
- * Space navigation links on smaller screens.
- * They are overflowing the main image.
  *
- * Warning in the Header
- *
- * Even after hamburger appears there is 'x' scrolling available.
  *
  * Not using CoronaModal
- *
  */
 
 /**

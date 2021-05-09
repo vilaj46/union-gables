@@ -1,5 +1,4 @@
 import * as React from "react";
-import styled from "styled-components";
 
 // Shared Components
 import PageTitle from "../../styledComponents/Shared/PageTitle";
@@ -18,12 +17,6 @@ import mainImage2 from "../../images/main_image2.jpg";
 import mainImage3 from "../../images/main_image3.jpg";
 
 const title = "Award-Winning Bed & Breakfast in Saratoga Springs, New York";
-
-// const PageSpacing = styled.div`
-//   @media screen and (max-width: 1530px) {
-//     border: 2px solid black;
-//   }
-// `;
 
 const HomePage = () => {
   return (
@@ -65,7 +58,6 @@ const HomePage = () => {
           to visit:
         </PageParagraph>
         <DiscoverLinks />
-        {/* <hr /> */}
         <HorizontalRule />
         <PageQuote>
           Reserve your stay today at our historic and romantic bed and breakfast

@@ -45,7 +45,7 @@ const BackgroundImage = styled.div`
 
 const NumbersContainer = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
 `;
 
 const ButtonContainer = styled.div`
@@ -53,7 +53,6 @@ const ButtonContainer = styled.div`
   border-radius: 100%;
   height: 90px;
   width: 90px;
-  margin: 0 40px;
   background: rgba(0, 0, 0, 0);
 
   &:hover {
@@ -73,7 +72,6 @@ const ActivatedContainer = styled.div`
   border-radius: 100%;
   height: 90px;
   width: 90px;
-  margin: 0 40px;
   background-color: #2a0511;
 
   &:hover {
@@ -110,12 +108,12 @@ const reasons = [
       "Easily walk to over 125 restaurants, music venues, bars, museums, galleries, and downtown shopping.",
   },
   {
-    img: mainImage4,
+    img: mainImage6,
     text:
-      "Discover romantic and historic rooms with antique furnishingsm natural gas fireplaces, and luxury linens.",
+      "Discover romantic and historic rooms with antique furnishings natural gas fireplaces, and luxury linens.",
   },
   {
-    img: mainImage6,
+    img: mainImage4,
     text:
       "Stay one and a half blocks from the oldest racetrack in the country.",
   },
