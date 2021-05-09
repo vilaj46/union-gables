@@ -13,6 +13,10 @@ const Container = styled.header`
   position: relative;
   width: 100%;
   height: 100vh;
+
+  @media screen and (max-width: 600px) {
+    display: flex;
+  }
 `;
 
 const BackgroundImage = styled.div`
@@ -43,6 +47,12 @@ const BelowContainer = styled.div`
 
   @media screen and (max-width: 350px) {
     padding-top: 0;
+  }
+`;
+
+const HideMessagesContainer = styled.div`
+  @media screen and (max-width: 600px) {
+    display: none;
   }
 `;
 
@@ -79,7 +89,9 @@ const Header = () => {
       <NavigationPanel />
       <BelowContainer>
         <NavigationHamburger />
-        <MessageButtons />
+        <HideMessagesContainer>
+          <MessageButtons />
+        </HideMessagesContainer>
       </BelowContainer>
     </Container>
   );

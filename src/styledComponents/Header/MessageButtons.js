@@ -13,6 +13,10 @@ const Container = styled.div`
     cursor: pointer;
     background-color: #74525d;
   }
+
+  @media screen and (max-width: 600px) {
+    font-size: 0.8rem;
+  }
 `;
 
 // const customStyles = {

@@ -4,10 +4,17 @@ import styled from "styled-components";
 
 import headerItems from "../../api/headerItems.js";
 
+// Components
+import MessageButtons from "./MessageButtons";
+
 const Container = styled.ul`
   position: absolute;
   margin: 0;
   padding: 0;
+
+  // @media screen and (max-width: 478px) {
+  //   border: 1px solid black;
+  // }
 `;
 
 const LinkContainer = styled.li`
@@ -23,8 +30,12 @@ const LinkContainer = styled.li`
     background-color: #680727;
   }
 
+  @media screen and (max-width: 600px) {
+    font-size: 0.8rem;
+  }
+
   @media screen and (max-width: 450px) {
-    font-size: .7rem;
+    font-size: 0.7rem;
   }
 `;
 
@@ -46,6 +57,11 @@ const BookNowLink = styled(Link)`
   color: #ffffff;
   text-decoration: none;
   padding: 8px;
+  background-color: #b25a75;
+
+  &:hover {
+    background-color: #680727;
+  }
 `;
 
 const HamburgerItems = () => {
@@ -62,6 +78,7 @@ const HamburgerItems = () => {
           </LinkContainer>
         );
       })}
+      <MessageButtons />
     </Container>
   );
 };

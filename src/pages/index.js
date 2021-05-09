@@ -10,6 +10,8 @@ import * as React from "react";
  *
  * Even after hamburger appears there is 'x' scrolling available.
  *
+ * Not using CoronaModal
+ *
  */
 
 /**

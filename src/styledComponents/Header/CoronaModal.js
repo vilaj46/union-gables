@@ -17,9 +17,9 @@ const customStyles = {
 const CoronaModal = (props) => {
   const [modalIsOpen, setIsOpen] = React.useState(false);
 
-  const openModal = () => {
-    setIsOpen(true);
-  };
+  // const openModal = () => {
+  //   setIsOpen(true);
+  // };
 
   const closeModal = () => {
     setIsOpen(false);
