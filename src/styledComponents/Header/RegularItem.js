@@ -15,6 +15,10 @@ const NavItemContainer = styled.li`
   }
 
   @media screen and (max-width: 815px) {
+    font-size: 0.8rem;
+  }
+
+  @media screen and (max-width: 815px) {
     padding: 5px 8px;
   }
 `;
@@ -41,6 +45,10 @@ const BookNowContainer = styled.li`
   &:hover {
     background-color: #680727;
     cursor: pointer;
+  }
+
+  @media screen and (max-width: 815px) {
+    font-size: 0.8rem;
   }
 
   @media screen and (max-width: 815px) {

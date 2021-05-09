@@ -2,21 +2,19 @@ import * as React from "react";
 
 /**
  * Need Page page links.
- * 
+ *
  * Space navigation links on smaller screens.
  * They are overflowing the main image.
- * 
+ *
  * Warning in the Header
- * 
- * Minimizing causing problems before hamburger appears.
- * 
+ *
  * Even after hamburger appears there is 'x' scrolling available.
- * 
+ *
  */
 
 /**
  * Created font container as a shared component.'
-*/
+ */
 
 // Pages
 import HomePage from "./HomePage/HomePage";
