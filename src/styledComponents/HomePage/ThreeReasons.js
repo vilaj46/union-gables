@@ -11,12 +11,24 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media screen and (max-width: 731px) {
+    min-height: 0;
+    height: auto;
+  }
 `;
 
 const H3Container = styled.h3`
   text-transform: uppercase;
   text-align: center;
   color: #ffffff;
+
+  @media screen and (max-width: 731px) {
+    font-weight: 200;
+    padding-top: 50px;
+    padding-bottom: 25px;
+    margin: 0;
+  }
 `;
 
 const ParagraphContainer = styled.p`
@@ -24,8 +36,17 @@ const ParagraphContainer = styled.p`
   color: #ffffff;
   font-size: 20px;
   font-weight: 600;
+  width: 95%;
   margin: auto;
   height: 80px;
+
+  @media screen and (max-width: 731px) {
+    font-weight: 200;
+    height: auto;
+    padding: 0;
+    min-height: 60px;
+    padding-bottom: 25px;
+  }
 
   @media screen and (max-width: 550px) {
     width: 90%;
@@ -49,6 +70,10 @@ const NumbersContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
   width: 100%;
+
+  @media screen and (max-width: 731px) {
+    padding-bottom: 50px;
+  }
 `;
 
 const ButtonContainer = styled.div`
@@ -64,9 +89,10 @@ const ButtonContainer = styled.div`
     opacity: 0.6;
   }
 
-  @media screen and (max-width: 500px) {
-    height: 75px;
-    width: 75px;
+  @media screen and (max-width: 731px) {
+    height: 65px;
+    width: 65px;
+    display: flex;
   }
 `;
 
@@ -82,9 +108,10 @@ const ActivatedContainer = styled.div`
     opacity: 0.6;
   }
 
-  @media screen and (max-width: 500px) {
-    height: 75px;
-    width: 75px;
+  @media screen and (max-width: 731px) {
+    height: 65px;
+    width: 65px;
+    display: flex;
   }
 `;
 
@@ -94,8 +121,8 @@ const Button = styled.div`
   margin: auto;
   font-size: 72px;
 
-  @media screen and (max-width: 500px) {
-    font-size: 60px;
+  @media screen and (max-width: 731px) {
+    font-size: 40px;
   }
 `;
 
