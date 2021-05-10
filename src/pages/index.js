@@ -4,10 +4,9 @@ import * as React from "react";
  * Discover Saratoga Links
  * Add Space in Good to Know
  * Gray block above 3 reasons
- * Footer
  *
  *
- *
+ * Spacing below 3 reasons to stay with us is weird.
  * Not using CoronaModal
  */
 
@@ -23,7 +22,7 @@ import FontContainer from "../styledComponents/Shared/FontContainer";
 
 // Components
 import Header from "../styledComponents/Header/Header";
-// import Footer from "../components/Footer/Footer.js";
+import Footer from "../styledComponents/Footer/Footer";
 
 // styles
 import "./style.css";
@@ -33,7 +32,7 @@ const IndexPage = () => {
     <FontContainer>
       <Header />
       <HomePage />
-      {/*<Footer /> */}
+      <Footer />
     </FontContainer>
   );
 };
