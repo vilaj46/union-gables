@@ -11,11 +11,7 @@ const Container = styled.div`
 `;
 
 const PageBodyContainer = ({ children }) => {
-  return (
-    <Container>
-        {children}
-    </Container>
-  );
+  return <Container>{children}</Container>;
 };
 
 export default PageBodyContainer;

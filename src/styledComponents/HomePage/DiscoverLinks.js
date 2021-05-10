@@ -40,6 +40,7 @@ const Circle = styled.i`
 `;
 
 const congress = "https://www.saratoga.com/hotspots/congress-park/";
+const saratogaRaceCourse = "./discover/saratoga-race-course";
 
 const DiscoverLinks = () => {
   return (
@@ -49,7 +50,7 @@ const DiscoverLinks = () => {
           Congress Park
         </Item>
         <Circle />
-        <Item>Saratoga Race Course</Item>
+        <Item href={saratogaRaceCourse}>Saratoga Race Course</Item>
         <Circle />
         <Item>Saratoga Performing Arts Center</Item>
       </div>
