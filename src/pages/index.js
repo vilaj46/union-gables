@@ -2,6 +2,10 @@ import * as React from "react";
 
 /**
  * Discover Saratoga Links - Make pages for the section.
+ *
+ * Complete charts and other nonsensein the page.
+ * Needs links in the pages we've created.
+ * Bottom Paddding does not fill a large screen.
  */
 
 // Pages

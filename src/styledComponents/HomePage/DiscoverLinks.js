@@ -43,6 +43,8 @@ const congress = "https://www.saratoga.com/hotspots/congress-park/";
 const saratogaRaceCourse = "./discover/saratoga-race-course";
 const performingArts = "./discover/saratoga-performing-arts";
 const springCenter = "./discover/saratoga-springs-center";
+const spaStatePark = "./discover/saratoga-spa-state-park";
+const annualFestivals = "./discover/saratoga-festivals-and-events";
 
 const DiscoverLinks = () => {
   return (
@@ -59,9 +61,9 @@ const DiscoverLinks = () => {
       <div>
         <Item href={springCenter}>Saratoga Springs City Center</Item>
         <Circle />
-        <Item>Saratoga Spa State Park</Item>
+        <Item href={spaStatePark}>Saratoga Spa State Park</Item>
         <Circle />
-        <Item>Annual festivals and events</Item>
+        <Item href={annualFestivals}>Annual festivals and events</Item>
       </div>
     </Container>
   );
