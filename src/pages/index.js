@@ -2,13 +2,6 @@ import * as React from "react";
 
 /**
  * Discover Saratoga Links - Make pages for the section.
- *
- * Spacing below 3 reasons to stay with us is weird.
- * Not using CoronaModal
- */
-
-/**
- * Created font container as a shared component.'
  */
 
 // Pages
