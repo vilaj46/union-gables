@@ -12,6 +12,7 @@ import PageBodyContainer from "../../styledComponents/Shared/PageBodyContainer";
 // HomePage Components
 import ThreeReasons from "../../styledComponents/HomePage/ThreeReasons";
 import DiscoverLinks from "../../styledComponents/HomePage/DiscoverLinks";
+import BottomPadding from "../../styledComponents/HomePage/BottomPadding";
 
 import mainImage2 from "../../images/main_image2.jpg";
 import mainImage3 from "../../images/main_image3.jpg";
@@ -76,6 +77,7 @@ const HomePage = () => {
         <PageParagraph center={true}>
           Glorious Gardens Award and Soroptimist Best Garden Award
         </PageParagraph>
+        <BottomPadding />
       </PageBodyContainer>
       <ThreeReasons />
     </div>

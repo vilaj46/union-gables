@@ -25,18 +25,6 @@ const Icon = styled.img`
   height: 25px;
   width: 25px;
   padding: 0 5px;
-
-  @media screen and (min-width: 700px) {
-    height: 35px;
-    width: 35px;
-    padding: 0 10px;
-  }
-
-  @media screen and (min-width: 900px) {
-    height: 50px;
-    width: 50px;
-    padding: 0 15px;
-  }
 `;
 
 const IconContainer = styled.a`

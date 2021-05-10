@@ -1,8 +1,7 @@
 import * as React from "react";
 
 /**
- * Discover Saratoga Links
- * Add Space in Good to Know
+ * Discover Saratoga Links - Make pages for the section.
  * Gray block above 3 reasons
  *
  *

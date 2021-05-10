@@ -8,16 +8,25 @@ const Container = styled.ul`
   margin-left: 0;
 `;
 
-const Item = styled.li`
+const Item = styled.a`
+  display: block;
   text-align: center;
-  list-style-type: none;
-  
+  text-decoration: underline;
+  color: #350313;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+
+  &:hover {
+    cursor: pointer;
+    color: #aa4465;
+  }
+
   @media screen and (max-width: 435px) {
-    font-size: .7rem;
+    font-size: 0.7rem;
   }
 
   @media screen and (max-width: 310px) {
-    font-size: .6rem;
+    font-size: 0.6rem;
   }
 `;
 
@@ -30,11 +39,15 @@ const Circle = styled.i`
   border-radius: 100%;
 `;
 
+const congress = "https://www.saratoga.com/hotspots/congress-park/";
+
 const DiscoverLinks = () => {
   return (
     <Container>
       <div>
-        <Item>Congress Park</Item>
+        <Item href={congress} target="_blank">
+          Congress Park
+        </Item>
         <Circle />
         <Item>Saratoga Race Course</Item>
         <Circle />

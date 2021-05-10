@@ -5,6 +5,7 @@ import styled from "styled-components";
 // Sub Components
 import FontContainer from "../Shared/FontContainer";
 import SocialLinks from "./SocialLinks";
+import FooterTitle from "./FooterTitle";
 
 // Icons - from flaticon
 import pin from "../../icons/pin.png";
@@ -15,18 +16,6 @@ const Container = styled.div`
   text-align: center;
   color: #333;
   padding-bottom: 100px;
-
-  @media screen and (min-width: 700px) {
-    font-size: 1.5rem;
-  }
-
-  @media screen and (min-width: 900px) {
-    font-size: 1.8rem;
-  }
-`;
-
-const FooterTitle = styled.h3`
-  color: #aa4465;
 `;
 
 const Icon = styled.img`
@@ -42,6 +31,7 @@ const Anchor = styled.a`
 
 const IconContainer = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 12.5px 0;
@@ -88,22 +78,9 @@ const Footer = () => {
           </Anchor>
         </IconContainer>
         <SocialLinks />
-        {/* <FooterLinks /> */}
       </FontContainer>
     </Container>
   );
 };
-
-// const FooterLinks = () => {
-//   return (
-//     <Container>
-//       <Link to="#">Newsletter</Link>
-//       <Link to="#">Event Inquiries</Link>
-//       <Link to="#">Cookie Policy</Link>
-//       <Link to="#">Privacy Policy</Link>
-//       <Link to="#">Sitemap</Link>
-//     </Container>
-//   );
-// };
 
 export default Footer;

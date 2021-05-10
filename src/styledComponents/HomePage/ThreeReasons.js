@@ -121,7 +121,6 @@ const reasons = [
 
 const ThreeReasons = () => {
   const [reason, setReason] = React.useState(0);
-  console.log(reasons[reason].img);
   return (
     <Container>
       <BackgroundImage
