@@ -12,7 +12,7 @@ import PageBodyContainer from "../../styledComponents/Shared/PageBodyContainer";
 // HomePage Components
 import ThreeReasons from "../../styledComponents/HomePage/ThreeReasons";
 import DiscoverLinks from "../../styledComponents/HomePage/DiscoverLinks";
-import BottomPadding from "../../styledComponents/HomePage/BottomPadding";
+import BottomPadding from "../../styledComponents/Shared/BottomPadding";
 
 import mainImage2 from "../../images/main_image2.jpg";
 import mainImage3 from "../../images/main_image3.jpg";
