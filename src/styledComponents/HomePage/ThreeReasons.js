@@ -9,6 +9,7 @@ const Container = styled.div`
   position: relative;
   min-height: 450px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 `;
 
@@ -23,10 +24,11 @@ const ParagraphContainer = styled.p`
   color: #ffffff;
   font-size: 20px;
   font-weight: 600;
+  margin: auto;
+  height: 80px;
 
   @media screen and (max-width: 550px) {
     width: 90%;
-    margin: 0 auto;
   }
 `;
 
@@ -46,6 +48,7 @@ const BackgroundImage = styled.div`
 const NumbersContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
+  width: 100%;
 `;
 
 const ButtonContainer = styled.div`
@@ -96,9 +99,8 @@ const Button = styled.div`
   }
 `;
 
-const Center = styled.div`
+const CenterText = styled.div`
   height: 50%;
-  margin: auto;
 `;
 
 const reasons = [
@@ -126,30 +128,30 @@ const ThreeReasons = () => {
       <BackgroundImage
         style={{ backgroundImage: `url(${reasons[reason].img})` }}
       />
-      <Center>
+      <CenterText>
         <H3Container>3 Reasons to Stay with us</H3Container>
         <ParagraphContainer>{reasons[reason].text}</ParagraphContainer>
-        <NumbersContainer>
-          <Number
-            text="1"
-            activated={reason === 0 ? true : false}
-            setReason={setReason}
-            num={0}
-          />
-          <Number
-            text="2"
-            num={1}
-            activated={reason === 1 ? true : false}
-            setReason={setReason}
-          />
-          <Number
-            text="3"
-            num={2}
-            activated={reason === 2 ? true : false}
-            setReason={setReason}
-          />
-        </NumbersContainer>
-      </Center>
+      </CenterText>
+      <NumbersContainer>
+        <Number
+          text="1"
+          activated={reason === 0 ? true : false}
+          setReason={setReason}
+          num={0}
+        />
+        <Number
+          text="2"
+          num={1}
+          activated={reason === 1 ? true : false}
+          setReason={setReason}
+        />
+        <Number
+          text="3"
+          num={2}
+          activated={reason === 2 ? true : false}
+          setReason={setReason}
+        />
+      </NumbersContainer>
     </Container>
   );
 };
