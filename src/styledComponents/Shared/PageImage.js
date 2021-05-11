@@ -3,12 +3,18 @@ import styled from "styled-components";
 
 const ParagraphContainer = styled.img`
   max-width: 100%;
-  padding-top: 25px;
-  margin: 0 auto;
+  padding: 25px 0;
 `;
 
 const PageImage = (props) => {
-  return <ParagraphContainer src={props.src} alt={props.alt} />;
+  const paddingBottom = props.extraBottomPadding ? "50px" : "25px";
+  return (
+    <ParagraphContainer
+      src={props.src}
+      alt={props.alt}
+      style={{ paddingBottom }}
+    />
+  );
 };
 
 export default PageImage;

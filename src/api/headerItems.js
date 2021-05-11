@@ -1,5 +1,3 @@
-// Used in styledComponents/Header/NavigationPanel
-
 const items = [
   {
     text: "About Us",

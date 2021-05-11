@@ -8,10 +8,12 @@ const QuoteContainer = styled.em`
   display: block;
   margin: 0 auto;
   text-align: center;
-  margin: 22.4px;
+  padding-bottom: 80px;
 `;
 
 const PageQuote = (props) => {
+  // const bottomPadding = props.extraBottomPadding ? ""
+
   return <QuoteContainer>{props.children}</QuoteContainer>;
 };
 

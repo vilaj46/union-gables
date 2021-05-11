@@ -6,27 +6,9 @@ const ParagraphContainer = styled.p`
   font-size: 1.4rem;
   margin: 0;
   padding: 0;
-  line-height: 25px;
-  padding-bottom: 20px;
 
   @media screen and (max-width: 1020px) {
     width: 95%;
-  }
-
-  @media screen and (max-width: 775px) {
-    font-size: 1.2rem;
-  }
-`;
-
-const CenterContainer = styled.p`
-  color: #333;
-  text-align: center;
-  font-size: 1.4rem;
-
-  @media screen and (max-width: 1020px) {
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   @media screen and (max-width: 775px) {
@@ -35,15 +17,12 @@ const CenterContainer = styled.p`
 `;
 
 const PageSubParagraph = (props) => {
-  try {
-    if (props.center) {
-      return <CenterContainer>{props.children}</CenterContainer>;
-    } else {
-      return <ParagraphContainer>{props.children}</ParagraphContainer>;
-    }
-  } catch (err) {
-    return <ParagraphContainer>{props.children}</ParagraphContainer>;
-  }
+  const paddingBottom = props.last ? "0" : "20px"; // Too much padding when image was below.
+  return (
+    <ParagraphContainer style={{ paddingBottom }}>
+      {props.children}
+    </ParagraphContainer>
+  );
 };
 
 export default PageSubParagraph;

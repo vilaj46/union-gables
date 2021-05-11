@@ -1,6 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
 
+import api from "../../api/homepageAPI";
+
 const Container = styled.ul`
   display: flex;
   justify-content: space-around;
@@ -14,6 +16,7 @@ const Item = styled.a`
   text-decoration: underline;
   color: #350313;
   font-weight: 600;
+  font-size: 1.4rem;
   letter-spacing: 0.7px;
 
   &:hover {
@@ -39,31 +42,41 @@ const Circle = styled.i`
   border-radius: 100%;
 `;
 
-const congress = "https://www.saratoga.com/hotspots/congress-park/";
-const saratogaRaceCourse = "./discover/saratoga-race-course";
-const performingArts = "./discover/saratoga-performing-arts";
-const springCenter = "./discover/saratoga-springs-center";
-const spaStatePark = "./discover/saratoga-spa-state-park";
-const annualFestivals = "./discover/saratoga-festivals-and-events";
+// const congress = "https://www.saratoga.com/hotspots/congress-park/";
+// const saratogaRaceCourse = "./discover/saratoga-race-course";
+// const performingArts = "./discover/saratoga-performing-arts";
+// const springCenter = "./discover/saratoga-springs-center";
+// const spaStatePark = "./discover/saratoga-spa-state-park";
+// const annualFestivals = "./discover/saratoga-festivals-and-events";
 
 const DiscoverLinks = () => {
   return (
     <Container>
       <div>
-        <Item href={congress} target="_blank">
-          Congress Park
+        <Item href={api.congressPark.href} target="_blank">
+          {api.congressPark.text}
         </Item>
         <Circle />
-        <Item href={saratogaRaceCourse}>Saratoga Race Course</Item>
+        <Item href={api.saratogaRaceCourse.href}>
+          {api.saratogaRaceCourse.text}
+        </Item>
         <Circle />
-        <Item href={performingArts}>Saratoga Performing Arts Center</Item>
+        <Item href={api.saratogaPerformingArtsCenter.href}>
+          {api.saratogaPerformingArtsCenter.text}
+        </Item>
       </div>
       <div>
-        <Item href={springCenter}>Saratoga Springs City Center</Item>
+        <Item href={api.saratogaSpringsCityCenter.href}>
+          {api.saratogaSpringsCityCenter.text}
+        </Item>
         <Circle />
-        <Item href={spaStatePark}>Saratoga Spa State Park</Item>
+        <Item href={api.saratogaSpaStatePark.href}>
+          {api.saratogaSpaStatePark.text}
+        </Item>
         <Circle />
-        <Item href={annualFestivals}>Annual festivals and events</Item>
+        <Item href={api.annualFestivalsAndEvents.href}>
+          {api.annualFestivalsAndEvents.text}
+        </Item>
       </div>
     </Container>
   );

@@ -1,9 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 
-import mainImage4 from "../../images/main_image4.jpg";
-import mainImage5 from "../../images/main_image5.jpg";
-import mainImage6 from "../../images/main_image6.jpg";
+import api from "../../api/homepageAPI";
 
 const Container = styled.div`
   position: relative;
@@ -57,7 +55,7 @@ const ParagraphContainer = styled.p`
 `;
 
 const BackgroundImage = styled.div`
-  background-image: url(${mainImage4});
+  background-image: url(${api.food});
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center center;
@@ -135,17 +133,17 @@ const CenterText = styled.div`
 
 const reasons = [
   {
-    img: mainImage5,
+    img: api.food,
     text:
       "Easily walk to over 125 restaurants, music venues, bars, museums, galleries, and downtown shopping.",
   },
   {
-    img: mainImage6,
+    img: api.room,
     text:
       "Discover romantic and historic rooms with antique furnishings natural gas fireplaces, and luxury linens.",
   },
   {
-    img: mainImage4,
+    img: api.racetrack,
     text:
       "Stay one and a half blocks from the oldest racetrack in the country.",
   },

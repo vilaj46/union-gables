@@ -1,99 +1,68 @@
 import * as React from "react";
 
+// API Components
+import api from "../../api/homepageAPI";
+
 // Shared Components
-import PageTitle from "../../styledComponents/Shared/PageTitle";
+import MainPageTitle from "../../styledComponents/Shared/MainPageTitle";
 import PageImage from "../../styledComponents/Shared/PageImage";
 import PageQuote from "../../styledComponents/Shared/PageQuote";
 import PageSubTitle from "../../styledComponents/Shared/PageSubTitle";
-import PageParagraph from "../../styledComponents/Shared/PageParagraph";
 import HorizontalRule from "../../styledComponents/Shared/HorizontalRule";
 import PageBodyContainer from "../../styledComponents/Shared/PageBodyContainer";
-import PageParagraphLink from "../../styledComponents/Shared/PageParagraphLink";
+import BottomPadding from "../../styledComponents/Shared/BottomPadding";
 
 // HomePage Components
 import ThreeReasons from "../../styledComponents/HomePage/ThreeReasons";
 import DiscoverLinks from "../../styledComponents/HomePage/DiscoverLinks";
-import BottomPadding from "../../styledComponents/Shared/BottomPadding";
-
-import mainImage2 from "../../images/main_image2.jpg";
-import mainImage3 from "../../images/main_image3.jpg";
-
-const title = "Award-Winning Bed & Breakfast in Saratoga Springs, New York";
 
 const HomePage = () => {
   return (
     <div>
-      <title>Home Page!</title>
-      <PageTitle>{title}</PageTitle>
       <PageBodyContainer>
-        <PageParagraph>
-          Experience old world hospitality at its finest at Union Gables Inn,
-          our luxurious bed and breakfast in Saratoga Springs, New York. Built
-          circa 1901, this Queen Anne Victorian Mansion is located in the heart
-          of Saratoga’s Historic District known as the Magic Rectangle, one and
-          a half blocks from the oldest racetrack in the country. Discover the
-          romantic charm of our hotel, ideally nestled less than a ten-minute
-          walk from{" "}
-          <PageParagraphLink href="./discover/saratoga-restaurants">
-            countless restaurants
-          </PageParagraphLink>
-          , and{" "}
-          <PageParagraphLink href="./discover/saratoga-things-to-do">
-            downtown Saratoga gems
-          </PageParagraphLink>
-          .
-        </PageParagraph>
-        <PageImage src={mainImage2} alt="Pool and Garden" />
-        <PageSubTitle>Envision Your Stay</PageSubTitle>
-        <PageParagraph>
-          Step inside our historic mansion of 118 years, featuring a classic
-          wraparound porch, airy living areas with period antiques, and over one
-          acre of Perennial gardens, fountains, and a seasonal Romanesque-style
-          pool. Included in your stay is a freshly-prepared breakfast from our
-          Cordon Bleu trained chef, homemade baked goods served in the
-          afternoon, and exemplary concierge service. Stay in one of our{" "}
-          <PageParagraphLink href="./rooms/saratoga-lodging">
-            oversized rooms and suites
-          </PageParagraphLink>
-          , all with private bathrooms and each uniquely decorated. Each room at
-          our B&B in Saratoga Springs, NY features a romantic natural gas
-          fireplace, complimentary wireless Intenet, and a variety of period
-          antiques. Designated{" "}
-          <PageParagraphLink href="./about-us/pet-friendly">
-            pet friendly
-          </PageParagraphLink>
-          , extended stay, and rooms with private patios are available.
-        </PageParagraph>
-        <PageImage src={mainImage3} alt="Race Track" />
-        <PageSubTitle>Discover Saratoga Springs</PageSubTitle>
-        <PageParagraph>
-          Take in all that Saratoga Springs has to offer without the hassle of
-          parking downtown. Rich in history with its array of natural springs,
-          classic architecture, beautiful parks, and boutique shopping, in
-          addition to the excitement of thoroughbred horse races, we invite you
-          to visit:
-        </PageParagraph>
+        <MainPageTitle>{api.title}</MainPageTitle>
+
+        {api.Paragraph1}
+
+        <PageImage
+          src={api.statue}
+          alt="Pool and Garden"
+          extraBottomPadding={true}
+        />
+
+        <PageSubTitle>{api.subTitle1}</PageSubTitle>
+
+        {api.Paragraph2}
+
+        <PageImage
+          src={api.jockey}
+          alt="Race Track"
+          extraBottomPadding={true}
+        />
+
+        <PageSubTitle>{api.subTitle2}</PageSubTitle>
+
+        {api.Paragraph3}
+
         <DiscoverLinks />
+
         <HorizontalRule />
-        <PageQuote>
-          Reserve your stay today at our historic and romantic bed and breakfast
-          in Saratoga Springs, New York!
-        </PageQuote>
-        <PageSubTitle>Good to know</PageSubTitle>
-        <PageParagraph center={true}>
-          Built in 1901 and nicknamed the ‘Sunnyside House’
-        </PageParagraph>
-        <PageParagraph center={true}>
-          Best of Saratoga Region for Six Years in a Row
-        </PageParagraph>
-        <PageParagraph center={true}>
-          Tripadvisor Award of Excellence and Green Leader Hotel Awards
-        </PageParagraph>
-        <PageParagraph center={true}>
-          Glorious Gardens Award and Soroptimist Best Garden Award
-        </PageParagraph>
+
+        <PageQuote>{api.quote}</PageQuote>
+
+        <PageSubTitle>{api.subTitle3}</PageSubTitle>
+
+        {api.Paragraph4}
+
+        {api.Paragraph5}
+
+        {api.Paragraph6}
+
+        {api.Paragraph7}
       </PageBodyContainer>
+
       <BottomPadding />
+
       <ThreeReasons />
     </div>
   );
