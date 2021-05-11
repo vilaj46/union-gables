@@ -4,11 +4,11 @@ body {
   padding: 0;
 }
 
-
 #main {
   display: block;
   width: 100%;
   font-family: "DroidSans", sans-serif;
+  color: #333;
 }
 
 @font-face {

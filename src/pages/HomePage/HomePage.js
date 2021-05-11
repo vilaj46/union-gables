@@ -8,6 +8,7 @@ import PageSubTitle from "../../styledComponents/Shared/PageSubTitle";
 import PageParagraph from "../../styledComponents/Shared/PageParagraph";
 import HorizontalRule from "../../styledComponents/Shared/HorizontalRule";
 import PageBodyContainer from "../../styledComponents/Shared/PageBodyContainer";
+import PageParagraphLink from "../../styledComponents/Shared/PageParagraphLink";
 
 // HomePage Components
 import ThreeReasons from "../../styledComponents/HomePage/ThreeReasons";
@@ -32,7 +33,15 @@ const HomePage = () => {
           of Saratoga’s Historic District known as the Magic Rectangle, one and
           a half blocks from the oldest racetrack in the country. Discover the
           romantic charm of our hotel, ideally nestled less than a ten-minute
-          walk from countless restaurants, and downtown Saratoga gems.
+          walk from{" "}
+          <PageParagraphLink href="./discover/saratoga-restaurants">
+            countless restaurants
+          </PageParagraphLink>
+          , and{" "}
+          <PageParagraphLink href="./discover/saratoga-things-to-do">
+            downtown Saratoga gems
+          </PageParagraphLink>
+          .
         </PageParagraph>
         <PageImage src={mainImage2} alt="Pool and Garden" />
         <PageSubTitle>Envision Your Stay</PageSubTitle>
@@ -42,12 +51,18 @@ const HomePage = () => {
           acre of Perennial gardens, fountains, and a seasonal Romanesque-style
           pool. Included in your stay is a freshly-prepared breakfast from our
           Cordon Bleu trained chef, homemade baked goods served in the
-          afternoon, and exemplary concierge service. Stay in one of our
-          oversized rooms and suites, all with private bathrooms and each
-          uniquely decorated. Each room at our B&B in Saratoga Springs, NY
-          features a romantic natural gas fireplace, complimentary wireless
-          Intenet, and a variety of period antiques. Designated pet friendly,
-          extended stay, and rooms with private patios are available.
+          afternoon, and exemplary concierge service. Stay in one of our{" "}
+          <PageParagraphLink href="./rooms/saratoga-lodging">
+            oversized rooms and suites
+          </PageParagraphLink>
+          , all with private bathrooms and each uniquely decorated. Each room at
+          our B&B in Saratoga Springs, NY features a romantic natural gas
+          fireplace, complimentary wireless Intenet, and a variety of period
+          antiques. Designated{" "}
+          <PageParagraphLink href="./about-us/pet-friendly">
+            pet friendly
+          </PageParagraphLink>
+          , extended stay, and rooms with private patios are available.
         </PageParagraph>
         <PageImage src={mainImage3} alt="Race Track" />
         <PageSubTitle>Discover Saratoga Springs</PageSubTitle>
@@ -77,8 +92,8 @@ const HomePage = () => {
         <PageParagraph center={true}>
           Glorious Gardens Award and Soroptimist Best Garden Award
         </PageParagraph>
-        <BottomPadding />
       </PageBodyContainer>
+      <BottomPadding />
       <ThreeReasons />
     </div>
   );

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const QuoteContainer = styled.em`
   color: #333;
-  font-size: 16px;
+  font-size: 1.4rem;
   line-height: 30px;
   display: block;
   margin: 0 auto;

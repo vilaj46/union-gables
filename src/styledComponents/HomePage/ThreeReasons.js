@@ -22,6 +22,8 @@ const H3Container = styled.h3`
   text-transform: uppercase;
   text-align: center;
   color: #ffffff;
+  letter-spacing: 1px;
+  font-size: 1.4rem;
 
   @media screen and (max-width: 731px) {
     font-weight: 200;
@@ -35,10 +37,11 @@ const ParagraphContainer = styled.p`
   text-align: center;
   color: #ffffff;
   font-size: 20px;
-  font-weight: 600;
   width: 95%;
   margin: auto;
   height: 80px;
+  letter-spacing: 1px;
+  font-size: 1.4rem;
 
   @media screen and (max-width: 731px) {
     font-weight: 200;

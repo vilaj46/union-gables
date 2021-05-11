@@ -6,6 +6,13 @@ const H1Container = styled.h1`
   font-size: 36px;
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 0;
+
+  @media screen and (max-width: 800px) {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   @media screen and (max-width: 400px) {
     font-size: 1.7rem;

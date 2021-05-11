@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 
-const Container = styled.ul`
+const Container = styled.div`
   width: 100%;
   background-color: #dfdfdf;
   height: 75px;
@@ -9,8 +9,8 @@ const Container = styled.ul`
   margin: 0;
 `;
 
-const DiscoverLinks = () => {
+const BottomPadding = () => {
   return <Container />;
 };
 
-export default DiscoverLinks;
+export default BottomPadding;
