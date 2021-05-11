@@ -7,6 +7,9 @@ const H2Container = styled.h2`
   text-transform: uppercase;
   text-align: center;
   padding-top: 20px;
+  margin-bottom: 0;
+  letter-spacing: 1px;
+  font-weight: 600;
 `;
 
 const PageSubTitle = (props) => {

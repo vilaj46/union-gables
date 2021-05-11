@@ -11,6 +11,7 @@ import PageImage from "../../styledComponents/Shared/PageImage";
 import PageImages from "../../styledComponents/Shared/PageImages";
 import PageQuote from "../../styledComponents/Shared/PageQuote";
 import PageParagraph from "../../styledComponents/Shared/PageParagraph";
+import PageParagraphLink from "../../styledComponents/Shared/PageParagraphLink";
 import FontContainer from "../../styledComponents/Shared/FontContainer";
 import PageBodyContainer from "../../styledComponents/Shared/PageBodyContainer";
 import HorizontalRule from "../../styledComponents/Shared/HorizontalRule";
@@ -43,18 +44,35 @@ const SaratogaRaceCourse = () => {
         <PageSubTitle>2020 Schedule</PageSubTitle>
         <PageParagraph>
           This year’s racing season starts in July, 2020. Please visit the
-          official Saratoga Race Track website for the full calendar schedule.
+          official{" "}
+          <PageParagraphLink
+            href="https://www.saratogaracetrack.com/"
+            target={true}
+          >
+            Saratoga Race Track website
+          </PageParagraphLink>{" "}
+          for the full calendar schedule.
         </PageParagraph>
         <PageSubTitle>Betting at the Track</PageSubTitle>
         <PageParagraph>
           Try your luck wagering on a race (or two!) Bet on site at the track,
-          or online at Saratoga Bets. Make your wager from the comfort of your
-          room when you stay with us at our hotel near the Saratoga race track.
+          or online at{" "}
+          <PageParagraphLink href="https://www.saratogabets.com/" target={true}>
+            Saratoga Bets
+          </PageParagraphLink>
+          . Make your wager from the comfort of your room when you stay with us
+          at our hotel near the Saratoga race track.
         </PageParagraph>
         <PageSubTitle>Admissions</PageSubTitle>
         <PageParagraph>
-          Check out the official website to find out how to purchase season
-          passes, premium box seats and how to book for large groups.
+          Check out the official website to find out how to{" "}
+          <PageParagraphLink
+            href="https://www.saratoga.com/race-track/tickets/"
+            target={true}
+          >
+            purchase season passes
+          </PageParagraphLink>
+          , premium box seats and how to book for large groups.
         </PageParagraph>
         <PageImage src={mainImage3} alt="White Horse" />
         <PageSubTitle>Tours</PageSubTitle>

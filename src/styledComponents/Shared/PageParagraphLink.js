@@ -13,11 +13,19 @@ const StyledLink = styled(Link)`
 `;
 
 const PageParagraphLink = (props) => {
-  return (
-    <StyledLink href={props.href}>
-      <strong>{props.children}</strong>
-    </StyledLink>
-  );
+  if (props.target) {
+    return (
+      <StyledLink href={props.href} target="_blank">
+        <strong>{props.children}</strong>
+      </StyledLink>
+    );
+  } else {
+    return (
+      <StyledLink href={props.href}>
+        <strong>{props.children}</strong>
+      </StyledLink>
+    );
+  }
 };
 
 export default PageParagraphLink;

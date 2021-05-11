@@ -1,11 +1,10 @@
 import * as React from "react";
 
 /**
- * Discover Saratoga Links - Make pages for the section.
- *
+ * Footer styling.
  * Complete charts and other nonsensein the page.
  * Needs links in the pages we've created.
- * Bottom Paddding does not fill a large screen.
+ * Spacing below some quotes and the footer.
  */
 
 // Pages
