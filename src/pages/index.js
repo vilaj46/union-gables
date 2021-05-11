@@ -4,7 +4,6 @@ import * as React from "react";
  * Footer styling.
  * Complete charts and other nonsensein the page.
  * Needs links in the pages we've created.
- * Spacing below some quotes and the footer.
  */
 
 // Pages

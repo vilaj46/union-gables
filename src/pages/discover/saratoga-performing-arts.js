@@ -9,6 +9,8 @@ import PageTitle from "../../styledComponents/Shared/PageTitle";
 import PageSubTitle from "../../styledComponents/Shared/PageSubTitle";
 import PageImages from "../../styledComponents/Shared/PageImages";
 import PageParagraph from "../../styledComponents/Shared/PageParagraph";
+import PageParagraphLink from "../../styledComponents/Shared/PageParagraphLink";
+import PageSubParagraph from "../../styledComponents/Shared/PageSubParagraph";
 import FontContainer from "../../styledComponents/Shared/FontContainer";
 import PageBodyContainer from "../../styledComponents/Shared/PageBodyContainer";
 import HorizontalRule from "../../styledComponents/Shared/HorizontalRule";
@@ -46,33 +48,77 @@ const SaratogaPerformingArts = () => {
         <PageImages images={splitImages} />
         <PageSubTitle>Plan your visit</PageSubTitle>
         <PageParagraph>
-          It’s about a 7-minute drive from our hotel by Saratoga Performing Arts
-          Center. Take Avenue of the Pines to S Broadway to the venue. The
-          amphitheatre hosts numerous concerts from Memorial Day to Labor Day.
-          See what’s coming up on their calendar of events. Parking in all lots
-          is $10 per car for Live Nation Concerts. Parking during classical
-          performances is free! The main parking lot is located off Route 50.
-          Sit on the lawn if you’re bringing personal food and sealed bottles of
-          water. Lawn chairs must not exceed the height of 43”.
+          <PageSubParagraph>
+            It’s about a 7-minute drive from our hotel by Saratoga Performing
+            Arts Center. Take Avenue of the Pines to S Broadway to the venue.
+          </PageSubParagraph>
+          <PageSubParagraph>
+            The amphitheatre hosts numerous concerts from Memorial Day to Labor
+            Day. See what’s coming up on their{" "}
+            <PageParagraphLink
+              href="https://spac.org/calendar/calendar-of-events/"
+              target={true}
+            >
+              calendar of events
+            </PageParagraphLink>
+            .
+          </PageSubParagraph>
+          <PageSubParagraph>
+            Parking in all lots is $10 per car for Live Nation Concerts. Parking
+            during classical performances is free!
+          </PageSubParagraph>
+          <PageSubParagraph>
+            The main parking lot is located off Route 50.
+          </PageSubParagraph>
+          <PageSubParagraph>
+            Sit on the lawn if you’re bringing personal food and sealed bottles
+            of water.
+          </PageSubParagraph>
+          <PageSubParagraph>
+            Lawn chairs must not exceed the height of 43”.
+          </PageSubParagraph>
         </PageParagraph>
         <PageImages images={splitImages2} />
         <PageSubTitle>Around Spac</PageSubTitle>
         <PageParagraph>
-          The majority of shows are held in the 5,200-seat amphitheater with a
-          sloping lawn. Additional shows take place next door at Spa Little
-          Theater, The Hall of Springs, or the Charles R. Wood Stage. Take
-          children for a swim in the Peerless Pool Complex! There is a separate
-          slide pool, a children’s wading pool with fountain, and a zero-depth
-          entry main pool with adjacent lockers and restrooms. Hit the links at
-          Saratoga Spa State Park Golf Course! There is one championship 18-hole
-          course and a challenging 9-hole course. Reserve your tee time online.
-          Enjoy numerous picnic areas around SPAC and wander along trails beside
-          streams.
+          <PageSubParagraph>
+            The majority of shows are held in the 5,200-seat amphitheater with a
+            sloping lawn. Additional shows take place next door at{" "}
+            <strong>Spa Little Theater</strong>,{" "}
+            <strong>The Hall of Springs</strong>, or the{" "}
+            <strong>Charles R. Wood Stage</strong>.
+          </PageSubParagraph>
+          <PageSubParagraph>
+            Take children for a swim in the{" "}
+            <strong>Peerless Pool Complex!</strong> There is a separate slide
+            pool, a children’s wading pool with fountain, and a zero-depth entry
+            main pool with adjacent lockers and restrooms.
+          </PageSubParagraph>
+          <PageSubParagraph>
+            Hit the links at{" "}
+            <strong>Saratoga Spa State Park Golf Course!</strong> There is one
+            championship 18-hole course and a challenging 9-hole course. Reserve
+            your{" "}
+            <PageParagraphLink
+              href="https://www.saratogaspagolf.com/"
+              target={true}
+            >
+              tee time online
+            </PageParagraphLink>
+            .
+          </PageSubParagraph>
+          <PageSubParagraph>
+            Enjoy numerous picnic areas around SPAC and wander along trails
+            beside streams.
+          </PageSubParagraph>
         </PageParagraph>
         <HorizontalRule />
         <PageParagraph center={true}>
-          Book your one-of-a-kind room today at our historic hotel near Saratoga
-          Performing Arts Center!{" "}
+          Book your{" "}
+          <PageParagraphLink href="../rooms/saratoga-lodging">
+            one-of-a-kind
+          </PageParagraphLink>{" "}
+          room today at our historic hotel near Saratoga Performing Arts Center!{" "}
         </PageParagraph>
       </PageBodyContainer>
       <BottomPadding />

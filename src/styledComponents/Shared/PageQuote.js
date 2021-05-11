@@ -8,6 +8,7 @@ const QuoteContainer = styled.em`
   display: block;
   margin: 0 auto;
   text-align: center;
+  margin: 22.4px;
 `;
 
 const PageQuote = (props) => {

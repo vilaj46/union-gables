@@ -21,6 +21,7 @@ import mainImage from "../../images/saratogaRaceCourse.jpg";
 import mainImage1 from "../../images/saratogaRaceCourse1.jpg";
 import mainImage2 from "../../images/saratogaRaceCourse2.jpg";
 import mainImage3 from "../../images/saratogaRaceCourse3.jpg";
+import BottomPadding from "../../styledComponents/Shared/BottomPadding";
 
 const title = "Hotel Near Saratoga Race Track";
 
@@ -101,6 +102,7 @@ const SaratogaRaceCourse = () => {
           Book your stay at our hotel near the Saratoga Race Track today!{" "}
         </PageQuote>
       </PageBodyContainer>
+      <BottomPadding />
       <Footer />
     </FontContainer>
   );
