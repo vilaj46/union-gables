@@ -12,6 +12,7 @@ import PageImage from "../../styledComponents/Shared/PageImage";
 import PageImages from "../../styledComponents/Shared/PageImages";
 import PageQuote from "../../styledComponents/Shared/PageQuote";
 import PageParagraph from "../../styledComponents/Shared/PageParagraph";
+import PageParagraphLink from "../../styledComponents/Shared/PageParagraphLink";
 import FontContainer from "../../styledComponents/Shared/FontContainer";
 import PageBodyContainer from "../../styledComponents/Shared/PageBodyContainer";
 import HorizontalRule from "../../styledComponents/Shared/HorizontalRule";
@@ -26,6 +27,16 @@ import mainImage2 from "../../images/saratogaSpa2.jpg";
 const title = "Hotel near Saratoga Spa State Park";
 
 const splitImages = [mainImage, mainImage1];
+
+const SpecialPageTitle = styled.h2`
+  color: #680727;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: -30px;
+`;
 
 const SaratogaSpaStatePark = () => {
   return (
@@ -53,8 +64,15 @@ const SaratogaSpaStatePark = () => {
           Immerse yourself in the Arts with a visit to the Saratoga Performing
           Arts Center or Home Made Theatre. Experience the moving powers of
           theatre, dance, and orchestra productions. Or let loose and rock out
-          at a concert! Visit the SPAC and HMT websites to purchase tickets and
-          for additional visitor information.
+          at a concert! Visit the{" "}
+          <PageParagraphLink href="./saratoga-performing-arts">
+            SPAC
+          </PageParagraphLink>{" "}
+          and{" "}
+          <PageParagraphLink href="https://homemadetheater.org" target={true}>
+            HMT
+          </PageParagraphLink>{" "}
+          websites to purchase tickets and for additional visitor information.
         </PageParagraph>
         <PageSubTitle>Natural Springs</PageSubTitle>
         <PageParagraph>
@@ -63,9 +81,16 @@ const SaratogaSpaStatePark = () => {
           Discover the rich history of these waters and learn about the myths
           surrounding their magical, healing properties. Bring your own water
           bottle to taste the waters for yourself! Learn about booking mineral
-          hydrotherapy through the Roosevelt Spa.
+          hydrotherapy through the{" "}
+          <PageParagraphLink
+            href="https://www.gideonputnam.com/roosevelt-baths-and-spa/mineral-baths"
+            target={true}
+          >
+            Roosevelt Spa
+          </PageParagraphLink>
+          .
         </PageParagraph>
-        <PageSubTitle>Plan Your Visit</PageSubTitle>
+        <SpecialPageTitle>Plan Your Visit</SpecialPageTitle>
         <HorizontalRule />
         <PageParagraph>
           Check out our list of common visitor information to help plan your
@@ -80,8 +105,14 @@ const SaratogaSpaStatePark = () => {
         <PageSubTitle>Hours</PageSubTitle>
         <PageParagraph>
           The State Park is open year-round, all days of the week. Hours vary
-          between activities and amenities. See a full list of operating hours.
-          It is recommended that patrons contact the park directly before
+          between activities and amenities. See a full list of{" "}
+          <PageParagraphLink
+            href="https://parks.ny.gov/parks/saratogaspa"
+            target={true}
+          >
+            operating hours
+          </PageParagraphLink>
+          . It is recommended that patrons contact the park directly before
           traveling to confirm operating hours.
         </PageParagraph>
         <PageSubTitle>Admissions</PageSubTitle>
@@ -89,7 +120,14 @@ const SaratogaSpaStatePark = () => {
           Entrance Fee – $10 per vehicle (price may vary by season, please call
           the park directly to confirm). Save on your trips to New York State
           Parks with your Empire Pass – eligible for use at the Saratoga Spa
-          State Park. Click here for more details.
+          State Park.{" "}
+          <PageParagraphLink
+            href="https://parks.ny.gov/admission/empire-passport/default.aspx"
+            target={true}
+          >
+            Click here
+          </PageParagraphLink>{" "}
+          for more details.
         </PageParagraph>
         <PageSubTitle>Victoria Pool Admission</PageSubTitle>
         <PoolChart />
@@ -123,6 +161,14 @@ const ListContainer = styled.div`
 
 const ListHeader = styled.h4`
   text-transform: uppercase;
+  font-size: 1.4rem;
+  color: #5e3743;
+  letter-spacing: 1px;
+`;
+
+const ListSubHeader = styled.p`
+  font-size: 1.4rem;
+  color: #333;
 `;
 
 const Circle = styled.div`
@@ -138,6 +184,7 @@ const Circle = styled.div`
 const List = styled.ul`
   list-style-type: none;
   padding: 0;
+  color: #333;
 `;
 
 const Item = styled.li`
@@ -145,20 +192,25 @@ const Item = styled.li`
   justify-content: flex-start;
 `;
 
+const ItemText = styled.p`
+  font-size: 1.1rem;
+  color: #333;
+`;
+
 const AtTheParkItems = () => {
   return (
     <ListContainer>
       <ListHeader>Activities</ListHeader>
-      <p>
+      <ListSubHeader>
         It’s easy to stay active with so many options for sports and activities
         at the park.
-      </p>
+      </ListSubHeader>
       <List>
         {activityItems.map((item) => {
           return (
             <Item>
               <Circle />
-              <p>{item}</p>
+              <ItemText>{item}</ItemText>
             </Item>
           );
         })}
@@ -177,15 +229,15 @@ const HistoryItems = () => {
   return (
     <ListContainer>
       <ListHeader>History</ListHeader>
-      <p>
+      <ListSubHeader>
         School may be out for summer, but the learning doesn’t have to stop:
-      </p>
+      </ListSubHeader>
       <List>
         {historyItems.map((item) => {
           return (
             <Item>
               <Circle />
-              <p>{item}</p>
+              <ItemText>{item}</ItemText>
             </Item>
           );
         })}
