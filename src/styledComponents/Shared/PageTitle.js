@@ -25,7 +25,11 @@ const H1Container = styled.h1`
 `;
 
 const PageTitle = (props) => {
-  return <H1Container>{props.children}</H1Container>;
+  if (props.id) {
+    return <H1Container id={props.id}>{props.children}</H1Container>;
+  } else {
+    return <H1Container>{props.children}</H1Container>;
+  }
 };
 
 export default PageTitle;
