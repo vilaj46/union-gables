@@ -42,13 +42,6 @@ const Circle = styled.i`
   border-radius: 100%;
 `;
 
-// const congress = "https://www.saratoga.com/hotspots/congress-park/";
-// const saratogaRaceCourse = "./discover/saratoga-race-course";
-// const performingArts = "./discover/saratoga-performing-arts";
-// const springCenter = "./discover/saratoga-springs-center";
-// const spaStatePark = "./discover/saratoga-spa-state-park";
-// const annualFestivals = "./discover/saratoga-festivals-and-events";
-
 const DiscoverLinks = () => {
   return (
     <Container>
