@@ -415,6 +415,7 @@ const SaratogaPerformingArts = () => {
         <PageParagraph>Annual Victorian Streetwalk</PageParagraph>
         <PageParagraph>December 31st New Year’s Eve</PageParagraph>
         <PageParagraph>Saratoga First Night Celebration</PageParagraph>
+        <PageImage src={mainImage5} alt="Downtown" />
       </PageBodyContainer>
       <BottomPadding />
       <Footer />
