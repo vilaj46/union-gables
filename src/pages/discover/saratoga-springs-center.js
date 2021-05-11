@@ -11,6 +11,7 @@ import PageSubTitle from "../../styledComponents/Shared/PageSubTitle";
 import PageImage from "../../styledComponents/Shared/PageImage";
 import PageImages from "../../styledComponents/Shared/PageImages";
 import PageParagraph from "../../styledComponents/Shared/PageParagraph";
+import PageSubParagraph from "../../styledComponents/Shared/PageSubParagraph";
 import FontContainer from "../../styledComponents/Shared/FontContainer";
 import PageBodyContainer from "../../styledComponents/Shared/PageBodyContainer";
 import HorizontalRule from "../../styledComponents/Shared/HorizontalRule";
@@ -21,6 +22,7 @@ import BottomPadding from "../../styledComponents/Shared/BottomPadding";
 import mainImage from "../../images/saratogaSpringsCenter.jpg";
 import mainImage1 from "../../images/saratogaSpringsCenter1.jpg";
 import mainImage2 from "../../images/saratogaSpringsCenter2.jpg";
+import PageParagraphLink from "../../styledComponents/Shared/PageParagraphLink";
 
 const title = "Hotel near Saratoga Springs City Center";
 
@@ -44,12 +46,28 @@ const SaratogaPerformingArts = () => {
         <PageImages images={splitImages} />
         <PageSubTitle>Visitor Information</PageSubTitle>
         <PageParagraph>
-          Our hotel near Saratoga Springs City Center is a 15-minute walk down
-          Putnam St. which continues onto Maple Ave. Stay connected with the
-          convention center’s complimentary public Wi-Fi. The city center has a
-          parking lot on Maple Avenue. There is also an adjacent municipal
-          parking lot with complimentary 48-hour parking for overflow cars. See
-          a parking map! Outside food and beverages are not allowed.
+          <PageSubParagraph>
+            Our hotel near Saratoga Springs City Center is a 15-minute walk down
+            Putnam St. which continues onto Maple Ave.
+          </PageSubParagraph>
+          <PageSubParagraph>
+            Stay connected with the convention center’s complimentary public
+            Wi-Fi.
+          </PageSubParagraph>
+          <PageSubParagraph>
+            The city center has a parking lot on Maple Avenue. There is also an
+            adjacent municipal parking lot with complimentary 48-hour parking
+            for overflow cars.{" "}
+            <PageParagraphLink
+              href="https://www.saratogacitycenter.org/attend/parking/"
+              target={true}
+            >
+              See a parking map!
+            </PageParagraphLink>
+          </PageSubParagraph>
+          <PageSubParagraph>
+            Outside food and beverages are not allowed.
+          </PageSubParagraph>
         </PageParagraph>
         <PageImage src={mainImage2} alt="Dancing!" />
         <PageSubTitle>About SSCC</PageSubTitle>
@@ -62,8 +80,11 @@ const SaratogaPerformingArts = () => {
         <Events />
         <HorizontalRule />
         <PageParagraph center={true}>
-          Book your stay in one of our one-of-a-kind rooms at our luxurious
-          hotel near Saratoga Springs City Center!
+          Book your stay in one of our{" "}
+          <PageParagraphLink href="../rooms/saratoga-lodging">
+            one-of-a-kind
+          </PageParagraphLink>{" "}
+          rooms at our luxurious hotel near Saratoga Springs City Center!
         </PageParagraph>
       </PageBodyContainer>
       <BottomPadding />
@@ -85,6 +106,7 @@ const List = styled.ul`
 
 const Item = styled.li`
   padding: 10px 0;
+  font-size: 1.4rem;
 `;
 
 const Events = () => {
