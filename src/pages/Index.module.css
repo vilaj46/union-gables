@@ -1,7 +1,8 @@
 .mainPage {
   display: block;
   width: 100%;
-  font-family: "DroidSans", sans-serif;
+  /* font-family: "DroidSans", sans-serif; */
+  font-family: "junicode", sans-serif;
 }
 
 /* .mainPageWidth {
@@ -13,4 +14,12 @@
   font-family: "DroidSans";
   src: url("../fonts/DroidSans.ttf") format("truetype"),
     url("../fonts/DroidSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "junicode";
+  src: url("../fonts/Junicode.ttf") format("truetype"),
+    url("../fonts/Junicode-Bold.ttf") format("truetype"),
+    url("../fonts/Junicode-Italic.ttf") format("truetype"),
+    url("../fonts/Junicode-BoldItalic.ttf") format("truetype");
 }
