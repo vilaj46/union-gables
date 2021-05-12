@@ -9,6 +9,8 @@ import * as React from "react";
  * Do we need to include "alt" property in the API?
  * Page Images needs a better "alt"
  * Shorten link names?
+ *
+ * Make sure font is #333;
  */
 
 // Pages
