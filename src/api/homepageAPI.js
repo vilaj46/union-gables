@@ -130,6 +130,28 @@ const annualFestivalsAndEvents = {
   href: "../pages/discover/saratoga-festivals-and-events",
 };
 
+// Three Reasons
+
+const threeReasons = [
+  {
+    img: food,
+    text:
+      "Easily walk to over 125 restaurants, music venues, bars, museums, galleries, and downtown shopping.",
+  },
+  {
+    img: room,
+    text:
+      "Discover romantic and historic rooms with antique furnishings natural gas fireplaces, and luxury linens.",
+  },
+  {
+    img: racetrack,
+    text:
+      "Stay one and a half blocks from the oldest racetrack in the country.",
+  },
+];
+
+const threeReasonsTitle = "3 Reasons to Stay with us";
+
 const api = {
   // Text
   title,
@@ -161,6 +183,9 @@ const api = {
   saratogaSpringsCityCenter,
   saratogaSpaStatePark,
   annualFestivalsAndEvents,
+
+  // Three Reasons
+  threeReasons,
 };
 
 export default api;

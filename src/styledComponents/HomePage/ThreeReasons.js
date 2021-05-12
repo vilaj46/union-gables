@@ -3,6 +3,9 @@ import styled from "styled-components";
 
 import api from "../../api/homepageAPI";
 
+// Sub Components
+import ThreeReasonsNumber from "./ThreeReasonsNumber";
+
 const Container = styled.div`
   position: relative;
   min-height: 450px;
@@ -77,103 +80,35 @@ const NumbersContainer = styled.div`
   }
 `;
 
-const ButtonContainer = styled.div`
-  border: 2px solid #ffffff;
-  border-radius: 100%;
-  height: 90px;
-  width: 90px;
-  background: rgba(0, 0, 0, 0);
-
-  &:hover {
-    cursor: pointer;
-    background-color: #2a0511;
-    opacity: 0.6;
-  }
-
-  @media screen and (max-width: 731px) {
-    height: 65px;
-    width: 65px;
-    display: flex;
-  }
-`;
-
-const ActivatedContainer = styled.div`
-  border: 2px solid #ffffff;
-  border-radius: 100%;
-  height: 90px;
-  width: 90px;
-  background-color: #2a0511;
-
-  &:hover {
-    cursor: pointer;
-    opacity: 0.6;
-  }
-
-  @media screen and (max-width: 731px) {
-    height: 65px;
-    width: 65px;
-    display: flex;
-  }
-`;
-
-const Button = styled.div`
-  color: #ffffff;
-  text-align: center;
-  margin: auto;
-  font-size: 72px;
-
-  @media screen and (max-width: 731px) {
-    font-size: 40px;
-  }
-`;
-
 const CenterText = styled.div`
   height: 50%;
 `;
-
-const reasons = [
-  {
-    img: api.food,
-    text:
-      "Easily walk to over 125 restaurants, music venues, bars, museums, galleries, and downtown shopping.",
-  },
-  {
-    img: api.room,
-    text:
-      "Discover romantic and historic rooms with antique furnishings natural gas fireplaces, and luxury linens.",
-  },
-  {
-    img: api.racetrack,
-    text:
-      "Stay one and a half blocks from the oldest racetrack in the country.",
-  },
-];
 
 const ThreeReasons = () => {
   const [reason, setReason] = React.useState(0);
   return (
     <Container>
       <BackgroundImage
-        style={{ backgroundImage: `url(${reasons[reason].img})` }}
+        style={{ backgroundImage: `url(${api.threeReasons[reason].img})` }}
       />
       <CenterText>
-        <H3Container>3 Reasons to Stay with us</H3Container>
-        <ParagraphContainer>{reasons[reason].text}</ParagraphContainer>
+        <H3Container>{api.threeReasonsTitle}</H3Container>
+        <ParagraphContainer>{api.threeReasons[reason].text}</ParagraphContainer>
       </CenterText>
       <NumbersContainer>
-        <Number
+        <ThreeReasonsNumber
           text="1"
           activated={reason === 0 ? true : false}
           setReason={setReason}
           num={0}
         />
-        <Number
+        <ThreeReasonsNumber
           text="2"
           num={1}
           activated={reason === 1 ? true : false}
           setReason={setReason}
         />
-        <Number
+        <ThreeReasonsNumber
           text="3"
           num={2}
           activated={reason === 2 ? true : false}
@@ -182,22 +117,6 @@ const ThreeReasons = () => {
       </NumbersContainer>
     </Container>
   );
-};
-
-const Number = ({ text, activated, setReason, num }) => {
-  if (activated) {
-    return (
-      <ActivatedContainer onClick={() => setReason(num)}>
-        <Button type="button">{text}</Button>
-      </ActivatedContainer>
-    );
-  } else {
-    return (
-      <ButtonContainer onClick={() => setReason(num)}>
-        <Button type="button">{text}</Button>
-      </ButtonContainer>
-    );
-  }
 };
 
 export default ThreeReasons;

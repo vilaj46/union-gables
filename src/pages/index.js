@@ -1,6 +1,7 @@
 import * as React from "react";
 
 /**
+ * Clean DiscoverLinks file and 3 Reasons File (Also, add 3 reason to the API).
  * Footer styling.
  * Complete charts and other nonsensein the page.
  * Needs links in the pages we've created.
