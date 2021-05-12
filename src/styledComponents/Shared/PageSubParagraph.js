@@ -6,6 +6,7 @@ const ParagraphContainer = styled.p`
   font-size: 1.4rem;
   margin: 0;
   padding: 0;
+  line-height: 25px;
 
   @media screen and (max-width: 1020px) {
     width: 95%;

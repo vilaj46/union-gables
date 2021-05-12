@@ -7,7 +7,8 @@ import * as React from "react";
  * Needs links in the pages we've created.
  *
  * Do we need to include "alt" property in the API?
- * PPage Images needs a better "alt"
+ * Page Images needs a better "alt"
+ * Shorten link names?
  */
 
 // Pages

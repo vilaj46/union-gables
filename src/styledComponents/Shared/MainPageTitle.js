@@ -24,8 +24,8 @@ const H1Container = styled.h1`
   }
 `;
 
-const MainPainTitle = (props) => {
+const MainPageTitle = (props) => {
   return <H1Container>{props.children}</H1Container>;
 };
 
-export default MainPainTitle;
+export default MainPageTitle;
