@@ -33,14 +33,27 @@ const CenterContainer = styled.p`
 `;
 
 const PageParagraph = (props) => {
+  const paddingBottom = props.extraBottomPadding ? "22.4px" : "0";
   try {
     if (props.center) {
-      return <CenterContainer>{props.children}</CenterContainer>;
+      return (
+        <CenterContainer style={{ paddingBottom }}>
+          {props.children}
+        </CenterContainer>
+      );
     } else {
-      return <ParagraphContainer>{props.children}</ParagraphContainer>;
+      return (
+        <ParagraphContainer style={{ paddingBottom }}>
+          {props.children}
+        </ParagraphContainer>
+      );
     }
   } catch (err) {
-    return <ParagraphContainer>{props.children}</ParagraphContainer>;
+    return (
+      <ParagraphContainer style={{ paddingBottom }}>
+        {props.children}
+      </ParagraphContainer>
+    );
   }
 };
 

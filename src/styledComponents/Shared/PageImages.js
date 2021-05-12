@@ -10,10 +10,11 @@ const Image = styled.img`
   height: auto;
 `;
 
-const PageImages = ({ images }) => {
+const PageImages = (props) => {
+  const paddingBottom = props.extraBottomPadding ? "50px" : "25px";
   return (
-    <ImagesContainer>
-      {images.map((img, index) => {
+    <ImagesContainer style={{ paddingBottom }}>
+      {props.images.map((img, index) => {
         return <Image src={img} alt={`Saratoga Race Course${index}`} />;
       })}
     </ImagesContainer>

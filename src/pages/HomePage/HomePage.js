@@ -61,9 +61,9 @@ const HomePage = () => {
         {api.Paragraph7}
       </PageBodyContainer>
 
-      <BottomPadding />
-
       <ThreeReasons />
+
+      <BottomPadding />
     </div>
   );
 };

@@ -107,27 +107,28 @@ const congressPark = {
 
 const saratogaRaceCourse = {
   text: "Saratoga Race Course",
-  href: "../pages/discover/saratoga-race-course",
+  // href: "../pages/discover/saratoga-race-course",
+  href: "/discover/saratoga-race-course",
 };
 
 const saratogaPerformingArtsCenter = {
   text: "Saratoga Performing Arts Center",
-  href: "../pages/discover/saratoga-performing-arts",
+  href: "/discover/saratoga-performing-arts",
 };
 
 const saratogaSpringsCityCenter = {
   text: "Saratoga Springs City Center",
-  href: "../pages/discover/saratoga-springs-center",
+  href: "/discover/saratoga-springs-center",
 };
 
 const saratogaSpaStatePark = {
   text: "Saratoga Spa State Park",
-  href: "../pages/discover/saratoga-spa-state-park",
+  href: "/discover/saratoga-spa-state-park",
 };
 
 const annualFestivalsAndEvents = {
   text: "Annual festivals and events",
-  href: "../pages/discover/saratoga-festivals-and-events",
+  href: "/discover/saratoga-festivals-and-events",
 };
 
 // Three Reasons

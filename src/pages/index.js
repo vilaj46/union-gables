@@ -5,6 +5,9 @@ import * as React from "react";
  * Footer styling.
  * Complete charts and other nonsensein the page.
  * Needs links in the pages we've created.
+ *
+ * Do we need to include "alt" property in the API?
+ * PPage Images needs a better "alt"
  */
 
 // Pages
