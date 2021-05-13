@@ -13,6 +13,10 @@ import * as React from "react";
  * Make sure font is #333;
  */
 
+// Finished FestivalsAndEvents api and cleaned page.
+// Figure out what page we're on. Probably start at the navigation panel.
+
+
 // Pages
 import HomePage from "./HomePage/HomePage";
 
