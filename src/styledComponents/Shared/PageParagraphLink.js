@@ -9,6 +9,10 @@ const StyledLink = styled(Link)`
   &:hover {
     color: #aa4465;
   }
+
+  @media screen and (max-width: 775px) {
+    font-size: 1.2rem;
+  }
 `;
 
 const PageParagraphLink = (props) => {

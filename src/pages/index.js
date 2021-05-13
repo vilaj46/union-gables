@@ -11,10 +11,9 @@ import * as React from "react";
  * Shorten link names?
  *
  * Make sure font is #333;
+ * 
+ * Image in amenities is larger than the other.
  */
-
-// Finished FestivalsAndEvents api and cleaned page.
-// Figure out what page we're on. Probably start at the navigation panel.
 
 
 // Pages

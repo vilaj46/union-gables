@@ -2,8 +2,11 @@ import * as React from "react";
 import styled from "styled-components";
 
 const ParagraphContainer = styled.img`
+  display: block;
   max-width: 100%;
-  padding: 25px 0;
+  padding: 25px auto;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 const PageImage = (props) => {
