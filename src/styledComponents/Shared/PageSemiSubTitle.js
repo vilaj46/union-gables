@@ -2,8 +2,8 @@ import * as React from "react";
 import styled from "styled-components";
 
 const H2Container = styled.h2`
-  color: #350313;
-  font-size: 1.9rem;
+  color: #680727;
+  font-size: 2.1rem;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 1px;
@@ -12,7 +12,7 @@ const H2Container = styled.h2`
   padding: 0;
 `;
 
-const PageSubTitle = (props) => {
+const PageSemiSubTitle = (props) => {
   const paddingBottom = props.extraBottomPadding ? "25px" : "0";
   if (props.id) {
     return (
@@ -27,4 +27,4 @@ const PageSubTitle = (props) => {
   }
 };
 
-export default PageSubTitle;
+export default PageSemiSubTitle;

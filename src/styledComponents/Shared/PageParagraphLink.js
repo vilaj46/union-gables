@@ -4,7 +4,6 @@ import { Link } from "gatsby";
 
 const StyledLink = styled(Link)`
   color: #680727;
-  // line-height: 40px;
   font-size: 1.4rem;
 
   &:hover {

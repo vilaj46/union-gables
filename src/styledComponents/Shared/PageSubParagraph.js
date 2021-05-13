@@ -18,7 +18,9 @@ const ParagraphContainer = styled.p`
 `;
 
 const PageSubParagraph = (props) => {
-  const paddingBottom = props.last ? "0" : "20px"; // Too much padding when image was below.
+  let paddingBottom = props.last ? "0" : "20px"; // Too much padding when image was below.
+
+  paddingBottom = props.moreBottomPadding ? "44.8px" : paddingBottom;
   return (
     <ParagraphContainer style={{ paddingBottom }}>
       {props.children}
