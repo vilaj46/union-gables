@@ -6,48 +6,44 @@ import Header from "../../styledComponents/Header/Header";
 import Footer from "../../styledComponents/Footer/Footer";
 
 // Shared Components
-import PageTitle from "../../styledComponents/Shared/PageTitle";
-import PageSubTitle from "../../styledComponents/Shared/PageSubTitle";
+import MainPageTitle from "../../styledComponents/Shared/MainPageTitle";
 import PageImage from "../../styledComponents/Shared/PageImage";
-import PageParagraph from "../../styledComponents/Shared/PageParagraph";
-import PageSubParagraph from "../../styledComponents/Shared/PageSubParagraph";
+import PageSemiSubTitle from "../../styledComponents/Shared/PageSemiSubTitle";
+import PageSubTitle from "../../styledComponents/Shared/PageSubTitle";
 import FontContainer from "../../styledComponents/Shared/FontContainer";
-import PageBodyContainer from "../../styledComponents/Shared/PageBodyContainer";
-import HorizontalRule from "../../styledComponents/Shared/HorizontalRule";
-
+import PageParagraph from "../../styledComponents/Shared/PageParagraph";
 import BottomPadding from "../../styledComponents/Shared/BottomPadding";
+import HorizontalRule from "../../styledComponents/Shared/HorizontalRule";
+import PageSubParagraph from "../../styledComponents/Shared/PageSubParagraph";
+import PageBodyContainer from "../../styledComponents/Shared/PageBodyContainer";
+import PageParagraphLink from "../../styledComponents/Shared/PageParagraphLink";
 
-// Images
-import mainImage from "../../images/saratogaEvents.jpg";
-import mainImage1 from "../../images/saratogaEvents1.jpg";
-import mainImage2 from "../../images/saratogaEvents2.jpg";
-import mainImage3 from "../../images/saratogaEvents3.jpg";
-import mainImage4 from "../../images/saratogaEvents4.jpg";
-import mainImage5 from "../../images/saratogaEvents5.jpg";
+// Sub Components
+import EventsGuideLinks from "../../styledComponents/FestivalsAndEvents/EventsGuideLinks";
 
-const title = "Events in Saratoga Springs, NY";
+import api from "../../api/festivalsAndEventsAPI";
 
 const SaratogaPerformingArts = () => {
   return (
     <FontContainer>
       <Header />
-      <title>Saratoga PerformingArts Page!</title>
-      <PageTitle>{title}</PageTitle>
       <PageBodyContainer>
-        <PageParagraph>
-          Experience health, horses, history, and more popular events in
-          Saratoga Springs, NY! With the change of seasons brings the horse
-          races and polo, annual galas and fundraisers, outdoor concerts at
-          Saratoga Performing Arts Center, rowing regattas, and more! We
-          recommend visitors tour the waters of Saratoga Spa State Park for a
-          taste of healthy mineral baths. Visit beautiful parks, golf courses,
-          unique shops, and delicious restaurants no matter the time of year!{" "}
-        </PageParagraph>
-        <PageSubTitle>Events Guide</PageSubTitle>
-        <EventsLinks />
-        <PageImage src={mainImage} alt="Music" />
-        <PageTitle id="ongoing">Ongoing Events Throughout the Year</PageTitle>
+        <MainPageTitle>{api.title}</MainPageTitle>
+
+        {api.Paragraph1}
+
+        <PageSubTitle extraBottomPadding={true}>Events Guide</PageSubTitle>
+
+        <EventsGuideLinks />
+
+        <PageImage src={api.saxaphone} alt="Music" extraBottomPadding={true} />
+
+        <PageSemiSubTitle id="ongoing" extraBottomPadding={true}>
+          Ongoing Events Throughout the Year
+        </PageSemiSubTitle>
+
         <PageSubTitle>The Saratoga Farmers’ Market</PageSubTitle>
+
         <PageParagraph>
           <PageSubParagraph>
             Vendors from local farms gather with fresh produce, meats, cheeses,
@@ -55,11 +51,11 @@ const SaratogaPerformingArts = () => {
             indoor and outdoor stalls shopping for handmade jewelry, wine
             varieties, mushroom supplements, and herbal teas.
           </PageSubParagraph>
-          <PageSubParagraph>
+          <PageSubParagraph moreBottomPadding={true}>
             Wednesdays at the High Rock Park Pavillion, 105 High Rock Avenue.
             3:00 pm to 6:00 pm. Saturdays at the High Rock Park Pavillion, 105
             High Rock Avenue. 9:00 am to 1:00 pm Sundays at the Lincoln Bath
-            House at the entrance to the Spa State Park, 10:00 am -2:00 pm
+            House at the entrance to the Spa State Park, 10:00 am - 2:00 pm.
           </PageSubParagraph>
         </PageParagraph>
         <PageSubTitle>Taste the Waters of Saratoga Spa Park</PageSubTitle>
@@ -71,7 +67,7 @@ const SaratogaPerformingArts = () => {
             benefits of the "rarified atmosphere" created by the ionized
             elements in the air.
           </PageSubParagraph>
-          <PageSubParagraph>
+          <PageSubParagraph moreBottomPadding={true}>
             Daily tours at the education center: 11:00 AM, 1:00 PM and 3:00 PM
           </PageSubParagraph>
         </PageParagraph>
@@ -90,10 +86,12 @@ const SaratogaPerformingArts = () => {
             <strong>9 Maple Jazz Bar</strong>
           </PageSubParagraph>
         </PageParagraph>
-        <PageImage src={mainImage1} alt="Dancing" />
-        <PageTitle>Annual Events</PageTitle>
-        <HorizontalRule />
-        <PageTitle id="winter">Winter</PageTitle>
+        <PageImage src={api.dancing} alt="Dancing" />
+        <PageSemiSubTitle>Annual Events</PageSemiSubTitle>
+        <HorizontalRule halfMargin={true} />
+        <PageSemiSubTitle id="winter" extraBottomPadding={true}>
+          Winter
+        </PageSemiSubTitle>
         <PageSubTitle>January</PageSubTitle>
         <PageParagraph>
           <strong>Hattie's Annual Mardi Gras Soiree</strong>
@@ -122,7 +120,7 @@ const SaratogaPerformingArts = () => {
           A candlelit loop of Saratoga Springs Spa State Park, plus a bonfire
           and hot drinks.
         </PageParagraph>
-        <HorizontalRule />
+        <HorizontalRule halfMargin={true} />
         <PageSubTitle>February</PageSubTitle>
         <PageParagraph>
           <strong>Annual Winterfest</strong>
@@ -162,8 +160,10 @@ const SaratogaPerformingArts = () => {
         <PageParagraph>
           Tour the snowy landscape of Saratoga Spa State Park on marked trails.
         </PageParagraph>
-        <PageImage src={mainImage2} alt="Drinks" />
-        <PageTitle id="spring">Spring</PageTitle>
+        <PageImage src={api.dining} alt="Drinks" extraBottomPadding={true} />
+        <PageSemiSubTitle id="spring" extraBottomPadding={true}>
+          Spring
+        </PageSemiSubTitle>
         <PageSubTitle>March - April</PageSubTitle>
         <PageParagraph>
           <strong>SPAC's Annual Winter Ball</strong>
@@ -197,7 +197,7 @@ const SaratogaPerformingArts = () => {
         <PageParagraph>
           Cheer on crews at this classic regatta at Saratoga Lake.
         </PageParagraph>
-        <HorizontalRule />
+        <HorizontalRule halfMargin={true} />
         <PageSubTitle>May</PageSubTitle>
         <PageParagraph>
           <strong>Kentucky Derby Day</strong>
@@ -232,8 +232,10 @@ const SaratogaPerformingArts = () => {
           These famed outdoor concerts begin in Mid-May and range in genre from
           classical to classic rock.
         </PageParagraph>
-        <PageImage src={mainImage3} alt="Music" />
-        <PageTitle id="summer">Summer</PageTitle>
+        <PageImage src={api.violins} alt="Music" extraBottomPadding={true} />
+        <PageSemiSubTitle id="summer" extraBottomPadding={true}>
+          Summer
+        </PageSemiSubTitle>
         <PageSubTitle>June</PageSubTitle>
 
         <PageParagraph>
@@ -325,7 +327,7 @@ const SaratogaPerformingArts = () => {
         <PageParagraph>
           <strong>Mostly Modern Festival at Arthur Zankel Music Center</strong>
         </PageParagraph>
-        <PageParagraph>
+        <PageParagraph extraBottomPadding={true}>
           Receive a 10% discount off your room rate at Union Gables for
           attendees to the festival.
         </PageParagraph>
@@ -406,7 +408,7 @@ const SaratogaPerformingArts = () => {
         <PageParagraph>
           <strong>Historic Congress Park Summer Stroll</strong>
         </PageParagraph>
-        <PageParagraph>
+        <PageParagraph extraBottomPadding={true}>
           Hosted by The Saratoga Springs Preservation Foundation, join Dave
           Patterson and Charlie Kuenzel, owners of Saratoga Tours LLC, to
           explore the historic landscape architecture of Congress Park, the
@@ -414,7 +416,7 @@ const SaratogaPerformingArts = () => {
           sponsored by NBT Bank and Saratoga Tours LLC, meets at the front steps
           of the Canfield Casino in Congress Park.
         </PageParagraph>
-        <PageParagraph>
+        <PageParagraph extraBottomPadding={true}>
           Summer Strolls offered every Sunday through September 1st. All Sunday
           morning tours start at 10:30AM, $10 for non-members. Reservations are
           encouraged, but not necessary.
@@ -426,8 +428,14 @@ const SaratogaPerformingArts = () => {
           Northwest corner of Division Street and Broadway.
         </PageParagraph>
 
-        <PageImage src={mainImage4} alt="Farmer's Market" />
-        <PageTitle id="fall">Fall</PageTitle>
+        <PageImage
+          src={api.market}
+          alt="Farmer's Market"
+          extraBottomPadding={true}
+        />
+        <PageSemiSubTitle id="fall" extraBottomPadding={true}>
+          Fall
+        </PageSemiSubTitle>
         <PageSubTitle>September</PageSubTitle>
         <PageParagraph>
           <strong>Saratoga Wine & Food Festival</strong>
@@ -458,15 +466,21 @@ const SaratogaPerformingArts = () => {
           from Native Americans, Edgar Allan Poe, the Trask family and other
           contemporary visitors! Docent led tours begin at the Yaddo Garden
           parking lot and last for approximately one hour. This is a tour of the
-          Yaddo Gardens and does not include the Yaddo Mansion. Tours begin at
-          5:00 pm in Yaddo Gardens and cost $10 per person.
+          Yaddo Gardens and does not include the Yaddo Mansion.{" "}
+          <PageParagraphLink
+            href="https://freehauntedhistorytrail.com/"
+            target={true}
+          >
+            Tours
+          </PageParagraphLink>{" "}
+          begin at 5:00 pm in Yaddo Gardens and cost $10 per person.
         </PageParagraph>
-        <HorizontalRule />
+        <HorizontalRule halfMargin={true} />
         <PageSubTitle>October</PageSubTitle>
         <PageParagraph>
           <strong>Fasig Tipton Saratoga</strong>
         </PageParagraph>
-        <PageParagraph>
+        <PageParagraph extraBottomPadding={true}>
           Since its inception in 2012, The Saratoga Fall Sale has been a top
           destination for broodmares and weanlings – especially those foaled in
           New York. The sale is the prime source for breeding stock in the
@@ -477,7 +491,7 @@ const SaratogaPerformingArts = () => {
           advantage of the lucrative state-bred program while shopping in their
           own backyard.
         </PageParagraph>
-        <PageParagraph>
+        <PageParagraph extraBottomPadding={true}>
           Fasig-Tipton’s Saratoga sale of selected yearlings is one of the
           premier horse auctions in the world. It has roots that stretch back to
           1917 when Fasig-Tipton formed an alliance with some of the top
@@ -485,7 +499,7 @@ const SaratogaPerformingArts = () => {
           upstate New York. The great Man o’ War sold as a yearling at the 1918
           Saratoga sale.
         </PageParagraph>
-        <PageParagraph>
+        <PageParagraph extraBottomPadding={true}>
           The Saratoga sale has produced numerous household names for
           international horsemen, such as Raise a Native, Natalma, Hoist the
           Flag, Danzig, Miswaki, Conquistador Cielo, and two-time champion filly
@@ -494,7 +508,7 @@ const SaratogaPerformingArts = () => {
         <PageParagraph>
           <strong>Saratoga Rowing Regatta</strong>
         </PageParagraph>
-        <PageParagraph>
+        <PageParagraph extraBottomPadding={true}>
           Head of the Fish Regatta are held on the last weekend of October and
           are one of the largest regattas in the country. A beloved event in
           Saratoga Springs, the Head of the Fish attracts over 160 teams and
@@ -511,7 +525,7 @@ const SaratogaPerformingArts = () => {
           week at Saratoga Raceway! Catch all the action on the rail, in the
           grandstand, or in our mezzanine. Tuesday, Wednesday, Friday & Saturday
         </PageParagraph>
-        <HorizontalRule />
+        <HorizontalRule halfMargin={true} />
         <PageSubTitle>November</PageSubTitle>
         <PageParagraph>
           <strong>Veterans Day</strong> at the Saratoga Battlefield
@@ -521,7 +535,7 @@ const SaratogaPerformingArts = () => {
           served in the U.S. Armed Forces, including the Continental soldiers
           and militiamen who served here at Saratoga in 1777.
         </PageParagraph>
-        <HorizontalRule />
+        <HorizontalRule halfMargin={true} />
         <PageSubTitle>December</PageSubTitle>
         <PageParagraph>
           <strong>Saratoga Tree Lighting Ceremony</strong>
@@ -535,68 +549,11 @@ const SaratogaPerformingArts = () => {
         <PageParagraph>
           <strong>Saratoga First Night Celebration</strong>
         </PageParagraph>
-        <PageImage src={mainImage5} alt="Downtown" />
+        <PageImage src={api.nightlife} alt="Downtown" />
       </PageBodyContainer>
       <BottomPadding />
       <Footer />
     </FontContainer>
-  );
-};
-
-const EventLink = styled.a`
-  color: #aa4465;
-  font-weight: 600;
-
-  border-right: 1px solid #aa4465;
-  padding-right: 10px;
-
-  &:hover {
-    color: #ca90a3;
-  }
-`;
-
-const LastLink = styled.a`
-  color: #aa4465;
-  font-weight: 600;
-
-  &:hover {
-    color: #ca90a3;
-  }
-`;
-
-const EventDivider = styled.div`
-  height: 10px;
-  width: 10px;
-  color: black;
-  // color: #aa4465;
-  display: inline-block;
-`;
-
-const EventsLinksContainer = styled.div`
-  text-align: center;
-  padding-bottom: 20px;
-`;
-
-const EventsCenter = styled.div`
-  display: inline-block;
-  margin: 0 auto;
-`;
-
-const EventsLinks = () => {
-  return (
-    <EventsLinksContainer>
-      <EventsCenter>
-        <EventLink href="#ongoing">Ongoing</EventLink>
-        <EventDivider />
-        <EventLink href="#spring">Spring</EventLink>
-        <EventDivider />
-        <EventLink href="#summer">Summer</EventLink>
-        <EventDivider />
-        <EventLink href="#fall">Fall</EventLink>
-        <EventDivider />
-        <LastLink href="#winter">Winter</LastLink>
-      </EventsCenter>
-    </EventsLinksContainer>
   );
 };
 

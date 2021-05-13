@@ -7,7 +7,8 @@ const Ruler = styled.hr`
 `;
 
 const HorizontalRule = (props) => {
-  return <Ruler />;
+  const margin = props.halfMargin ? "20px 0" : "40px 0 20px";
+  return <Ruler style={{ margin }} />;
 };
 
 export default HorizontalRule;
