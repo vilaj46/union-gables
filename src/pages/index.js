@@ -1,16 +1,11 @@
 import * as React from "react";
 
 /**
- * Clean DiscoverLinks file and 3 Reasons File (Also, add 3 reason to the API).
  * Footer styling.
- * Complete charts and other nonsensein the page.
- * Needs links in the pages we've created.
  *
  * Do we need to include "alt" property in the API?
  * Page Images needs a better "alt"
  * Shorten link names?
- *
- * Make sure font is #333;
  * 
  * Image in amenities is larger than the other.
  * 

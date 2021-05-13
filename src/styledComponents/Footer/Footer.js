@@ -16,7 +16,20 @@ const Container = styled.div`
   text-align: center;
   color: #333;
   padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
 `;
+
+const SubContainer = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  width: 95%;
+  margin: 0 auto;
+
+  @media screen and (max-width: 750px) {
+    flex-direction: column;
+  }
+`
 
 const Icon = styled.img`
   height: 25px;
@@ -31,7 +44,7 @@ const Anchor = styled.a`
 
 const IconContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 12.5px 0;
@@ -56,30 +69,32 @@ const Span2 = styled.span`
 
 const Footer = () => {
   return (
-    <Container>
-      <FontContainer>
+    <FontContainer>
+      <Container>
         <FooterTitle>Union Gables Inn</FooterTitle>
-        <IconContainer>
-          <Icon src={pin} alt="Location" />
-          <Paragraph>
-            55 Union Ave, Saratoga Springs, NY 12866,{" "}
-            <Span2>United States</Span2>
-            <Span>US</Span>
-          </Paragraph>
-        </IconContainer>
-        <IconContainer>
-          <Icon src={telephone} alt="Phone Call" />
-          <Anchor href="tel:518-584-1558">518-584-1558</Anchor>
-        </IconContainer>
-        <IconContainer>
-          <Icon src={email} alt="Email" />
-          <Anchor href="mailto:stay@uniongables.com">
-            stay@uniongables.com
-          </Anchor>
-        </IconContainer>
+        <SubContainer>
+          <IconContainer>
+            <Icon src={pin} alt="Location" />
+            <Paragraph>
+              55 Union Ave, Saratoga Springs, NY 12866,{" "}
+              <Span2>United States</Span2>
+              <Span>US</Span>
+            </Paragraph>
+          </IconContainer>
+          <IconContainer>
+            <Icon src={telephone} alt="Phone Call" />
+            <Anchor href="tel:518-584-1558">518-584-1558</Anchor>
+          </IconContainer>
+          <IconContainer>
+            <Icon src={email} alt="Email" />
+            <Anchor href="mailto:stay@uniongables.com">
+              stay@uniongables.com
+            </Anchor>
+          </IconContainer>
+        </SubContainer>
         <SocialLinks />
-      </FontContainer>
-    </Container>
+      </Container>
+    </FontContainer>
   );
 };
 
