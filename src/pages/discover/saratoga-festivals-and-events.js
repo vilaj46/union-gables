@@ -329,6 +329,8 @@ const SaratogaPerformingArts = () => {
           Receive a 10% discount off your room rate at Union Gables for
           attendees to the festival.
         </PageParagraph>
+
+        <HorizontalRule halfMargin={true} />
         <PageSubTitle>July - August</PageSubTitle>
 
         <PageParagraph>

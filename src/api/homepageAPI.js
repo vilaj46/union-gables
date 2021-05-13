@@ -186,6 +186,7 @@ const api = {
   annualFestivalsAndEvents,
 
   // Three Reasons
+  threeReasonsTitle,
   threeReasons,
 };
 
