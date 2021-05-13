@@ -14,7 +14,7 @@ import racetrack from "../images/homePage/racetrack.jpg";
 
 // Paragraphs
 const Paragraph1 = (
-  <PageParagraph>
+  <PageParagraph extraBottomPadding={true}>
     Experience old world hospitality at its finest at Union Gables Inn, our
     luxurious bed and breakfast in Saratoga Springs, New York. Built circa 1901,
     this Queen Anne Victorian Mansion is located in the heart of Saratoga’s
@@ -33,7 +33,7 @@ const Paragraph1 = (
 );
 
 const Paragraph2 = (
-  <PageParagraph>
+  <PageParagraph extraBottomPadding={true}>
     <PageSubParagraph>
       Step inside our historic mansion of 118 years, featuring a classic
       wraparound porch, airy living areas with period antiques, and over one
