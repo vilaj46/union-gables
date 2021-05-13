@@ -1,8 +1,7 @@
 import * as React from "react";
 
 /**
- * Footer styling.
- *
+ * Make everything a gatsby image
  * Do we need to include "alt" property in the API?
  * Page Images needs a better "alt"
  * Shorten link names?
