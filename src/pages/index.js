@@ -13,6 +13,9 @@ import * as React from "react";
  * Make sure font is #333;
  * 
  * Image in amenities is larger than the other.
+ * 
+ * Spacing on the main page title is messed up when the developer
+ * tab is off.
  */
 
 

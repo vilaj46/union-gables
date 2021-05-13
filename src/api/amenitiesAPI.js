@@ -52,7 +52,13 @@ const Paragraph4 = (
         <PageSubParagraph>
         Relax in our heated outdoor pool or by the water on a pool lounger or plush patio chairs with seating for 25.
         </PageSubParagraph>
-        <PageSubParagraph>The pool is open from 8 AM to sundown and available seasonally from Memorial Day to Labor Day. Book your stay at our Saratoga hotel with a pool to take advantage of this guest-favorite amenity!</PageSubParagraph>
+        <PageSubParagraph last={true}>The pool is open from 8 AM to sundown and available seasonally from Memorial Day to Labor Day. Book your stay at our Saratoga hotel with a pool to take advantage of this guest-favorite amenity!</PageSubParagraph>
+    </PageParagraph>
+)
+
+const Paragraph4Half = (
+    <PageParagraph>
+        Visit the concierge desk for help with any of your needs during your stay here at Union Gables Inn. Our concierge desk is open daily. Ask us about our local recommendations as well as checking-in early (subject to availability)– free of charge.
     </PageParagraph>
 )
 
@@ -118,6 +124,7 @@ const api = {
   Paragraph2,
   Paragraph3,
   Paragraph4,
+  Paragraph4Half,
   Paragraph5,
   Paragraph6, 
   Paragraph7,
