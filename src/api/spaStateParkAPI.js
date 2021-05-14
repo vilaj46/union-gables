@@ -27,10 +27,7 @@ const Paragraph2 = (
     Immerse yourself in the Arts with a visit to the Saratoga Performing Arts
     Center or Home Made Theatre. Experience the moving powers of theatre, dance,
     and orchestra productions. Or let loose and rock out at a concert! Visit the{" "}
-    <PageParagraphLink href="./saratoga-performing-arts">
-      SPAC
-    </PageParagraphLink>{" "}
-    and{" "}
+    <PageParagraphLink href="./performing-arts">SPAC</PageParagraphLink> and{" "}
     <PageParagraphLink href="https://homemadetheater.org" target={true}>
       HMT
     </PageParagraphLink>{" "}

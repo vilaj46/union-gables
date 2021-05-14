@@ -3,10 +3,12 @@ import styled from "styled-components";
 
 const ImagesContainer = styled.div`
   display: flex;
+  height: auto;
 
   @media screen and (max-width: 1020px) {
     width: 95%;
     margin: 0 auto;
+    height: auto;
   }
 `;
 

@@ -2,7 +2,7 @@ import * as React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
 
-import logo from "../../images/logo.png";
+import logo from "../../images/header/logo.png";
 
 const Container = styled.div`
   width: 33.3%;

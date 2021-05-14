@@ -21,11 +21,11 @@ const Paragraph1 = (
     Historic District known as the Magic Rectangle, one and a half blocks from
     the oldest racetrack in the country. Discover the romantic charm of our
     hotel, ideally nestled less than a ten-minute walk from{" "}
-    <PageParagraphLink href="./discover/saratoga-restaurants">
+    <PageParagraphLink href="./discover/restaurants">
       countless restaurants
     </PageParagraphLink>
     , and{" "}
-    <PageParagraphLink href="./discover/saratoga-things-to-do">
+    <PageParagraphLink href="./discover/things-to-do">
       downtown Saratoga gems
     </PageParagraphLink>
     .
@@ -44,7 +44,7 @@ const Paragraph2 = (
     </PageSubParagraph>
     <PageSubParagraph last={true}>
       Stay in one of our{" "}
-      <PageParagraphLink href="./rooms/saratoga-lodging">
+      <PageParagraphLink href="./rooms/lodging">
         oversized rooms and suites
       </PageParagraphLink>
       , all with private bathrooms and each uniquely decorated. Each room at our
@@ -107,28 +107,27 @@ const congressPark = {
 
 const saratogaRaceCourse = {
   text: "Saratoga Race Course",
-  // href: "../pages/discover/saratoga-race-course",
-  href: "/discover/saratoga-race-course",
+  href: "/discover/race-course",
 };
 
 const saratogaPerformingArtsCenter = {
   text: "Saratoga Performing Arts Center",
-  href: "/discover/saratoga-performing-arts",
+  href: "/discover/performing-arts",
 };
 
 const saratogaSpringsCityCenter = {
   text: "Saratoga Springs City Center",
-  href: "/discover/saratoga-springs-center",
+  href: "/discover/springs-center",
 };
 
 const saratogaSpaStatePark = {
   text: "Saratoga Spa State Park",
-  href: "/discover/saratoga-spa-state-park",
+  href: "/discover/spa-state-park",
 };
 
 const annualFestivalsAndEvents = {
   text: "Annual festivals and events",
-  href: "/discover/saratoga-festivals-and-events",
+  href: "/discover/festivals-and-events",
 };
 
 // Three Reasons

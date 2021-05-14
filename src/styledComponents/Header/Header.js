@@ -6,7 +6,7 @@ import NavigationPanel from "../Header/NavigationPanel";
 import NavigationHamburger from "../Header/NavigationHamburger";
 import MessageButtons from "../Header/MessageButtons.js";
 
-import mainImage from "../../images/main_image.jpg";
+import mainImage from "../../images/header/main_image.jpg";
 
 const Container = styled.header`
   margin: 0 auto;

@@ -4,14 +4,7 @@ import * as React from "react";
  * Make everything a gatsby image
  * Do we need to include "alt" property in the API?
  * Page Images needs a better "alt"
- * Shorten link names?
- * 
- * Image in amenities is larger than the other.
- * 
- * Spacing on the main page title is messed up when the developer
- * tab is off.
  */
-
 
 // Pages
 import HomePage from "./HomePage/HomePage";

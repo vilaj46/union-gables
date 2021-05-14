@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 
 // API Components
 import api from "../../api/homepageAPI";
@@ -11,12 +12,41 @@ import PageSubTitle from "../../styledComponents/Shared/PageSubTitle";
 import HorizontalRule from "../../styledComponents/Shared/HorizontalRule";
 import PageBodyContainer from "../../styledComponents/Shared/PageBodyContainer";
 import BottomPadding from "../../styledComponents/Shared/BottomPadding";
+import NewPageImage from "../../styledComponents/Shared/NewPageImage";
 
 // HomePage Components
 import ThreeReasons from "../../styledComponents/HomePage/ThreeReasons";
 import DiscoverLinks from "../../styledComponents/HomePage/DiscoverLinks";
 
-const HomePage = () => {
+const HomePage = (props) => {
+  const data = useStaticQuery(graphql`
+    query {
+      allFile(
+        filter: {
+          extension: { eq: "jpg" }
+          relativeDirectory: { eq: "homePage" }
+        }
+      ) {
+        edges {
+          node {
+            base
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  const { edges } = data.allFile;
+  const statue = edges[0];
+  const jockey = edges[1];
+  const racetrack = edges[2];
+  const room = edges[3];
+  const food = edges[4];
   return (
     <div>
       <PageBodyContainer>
@@ -24,10 +54,19 @@ const HomePage = () => {
 
         {api.Paragraph1}
 
-        <PageImage
+        {/* <Img fluid={flu} fadeIn={true} durationFadeIn={2000} /> */}
+        {/* <PageImage
+          // src={images[0].node.publicURL}
+          // alt="Pool and Statue"
           src={api.statue}
           alt="Pool and Garden"
           extraBottomPadding={true}
+        /> */}
+
+        <NewPageImage
+          alt="Pool and Garden"
+          extraBottomPadding={true}
+          data={statue}
         />
 
         <PageSubTitle>{api.subTitle1}</PageSubTitle>
