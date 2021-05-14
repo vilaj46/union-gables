@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 
 // Components
 import Header from "../../styledComponents/Header/Header";
@@ -8,8 +9,8 @@ import Footer from "../../styledComponents/Footer/Footer";
 import SpringsCenterEvents from "../../styledComponents/SpringsCenter/SpringsCenterEvents";
 
 // Shared Components
-import PageImage from "../../styledComponents/Shared/PageImage";
-import PageImages from "../../styledComponents/Shared/PageImages";
+import NewPageImage from "../../styledComponents/Shared/NewPageImage";
+import NewPageImages from "../../styledComponents/Shared/NewPageImages";
 import PageSubTitle from "../../styledComponents/Shared/PageSubTitle";
 import MainPageTitle from "../../styledComponents/Shared/MainPageTitle";
 import FontContainer from "../../styledComponents/Shared/FontContainer";
@@ -20,6 +21,36 @@ import PageBodyContainer from "../../styledComponents/Shared/PageBodyContainer";
 import api from "../../api/springsCenterAPI";
 
 const SaratogaPerformingArts = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allFile(
+        filter: {
+          extension: { eq: "jpg" }
+          relativeDirectory: { eq: "springsCenter" }
+        }
+      ) {
+        edges {
+          node {
+            base
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+              fixed(quality: 100) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  // Images
+  const { edges } = data.allFile;
+  const dancing = edges[0];
+  const lecture = edges[1];
+  const gathering = edges[2];
   return (
     <FontContainer>
       <Header />
@@ -28,8 +59,9 @@ const SaratogaPerformingArts = () => {
 
         {api.Paragraph1}
 
-        <PageImages
-          images={[api.gathering, api.lecture]}
+        <NewPageImages
+          images={[gathering, lecture]}
+          alts={["Gathering", "Lecture"]}
           extraBottomPadding={true}
         />
 
@@ -37,7 +69,7 @@ const SaratogaPerformingArts = () => {
 
         {api.Paragraph2}
 
-        <PageImage src={api.dancing} alt="Dancing!" />
+        <NewPageImage data={dancing} alt="Dancing!" />
 
         <PageSubTitle>{api.subTitle2}</PageSubTitle>
 

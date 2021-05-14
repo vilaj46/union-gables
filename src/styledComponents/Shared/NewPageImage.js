@@ -1,6 +1,6 @@
 import * as React from "react";
-import styled from "styled-components";
 import Img from "gatsby-image";
+import styled from "styled-components";
 
 const ImageContainer = styled(Img)`
   display: block;
@@ -8,7 +8,6 @@ const ImageContainer = styled(Img)`
   padding: 25px auto;
   margin-left: auto;
   margin-right: auto;
-  //   height: auto;
 
   @media screen and (max-width: 1020px) {
     width: 95%;
@@ -21,7 +20,7 @@ const NewPageImage = (props) => {
   return (
     <ImageContainer
       alt={props.alt}
-      style={{ paddingBottom, height: "100%" }}
+      style={{ paddingBottom }}
       imgStyle={{ objectFit: "contain" }}
       fluid={props.data.node.childImageSharp.fluid}
     />

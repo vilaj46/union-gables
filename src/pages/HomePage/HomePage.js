@@ -42,8 +42,8 @@ const HomePage = (props) => {
 
   // Images
   const { edges } = data.allFile;
-  const statue = edges[0];
-  const jockey = edges[1];
+  const jockey = edges[0];
+  const statue = edges[1];
 
   return (
     <div>

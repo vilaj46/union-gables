@@ -1,13 +1,14 @@
 import * as React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 
 // Components
 import Header from "../../styledComponents/Header/Header";
 import Footer from "../../styledComponents/Footer/Footer";
 
 // Shared Components
-import PageImage from "../../styledComponents/Shared/PageImage";
+import NewPageImage from "../../styledComponents/Shared/NewPageImage";
 import PageQuote from "../../styledComponents/Shared/PageQuote";
-import PageImages from "../../styledComponents/Shared/PageImages";
+import NewPageImages from "../../styledComponents/Shared/NewPageImages";
 import PageSubTitle from "../../styledComponents/Shared/PageSubTitle";
 import MainPageTitle from "../../styledComponents/Shared/MainPageTitle";
 import FontContainer from "../../styledComponents/Shared/FontContainer";
@@ -18,6 +19,35 @@ import PageBodyContainer from "../../styledComponents/Shared/PageBodyContainer";
 import api from "../../api/raceCourseAPI";
 
 const SaratogaRaceCourse = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allFile(
+        filter: {
+          extension: { eq: "jpg" }
+          relativeDirectory: { eq: "raceCourse" }
+        }
+      ) {
+        edges {
+          node {
+            base
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  // Images
+  const { edges } = data.allFile;
+  const jockeys = edges[0];
+  const race = edges[1];
+  const horse = edges[2];
+  const racetrack = edges[3];
+
   return (
     <FontContainer>
       <Header />
@@ -27,11 +57,12 @@ const SaratogaRaceCourse = () => {
 
         {api.Paragraph1}
 
-        <PageImage src={api.racetrack} alt="Race Course" />
+        <NewPageImage data={racetrack} alt="Race Track" />
 
-        <PageImages
-          images={[api.race, api.jockeys]}
+        <NewPageImages
+          images={[race, jockeys]}
           extraBottomPadding={true}
+          alts={["Horses Racing", "Jockeys Talking"]}
         />
 
         <PageSubTitle>{api.subTitle1}</PageSubTitle>
@@ -44,7 +75,7 @@ const SaratogaRaceCourse = () => {
 
         {api.Paragraph4}
 
-        <PageImage src={api.horse} alt="White Horse" />
+        <NewPageImage data={horse} alt="White Horse" />
 
         <PageSubTitle>{api.subTitle4}</PageSubTitle>
 
