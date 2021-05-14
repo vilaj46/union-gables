@@ -116,11 +116,12 @@ const ThreeReasons = () => {
   const food = edges[4];
 
   const reasons = [racetrack, room, food];
+  const alts = ["Steak and Wine", "King Bed Room", "Race Track"];
 
   return (
     <Container>
       <Brightness>
-        <ThreeReasonsBackground alt="HEYOO" data={reasons[reason]} />
+        <ThreeReasonsBackground alt={alts[reason]} data={reasons[reason]} />
       </Brightness>
       <CenterText>
         <H3Container>{api.threeReasonsTitle}</H3Container>
