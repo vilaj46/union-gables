@@ -6,7 +6,6 @@ import api from "../../api/homepageAPI";
 
 // Shared Components
 import MainPageTitle from "../../styledComponents/Shared/MainPageTitle";
-import PageImage from "../../styledComponents/Shared/PageImage";
 import PageQuote from "../../styledComponents/Shared/PageQuote";
 import PageSubTitle from "../../styledComponents/Shared/PageSubTitle";
 import HorizontalRule from "../../styledComponents/Shared/HorizontalRule";
@@ -41,27 +40,17 @@ const HomePage = (props) => {
     }
   `);
 
+  // Images
   const { edges } = data.allFile;
   const statue = edges[0];
   const jockey = edges[1];
-  const racetrack = edges[2];
-  const room = edges[3];
-  const food = edges[4];
+
   return (
     <div>
       <PageBodyContainer>
         <MainPageTitle>{api.title}</MainPageTitle>
 
         {api.Paragraph1}
-
-        {/* <Img fluid={flu} fadeIn={true} durationFadeIn={2000} /> */}
-        {/* <PageImage
-          // src={images[0].node.publicURL}
-          // alt="Pool and Statue"
-          src={api.statue}
-          alt="Pool and Garden"
-          extraBottomPadding={true}
-        /> */}
 
         <NewPageImage
           alt="Pool and Garden"
@@ -73,10 +62,10 @@ const HomePage = (props) => {
 
         {api.Paragraph2}
 
-        <PageImage
-          src={api.jockey}
+        <NewPageImage
           alt="Race Track"
           extraBottomPadding={true}
+          data={jockey}
         />
 
         <PageSubTitle>{api.subTitle2}</PageSubTitle>

@@ -18,11 +18,8 @@ const ImageContainer = styled(Img)`
 
 const NewPageImage = (props) => {
   const paddingBottom = props.extraBottomPadding ? "50px" : "25px";
-  console.log(props);
-  console.log(paddingBottom);
   return (
     <ImageContainer
-      //   src={props.src}
       alt={props.alt}
       style={{ paddingBottom, height: "100%" }}
       imgStyle={{ objectFit: "contain" }}

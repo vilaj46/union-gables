@@ -1,10 +1,12 @@
 import * as React from "react";
+import { useStaticQuery } from "gatsby";
 import styled from "styled-components";
 
 import api from "../../api/homepageAPI";
 
 // Sub Components
 import ThreeReasonsNumber from "./ThreeReasonsNumber";
+import ThreeReasonsBackground from "./ThreeReasonsBackground";
 
 const Container = styled.div`
   position: relative;
@@ -57,23 +59,12 @@ const ParagraphContainer = styled.p`
   }
 `;
 
-const BackgroundImage = styled.div`
-  background-image: url(${api.food});
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: -1;
-  overflow: hidden;
-  filter: brightness(50%);
-`;
-
 const NumbersContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
   width: 100%;
+  position: absolute;
+  z-index: 2;
 
   @media screen and (max-width: 731px) {
     padding-bottom: 50px;
@@ -82,19 +73,60 @@ const NumbersContainer = styled.div`
 
 const CenterText = styled.div`
   height: 50%;
+  text-align: center;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  width: 100%;
+`;
+
+const Brightness = styled.div`
+  filter: brightness(50%);
 `;
 
 const ThreeReasons = () => {
   const [reason, setReason] = React.useState(0);
+
+  const data = useStaticQuery(graphql`
+    query {
+      allFile(
+        filter: {
+          extension: { eq: "jpg" }
+          relativeDirectory: { eq: "homePage" }
+        }
+      ) {
+        edges {
+          node {
+            base
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  // Images
+  const { edges } = data.allFile;
+  const racetrack = edges[2];
+  const room = edges[3];
+  const food = edges[4];
+
+  const reasons = [racetrack, room, food];
+
   return (
     <Container>
-      <BackgroundImage
-        style={{ backgroundImage: `url(${api.threeReasons[reason].img})` }}
-      />
+      <Brightness>
+        <ThreeReasonsBackground alt="HEYOO" data={reasons[reason]} />
+      </Brightness>
       <CenterText>
         <H3Container>{api.threeReasonsTitle}</H3Container>
         <ParagraphContainer>{api.threeReasons[reason].text}</ParagraphContainer>
       </CenterText>
+
       <NumbersContainer>
         <ThreeReasonsNumber
           text="1"
