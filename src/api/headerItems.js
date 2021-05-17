@@ -41,57 +41,57 @@ const items = [
     links: [
       {
         label: "Main Mainsion",
-        url: "/main-mansion",
+        url: "/rooms/main-mansion",
         links: [
           {
             label: "Jane Room",
-            url: "/jane-room",
+            url: "/rooms/jane-room",
           },
           {
             label: "Annie Room",
-            url: "/annie-room",
+            url: "/rooms/annie-room",
           },
           {
             label: "Bill Room",
-            url: "/bill-room",
+            url: "/rooms/bill-room",
           },
           {
             label: "edward Room",
-            url: "/edward-room",
+            url: "/rooms/edward-room",
           },
           {
             label: "Kate Room",
-            url: "/kate-room",
+            url: "/rooms/kate-room",
           },
           {
             label: "Cindy Room",
-            url: "/cindy-room",
+            url: "/rooms/cindy-room",
           },
           {
             label: "Linda Room",
-            url: "/linda-room",
+            url: "/rooms/linda-room",
           },
           {
             label: "Jody Room",
-            url: "/jody-room",
+            url: "/rooms/jody-room",
           },
           {
             label: "Tom Room",
-            url: "/tom-room",
+            url: "/rooms/tom-room",
           },
           {
             label: "Michael Room",
-            url: "/michael-room",
+            url: "/rooms/michael-room",
           },
         ],
       },
       {
         label: "Carriage House",
-        url: "/carriage-house",
+        url: "/rooms/carriage-house",
         links: [
           {
             label: "Henry Suite",
-            url: "/henry-suite",
+            url: "/rooms/henry-suite",
           },
         ],
       },

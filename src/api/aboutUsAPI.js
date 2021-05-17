@@ -43,7 +43,7 @@ const Section2 = (
       </PageSubParagraph>
       <PageSubParagraph>
         Today, Union Gables Inn boasts 24{" "}
-        <PageParagraphLink href="/rooms/lodging">
+        <PageParagraphLink href="/rooms">
           one-of-a-kind lodgings
         </PageParagraphLink>
         , some with private patios, soaking tubs, or modern kitchens and living

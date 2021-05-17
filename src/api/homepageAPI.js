@@ -44,7 +44,7 @@ const Paragraph2 = (
     </PageSubParagraph>
     <PageSubParagraph last={true}>
       Stay in one of our{" "}
-      <PageParagraphLink href="/rooms/lodging">
+      <PageParagraphLink href="/rooms">
         oversized rooms and suites
       </PageParagraphLink>
       , all with private bathrooms and each uniquely decorated. Each room at our
