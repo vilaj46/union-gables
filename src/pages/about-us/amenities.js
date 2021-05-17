@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 
 // Components
 import Header from "../../styledComponents/Header/Header";
@@ -10,14 +11,53 @@ import FontContainer from "../../styledComponents/Shared/FontContainer";
 import BottomPadding from "../../styledComponents/Shared/BottomPadding";
 import PageBodyContainer from "../../styledComponents/Shared/PageBodyContainer";
 
-import PageImage from "../../styledComponents/Shared/PageImage";
-import PageImages from "../../styledComponents/Shared/PageImages";
+import NewPageImage from "../../styledComponents/Shared/NewPageImage";
+import NewPageImages from "../../styledComponents/Shared/NewPageImages";
 import PageSubTitle from "../../styledComponents/Shared/PageSubTitle";
 import HorizontalRule from "../../styledComponents/Shared/HorizontalRule";
 
 import api from "../../api/amenitiesAPI";
 
 const Amenities = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allFile(
+        filter: {
+          extension: { eq: "jpg" }
+          relativeDirectory: { eq: "amenities" }
+        }
+      ) {
+        edges {
+          node {
+            base
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+              fixed(quality: 100) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  // Images
+  const { edges } = data.allFile;
+  const benedict = edges[0];
+  const lamps = edges[1];
+  const loungechairs2 = edges[2];
+  const billiards = edges[3];
+  const fireplace = edges[4];
+  const garden = edges[5];
+  const garden2 = edges[6];
+  const loungechairs = edges[7];
+  const porch = edges[8];
+  const statue = edges[9];
+  const pool = edges[10];
+
   return (
     <FontContainer>
       <Header />
@@ -25,9 +65,15 @@ const Amenities = () => {
         <MainPageTitle>{api.title}</MainPageTitle>
         {api.Paragraph1}
 
-        <PageImages images={[api.benedict, api.pool]} />
+        <NewPageImages
+          images={[benedict, pool]}
+          alts={["Breakfast Eggs Benedict", "Pool"]}
+        />
 
-        <PageImages images={[api.billiards, api.fireplace]} />
+        <NewPageImages
+          alts={["Billiards Table", "Fireplace"]}
+          images={[billiards, fireplace]}
+        />
 
         <PageSubTitle>{api.subTitle1}</PageSubTitle>
 
@@ -39,9 +85,9 @@ const Amenities = () => {
 
         {api.Paragraph4Half}
 
-        <PageImage src={api.loungechairs} alt="Lounge Chairs" />
+        <NewPageImage data={loungechairs} alt="Lounge Chairs" />
 
-        <PageImages images={[api.statue, api.pool]} />
+        <NewPageImages alts={["Statue", "Pool"]} images={[statue, pool]} />
 
         <PageSubTitle>{api.subTitle3}</PageSubTitle>
 
@@ -55,10 +101,14 @@ const Amenities = () => {
 
         {api.Paragraph6}
 
-        <PageImages images={[api.garden, api.garden2]} />
+        <NewPageImages
+          alts={["Garden View One", "Garden View Two"]}
+          images={[garden, garden2]}
+        />
 
-        <PageImages
-          images={[api.porch, api.loungechairs2]}
+        <NewPageImages
+          images={[porch, loungechairs2]}
+          alts={["Porch", "Lounge Chairs"]}
           extraBottomPadding={true}
         />
 
