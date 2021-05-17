@@ -56,8 +56,10 @@ const Paragraph3 = (
     </PageSubParagraph>
     <PageSubParagraph>
       Our complimentary, hot breakfast is just one of many{" "}
-      <PageParagraphLink href="./amenities">amenities</PageParagraphLink> to
-      take advantage of at Union Gables Inn. Book your stay directly today!
+      <PageParagraphLink href="/about-us/amenities">
+        amenities
+      </PageParagraphLink>{" "}
+      to take advantage of at Union Gables Inn. Book your stay directly today!
     </PageSubParagraph>
   </PageParagraph>
 );
