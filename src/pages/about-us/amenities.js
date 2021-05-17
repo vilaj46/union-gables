@@ -47,7 +47,7 @@ const Amenities = () => {
   // Images
   const { edges } = data.allFile;
   const benedict = edges[0];
-  const lamps = edges[1];
+  // const lamps = edges[1];
   const loungechairs2 = edges[2];
   const billiards = edges[3];
   const fireplace = edges[4];

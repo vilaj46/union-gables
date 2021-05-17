@@ -1,6 +1,5 @@
 import * as React from "react";
 import styled from "styled-components";
-import Img from "gatsby-image";
 
 const ImageContainer = styled.img`
   display: block;
@@ -18,12 +17,7 @@ const ImageContainer = styled.img`
 const PageImage = (props) => {
   const paddingBottom = props.extraBottomPadding ? "50px" : "25px";
   return (
-    <ImageContainer
-      src={props.src}
-      alt={props.alt}
-      style={{ paddingBottom }}
-      // paddingBottom={paddingBottom}
-    />
+    <ImageContainer src={props.src} alt={props.alt} style={{ paddingBottom }} />
   );
 };
 

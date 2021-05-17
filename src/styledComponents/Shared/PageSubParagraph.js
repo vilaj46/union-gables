@@ -1,7 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
 
-const ParagraphContainer = styled.p`
+const ParagraphContainer = styled.span`
+  display: block;
   color: #333;
   font-size: 1.4rem;
   margin: 0;

@@ -24,6 +24,7 @@ const Chart = styled.table`
   border: 1px solid black;
   border-collapse: collapse;
   text-align: center;
+  margin-bottom: 25px;
 
   @media screen and (max-width: 560px) {
     width: 75%;

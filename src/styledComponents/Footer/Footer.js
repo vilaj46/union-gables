@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Link } from "gatsby";
 import styled from "styled-components";
 
 // Sub Components
@@ -29,7 +28,7 @@ const SubContainer = styled.div`
   @media screen and (max-width: 750px) {
     flex-direction: column;
   }
-`
+`;
 
 const Icon = styled.img`
   height: 25px;

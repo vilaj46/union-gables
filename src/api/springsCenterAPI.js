@@ -59,9 +59,7 @@ const Paragraph3 = (
 const Paragraph4 = (
   <PageParagraph center={true}>
     Book your stay in one of our{" "}
-    <PageParagraphLink href="../rooms/saratoga-lodging">
-      one-of-a-kind
-    </PageParagraphLink>{" "}
+    <PageParagraphLink href="/rooms/lodging">one-of-a-kind</PageParagraphLink>{" "}
     rooms at our luxurious hotel near Saratoga Springs City Center!
   </PageParagraph>
 );

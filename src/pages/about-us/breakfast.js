@@ -68,6 +68,7 @@ const Breakfast = () => {
           allowFullScreen=""
           frameBorder="0"
           style={{ display: "block", margin: "0 auto" }}
+          title="Tour Video"
         ></iframe>
       </PageBodyContainer>
       <BottomPadding />

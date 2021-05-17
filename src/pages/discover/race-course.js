@@ -34,6 +34,9 @@ const SaratogaRaceCourse = () => {
               fluid(quality: 100) {
                 ...GatsbyImageSharpFluid
               }
+              fixed(quality: 100) {
+                ...GatsbyImageSharpFixed
+              }
             }
           }
         }

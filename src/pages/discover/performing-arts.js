@@ -6,7 +6,6 @@ import Header from "../../styledComponents/Header/Header";
 import Footer from "../../styledComponents/Footer/Footer";
 
 // Shared Components
-import PageImages from "../../styledComponents/Shared/PageImages";
 import NewPageImages from "../../styledComponents/Shared/NewPageImages";
 import PageSubTitle from "../../styledComponents/Shared/PageSubTitle";
 import MainPageTitle from "../../styledComponents/Shared/MainPageTitle";

@@ -21,11 +21,11 @@ const Paragraph1 = (
     Historic District known as the Magic Rectangle, one and a half blocks from
     the oldest racetrack in the country. Discover the romantic charm of our
     hotel, ideally nestled less than a ten-minute walk from{" "}
-    <PageParagraphLink href="./discover/restaurants">
+    <PageParagraphLink href="/discover/restaurants">
       countless restaurants
     </PageParagraphLink>
     , and{" "}
-    <PageParagraphLink href="./discover/things-to-do">
+    <PageParagraphLink href="/discover/things-to-do">
       downtown Saratoga gems
     </PageParagraphLink>
     .
@@ -44,14 +44,14 @@ const Paragraph2 = (
     </PageSubParagraph>
     <PageSubParagraph last={true}>
       Stay in one of our{" "}
-      <PageParagraphLink href="./rooms/lodging">
+      <PageParagraphLink href="/rooms/lodging">
         oversized rooms and suites
       </PageParagraphLink>
       , all with private bathrooms and each uniquely decorated. Each room at our
       B&B in Saratoga Springs, NY features a romantic natural gas fireplace,
       complimentary wireless Intenet, and a variety of period antiques.
       Designated{" "}
-      <PageParagraphLink href="./about-us/pet-friendly">
+      <PageParagraphLink href="/about-us/pet-friendly">
         pet friendly
       </PageParagraphLink>
       , extended stay, and rooms with private patios are available.

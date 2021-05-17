@@ -29,6 +29,7 @@ const NewPageImages = (props) => {
             style={{ height: `${largestHeight}px`, width: "100%" }}
             fixed={img.node.childImageSharp.fixed}
             alt={props.alts[index]}
+            key={img.node.base}
           />
         );
       })}

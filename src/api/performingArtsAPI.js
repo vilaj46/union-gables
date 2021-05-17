@@ -90,7 +90,7 @@ const Paragraph3 = (
 const Paragraph4 = (
   <PageParagraph center={true}>
     Book your{" "}
-    <PageParagraphLink href="../rooms/lodging">one-of-a-kind</PageParagraphLink>{" "}
+    <PageParagraphLink href="/rooms/lodging">one-of-a-kind</PageParagraphLink>{" "}
     room today at our historic hotel near Saratoga Performing Arts Center!{" "}
   </PageParagraph>
 );
