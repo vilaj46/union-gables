@@ -1,5 +1,4 @@
 import * as React from "react";
-import styled from "styled-components";
 
 // Sub Component
 import Circle from "../Shared/RedCircle";

@@ -55,6 +55,23 @@ const GatsbyItem = styled(Link)`
   }
 `;
 
+const ParagraphItem = styled.p`
+  display: block;
+  text-align: center;
+  color: #333;
+  font-weight: 600;
+  font-size: 1.4rem;
+  letter-spacing: 0.7px;
+
+  @media screen and (max-width: 435px) {
+    font-size: 0.7rem;
+  }
+
+  @media screen and (max-width: 310px) {
+    font-size: 0.6rem;
+  }
+`;
+
 export const PageSubLinksItem = (props) => {
   if (props.type === "gatsby") {
     return <GatsbyItem to={props.href}>{props.children}</GatsbyItem>;
@@ -64,7 +81,9 @@ export const PageSubLinksItem = (props) => {
         {props.children}
       </RegularItem>
     );
-  } else {
+  } else if (props.type === "regular") {
     return <RegularItem href={props.href}>{props.children}</RegularItem>;
+  } else {
+    return <ParagraphItem>{props.children}</ParagraphItem>;
   }
 };
