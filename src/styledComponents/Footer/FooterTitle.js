@@ -14,11 +14,14 @@ const FooterHomeLink = styled.a`
   font-size: 1.5rem;
 `;
 
-const FooterTitle = () => {
+const FooterTitle = (props) => {
+  const fontSize = props.size ? "1.8rem" : "1.5rem";
   return (
     <FontContainer>
       <h3>
-        <FooterHomeLink href="/">Union Gables Inn</FooterHomeLink>
+        <FooterHomeLink style={{ fontSize }} href="/">
+          Union Gables Inn
+        </FooterHomeLink>
       </h3>
     </FontContainer>
   );

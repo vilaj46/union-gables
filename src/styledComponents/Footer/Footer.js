@@ -19,7 +19,7 @@ const Container = styled.div`
   flex-direction: column;
 `;
 
-const SubContainer = styled.div`
+const SubContainer1 = styled.div`
   display: flex;
   justify-content: space-evenly;
   width: 95%;
@@ -28,6 +28,15 @@ const SubContainer = styled.div`
   @media screen and (max-width: 750px) {
     flex-direction: column;
   }
+`;
+
+const SubContainer2 = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 95%;
+  margin: 0 auto;
+  font-size: 1.5rem;
 `;
 
 const Icon = styled.img`
@@ -43,7 +52,6 @@ const Anchor = styled.a`
 
 const IconContainer = styled.div`
   display: flex;
-  // flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 12.5px 0;
@@ -66,11 +74,13 @@ const Span2 = styled.span`
   }
 `;
 
-const Footer = () => {
+const Footer = (props) => {
+  console.log(props.size);
+  const SubContainer = props.size ? SubContainer2 : SubContainer1;
   return (
     <FontContainer>
       <Container>
-        <FooterTitle>Union Gables Inn</FooterTitle>
+        <FooterTitle size={props.size}>Union Gables Inn</FooterTitle>
         <SubContainer>
           <IconContainer>
             <Icon src={pin} alt="Location" />
