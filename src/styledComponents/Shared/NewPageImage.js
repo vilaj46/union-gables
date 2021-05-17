@@ -20,7 +20,7 @@ const NewPageImage = (props) => {
   return (
     <ImageContainer
       alt={props.alt}
-      style={{ paddingBottom }}
+      style={{ paddingBottom, ...props.dimensions }}
       imgStyle={{ objectFit: "contain" }}
       fluid={props.data.node.childImageSharp.fluid}
     />
