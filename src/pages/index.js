@@ -1,9 +1,7 @@
 import * as React from "react";
 
 /**
- * Make everything a gatsby image
- * Do we need to include "alt" property in the API?
- * Page Images needs a better "alt"
+ * Change alt in NewPageImages
  */
 
 // Pages

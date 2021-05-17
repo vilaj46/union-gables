@@ -1,63 +1,52 @@
 import * as React from "react";
-import { useStaticQuery, graphql } from "gatsby";
 
 // Components
-import Header from "../../styledComponents/Header/Header";
 import Footer from "../../styledComponents/Footer/Footer";
 import RoomTemplate from "../../styledComponents/Rooms/RoomTemplate";
 
 // Shared Components
-import MainPageTitle from "../../styledComponents/Shared/MainPageTitle";
 import FontContainer from "../../styledComponents/Shared/FontContainer";
-import BottomPadding from "../../styledComponents/Shared/BottomPadding";
 import PageBodyContainer from "../../styledComponents/Shared/PageBodyContainer";
-import NewPageImage from "../../styledComponents/Shared/NewPageImage";
+import PageParagraph from "../../styledComponents/Shared/PageParagraph";
+import PageParagraphLink from "../../styledComponents/Shared/PageParagraphLink";
 
-// import api from "../api/roomsAPI";
+const Paragraph1 = (
+  <PageParagraph>
+    Discover the Main Mansion room that suits your stay in Saratoga Springs.
+    Each of our{" "}
+    <PageParagraphLink href="/rooms">spacious rooms</PageParagraphLink> are
+    uniquely decorated and feature hand-selected antique furniture. Delight over
+    luxurious offerings such as in-room natural gas fireplaces, high thread
+    count sheets, and plush king beds. Every room has its own private bathroom
+    and modern conveniences like high-speed wireless Internet and flat-screen
+    televisions. There's a story for each room, with three floors to choose
+    from, including elegant accommodations inside the mansion turret.
+  </PageParagraph>
+);
 
-const Rooms = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allFile(
-        filter: { extension: { eq: "jpg" }, relativeDirectory: { eq: "rooms" } }
-      ) {
-        edges {
-          node {
-            base
-            childImageSharp {
-              fluid(quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-        }
-      }
-    }
-  `);
+const Paragraph2 = (
+  <PageParagraph center={true}>
+    Find your room at Union Gables Inn.
+  </PageParagraph>
+);
 
-  // Images
-  const { edges } = data.allFile;
-  const kate = edges[0];
+const title = "Main Mansion Main Rooms";
 
-  return <RoomTemplate />;
+const MainMansion = () => {
+  const alts = ["Jane Room", "Linda Room", "Annie Room", "Edward Room"];
+  const paragraphs = [Paragraph1, Paragraph2];
+  return (
+    <FontContainer>
+      <PageBodyContainer>
+        <RoomTemplate
+          title={title}
+          type="mainMansion"
+          alts={alts}
+          paragraphs={paragraphs}
+        />
+      </PageBodyContainer>
+    </FontContainer>
+  );
 };
 
-// <FontContainer>
-//   <Header />
-{
-  /* <PageBodyContainer>
-        <MainPageTitle>{api.title}</MainPageTitle>
-        {api.Section1}
-
-        <NewPageImage data={kate} alt="Kate Room" extraBottomPadding={true} />
-
-        {api.Section2}
-      </PageBodyContainer>
-      <BottomPadding />
-      <Footer /> */
-}
-{
-  /* </FontContainer> */
-}
-
-export default Rooms;
+export default MainMansion;
