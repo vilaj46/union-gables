@@ -23,10 +23,10 @@ const NewPageImages = (props) => {
         return (
           <Img
             imgStyle={{
-              width: "auto",
+              width: "100%",
               height: `${largestHeight}px`,
             }}
-            style={{ height: `${largestHeight}px` }}
+            style={{ height: `${largestHeight}px`, width: "100%" }}
             fixed={img.node.childImageSharp.fixed}
             alt={props.alts[index]}
           />
