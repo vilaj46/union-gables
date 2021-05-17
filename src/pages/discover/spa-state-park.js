@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
+import { useStaticQuery, graphql } from "gatsby";
 
 // Components
 import Header from "../../styledComponents/Header/Header";
@@ -8,8 +9,8 @@ import Footer from "../../styledComponents/Footer/Footer";
 // Shared Components
 import MainPageTitle from "../../styledComponents/Shared/MainPageTitle";
 import PageSubTitle from "../../styledComponents/Shared/PageSubTitle";
-import PageImage from "../../styledComponents/Shared/PageImage";
-import PageImages from "../../styledComponents/Shared/PageImages";
+import NewPageImage from "../../styledComponents/Shared/NewPageImage";
+import NewPageImages from "../../styledComponents/Shared/NewPageImages";
 import PageQuote from "../../styledComponents/Shared/PageQuote";
 import FontContainer from "../../styledComponents/Shared/FontContainer";
 import PageBodyContainer from "../../styledComponents/Shared/PageBodyContainer";
@@ -34,6 +35,37 @@ const SpecialPageTitle = styled.h2`
 `;
 
 const SaratogaSpaStatePark = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allFile(
+        filter: {
+          extension: { eq: "jpg" }
+          relativeDirectory: { eq: "spaStatePark" }
+        }
+      ) {
+        edges {
+          node {
+            base
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+              fixed(quality: 100) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  // Images
+  const { edges } = data.allFile;
+  const river = edges[0];
+  const bridge = edges[1];
+  const park = edges[2];
+
   return (
     <FontContainer>
       <Header />
@@ -42,7 +74,11 @@ const SaratogaSpaStatePark = () => {
 
         {api.Paragraph1}
 
-        <PageImages images={[api.park, api.bridge]} extraBottomPadding={true} />
+        <NewPageImages
+          images={[park, bridge]}
+          alts={["Park", "Bridge"]}
+          extraBottomPadding={true}
+        />
 
         <PageSubTitle>{api.subTitle1}</PageSubTitle>
 
@@ -50,9 +86,9 @@ const SaratogaSpaStatePark = () => {
 
         <History />
 
-        <PageImage
-          src={api.river}
-          alt="Water and River"
+        <NewPageImage
+          data={river}
+          alt="River and Water"
           extraBottomPadding={true}
         />
 
