@@ -1,5 +1,5 @@
 import * as React from "react";
-import styled from "styled-components";
+import { useStaticQuery, graphql } from "gatsby";
 
 // Components
 import Header from "../../styledComponents/Header/Header";
@@ -7,16 +7,13 @@ import Footer from "../../styledComponents/Footer/Footer";
 
 // Shared Components
 import MainPageTitle from "../../styledComponents/Shared/MainPageTitle";
-import PageImage from "../../styledComponents/Shared/PageImage";
+import NewPageImage from "../../styledComponents/Shared/NewPageImage";
 import PageSemiSubTitle from "../../styledComponents/Shared/PageSemiSubTitle";
 import PageSubTitle from "../../styledComponents/Shared/PageSubTitle";
 import FontContainer from "../../styledComponents/Shared/FontContainer";
-import PageParagraph from "../../styledComponents/Shared/PageParagraph";
 import BottomPadding from "../../styledComponents/Shared/BottomPadding";
 import HorizontalRule from "../../styledComponents/Shared/HorizontalRule";
-import PageSubParagraph from "../../styledComponents/Shared/PageSubParagraph";
 import PageBodyContainer from "../../styledComponents/Shared/PageBodyContainer";
-import PageParagraphLink from "../../styledComponents/Shared/PageParagraphLink";
 
 // Sub Components
 import EventsGuideLinks from "../../styledComponents/FestivalsAndEvents/EventsGuideLinks";
@@ -24,6 +21,39 @@ import EventsGuideLinks from "../../styledComponents/FestivalsAndEvents/EventsGu
 import api from "../../api/festivalsAndEventsAPI";
 
 const SaratogaPerformingArts = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allFile(
+        filter: {
+          extension: { eq: "jpg" }
+          relativeDirectory: { eq: "festivalsAndEvents" }
+        }
+      ) {
+        edges {
+          node {
+            base
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+              fixed(quality: 100) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  // Images
+  const { edges } = data.allFile;
+  const dining = edges[0];
+  const market = edges[1];
+  const dancing = edges[2];
+  const nightlife = edges[3];
+  const violins = edges[4];
+  const saxaphone = edges[5];
   return (
     <FontContainer>
       <Header />
@@ -36,7 +66,7 @@ const SaratogaPerformingArts = () => {
 
         <EventsGuideLinks />
 
-        <PageImage src={api.saxaphone} alt="Music" extraBottomPadding={true} />
+        <NewPageImage data={saxaphone} alt="Music" extraBottomPadding={true} />
 
         <PageSemiSubTitle id="ongoing" extraBottomPadding={true}>
           {api.semiSubTitle1}
@@ -45,8 +75,8 @@ const SaratogaPerformingArts = () => {
         <PageSubTitle>{api.subTitle2}</PageSubTitle>
 
         {api.OngoingParagraph}
-        
-        <PageImage src={api.dancing} alt="Dancing" />
+
+        <NewPageImage data={dancing} alt="Dancing!" />
 
         <PageSemiSubTitle>{api.semiSubTitle2}</PageSemiSubTitle>
 
@@ -60,7 +90,7 @@ const SaratogaPerformingArts = () => {
 
         {api.WinterParagraph}
 
-        <PageImage src={api.dining} alt="Drinks" extraBottomPadding={true} />
+        <NewPageImage data={dining} alt="Drinks" extrabottomPadding={true} />
 
         <PageSemiSubTitle id="spring" extraBottomPadding={true}>
           {api.semiSubTitle4}
@@ -70,7 +100,7 @@ const SaratogaPerformingArts = () => {
 
         {api.SpringParagraph}
 
-        <PageImage src={api.violins} alt="Music" extraBottomPadding={true} />
+        <NewPageImage data={violins} alt="Concert" extraBottomPadding={true} />
 
         <PageSemiSubTitle id="summer" extraBottomPadding={true}>
           {api.semiSubTitle5}
@@ -80,8 +110,8 @@ const SaratogaPerformingArts = () => {
 
         {api.SummerParagraph}
 
-        <PageImage
-          src={api.market}
+        <NewPageImage
+          data={market}
           alt="Farmer's Market"
           extraBottomPadding={true}
         />
@@ -94,12 +124,11 @@ const SaratogaPerformingArts = () => {
 
         {api.FallParagraph}
 
-        <PageImage src={api.nightlife} alt="Downtown" />
-
+        <NewPageImage data={nightlife} alt="Downtown Nightlife" />
       </PageBodyContainer>
 
       <BottomPadding />
-      
+
       <Footer />
     </FontContainer>
   );
