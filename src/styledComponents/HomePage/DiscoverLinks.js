@@ -1,77 +1,63 @@
 import * as React from "react";
 import styled from "styled-components";
 
+// Sub Component
+import Circle from "../Shared/RedCircle";
+import {
+  PageSubLinksContainer,
+  PageSubLinksItem,
+} from "../Shared/PageSubLinks";
+
 import api from "../../api/homepageAPI";
-
-const Container = styled.ul`
-  display: flex;
-  justify-content: space-around;
-  padding-left: 0;
-  margin-left: 0;
-`;
-
-const Item = styled.a`
-  display: block;
-  text-align: center;
-  text-decoration: underline;
-  color: #350313;
-  font-weight: 600;
-  font-size: 1.4rem;
-  letter-spacing: 0.7px;
-
-  &:hover {
-    cursor: pointer;
-    color: #aa4465;
-  }
-
-  @media screen and (max-width: 435px) {
-    font-size: 0.7rem;
-  }
-
-  @media screen and (max-width: 310px) {
-    font-size: 0.6rem;
-  }
-`;
-
-const Circle = styled.i`
-  display: block;
-  background-color: #350313;
-  width: 10px;
-  height: 10px;
-  margin: 10px auto;
-  border-radius: 100%;
-`;
 
 const DiscoverLinks = () => {
   return (
-    <Container>
+    <PageSubLinksContainer>
       <div>
-        <Item href={api.congressPark.href} target="_blank">
+        <PageSubLinksItem
+          href={api.congressPark.href}
+          target="_blank"
+          type="regular"
+        >
           {api.congressPark.text}
-        </Item>
+        </PageSubLinksItem>
         <Circle />
-        <Item href={api.saratogaRaceCourse.href}>
+
+        <PageSubLinksItem href={api.saratogaRaceCourse.href} type="gatsby">
           {api.saratogaRaceCourse.text}
-        </Item>
+        </PageSubLinksItem>
         <Circle />
-        <Item href={api.saratogaPerformingArtsCenter.href}>
+
+        <PageSubLinksItem
+          href={api.saratogaPerformingArtsCenter.href}
+          type="gatsby"
+        >
           {api.saratogaPerformingArtsCenter.text}
-        </Item>
+        </PageSubLinksItem>
       </div>
+
       <div>
-        <Item href={api.saratogaSpringsCityCenter.href}>
+        <PageSubLinksItem
+          href={api.saratogaSpringsCityCenter.href}
+          type="gatsby"
+        >
           {api.saratogaSpringsCityCenter.text}
-        </Item>
+        </PageSubLinksItem>
         <Circle />
-        <Item href={api.saratogaSpaStatePark.href}>
+
+        <PageSubLinksItem href={api.saratogaSpaStatePark.href} type="gatsby">
           {api.saratogaSpaStatePark.text}
-        </Item>
+        </PageSubLinksItem>
         <Circle />
-        <Item href={api.annualFestivalsAndEvents.href}>
+
+        <PageSubLinksItem
+          href={api.annualFestivalsAndEvents.href}
+          type="gatsby"
+        >
           {api.annualFestivalsAndEvents.text}
-        </Item>
+        </PageSubLinksItem>
       </div>
-    </Container>
+    </PageSubLinksContainer>
   );
 };
 
