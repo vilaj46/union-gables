@@ -110,7 +110,7 @@ const items = [
   },
   {
     text: "Saratoga Springs",
-    url: "./saratoga-springs",
+    url: "/saratoga-springs",
     description: "Saratoga Springs",
     links: [
       {
