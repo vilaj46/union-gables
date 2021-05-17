@@ -1,7 +1,7 @@
 const items = [
   {
     text: "About Us",
-    url: "/aboutus",
+    url: "/about-us",
     description: "About Us.",
     links: [
       {

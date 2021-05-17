@@ -32,13 +32,16 @@ const NavItemContainer = styled(Link)`
   text-decoration: none;
   height: 100%;
   color: #ffffff;
-  text-decoration: none;
   margin: 0;
   padding: 0;
   width: auto;
 
   ${Container}:hover & {
     color: #b25a75;
+  }
+
+  &:active {
+    text-decoration: underline;
   }
 `;
 
@@ -126,27 +129,31 @@ const TextContainer = styled.div`
   height: 100%;
 `;
 
-// const SideLinksContainer = styled.ul`
-//   display: none;
-//   position: absolute;
-//   min-width: 160px;
-//   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-//   z-index: 1;
-//   margin-left: -16px;
-//   background-color: rgba(255, 255, 255, 0.5);
-//   left: 216px;
-//   top: 0;
+const SideLinksContainer = styled.ul`
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  margin-left: -16px;
+  background-color: rgba(255, 255, 255, 0.5);
+  left: 216px;
+  top: 0;
 
-//   ${DownLinkContainer}:hover & {
-//     display: block;
-//   }
-// `;
+  ${DownLinkContainer}:hover & {
+    display: block;
+  }
+`;
 
 const DropDownList = ({ item }) => {
   const { text, links } = item;
+
   return (
     <Container>
-      <NavItemContainer to={item.url}>
+      <NavItemContainer
+        activeStyle={{ textDecoration: "underline" }}
+        to={item.url}
+      >
         <TextContainer>
           {text}
           <DownArrow />
@@ -163,10 +170,14 @@ const DropDownList = ({ item }) => {
             sideLinks = [];
           }
           return (
-            <DownLinkContainer key={link.url} to={link.url}>
+            <DownLinkContainer
+              key={link.url}
+              to={link.url}
+              activeStyle={{ backgroundColor: "#AA4465", color: "white" }}
+            >
               {link.label}
               {sideLinks.length > 0 && <RightArrow />}
-              {/* <SideLinksContainer>
+              <SideLinksContainer>
                 {sideLinks.map((link) => {
                   return (
                     <DownLinkContainer to={link.url} key={link.url}>
@@ -174,7 +185,7 @@ const DropDownList = ({ item }) => {
                     </DownLinkContainer>
                   );
                 })}
-              </SideLinksContainer> */}
+              </SideLinksContainer>
             </DownLinkContainer>
           );
         })}

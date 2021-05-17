@@ -75,7 +75,6 @@ const Span2 = styled.span`
 `;
 
 const Footer = (props) => {
-  console.log(props.size);
   const SubContainer = props.size ? SubContainer2 : SubContainer1;
   return (
     <FontContainer>

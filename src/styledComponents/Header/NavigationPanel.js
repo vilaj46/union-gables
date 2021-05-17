@@ -17,7 +17,7 @@ const Container = styled.nav`
   }
 `;
 
-const NavigationPanel = (props) => {
+const NavigationPanel = () => {
   return (
     <Container>
       {headerItems.map((item) => (
