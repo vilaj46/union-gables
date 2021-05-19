@@ -57,7 +57,7 @@ const DescriptionContainer = styled.div`
   height: 30%;
   position: absolute;
   top: 50%;
-  right: 3000px;
+  right: -3000px;
   transform: translate(-50%, -50%);
   z-index: 1;
   display: flex;
@@ -67,7 +67,6 @@ const DescriptionContainer = styled.div`
 
   ${ImageContainer}:hover & {
     right: 10%;
-    transform: translate(-50%, -50%);
   }
 `;
 
