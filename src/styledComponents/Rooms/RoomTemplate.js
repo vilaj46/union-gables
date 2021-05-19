@@ -40,6 +40,7 @@ const RoomTemplate = (props) => {
   const { edges } = data.allFile;
   const rooms = separateRooms(edges, props.type);
   let allRooms = [];
+  let descriptions = [];
   let jane,
     annie,
     bill,
@@ -76,6 +77,19 @@ const RoomTemplate = (props) => {
       tom: tom,
       michael: michael,
     };
+    descriptions = [
+      "Tastefully decorated with Tiffany lamps, classic marble top tables, and the original fireplace.",
+      "The historic 'Guest Room' located in mansion's turret.",
+      "Featuring a private porch and spacious sitting area with a gas fireplace.",
+      "Edward Room Romantic and elegant with multiple Victorian windows.",
+      "With views of the grounds and a charming sitting area.",
+      "Cindy Room Two adjacent bedrooms with space for four guests.",
+      "The original Victorian Billiard room decorated with the rustic style from the Adirondacks.",
+      "An octagon-shaped room located in the turret of the mansion.",
+      "An intimate room with bright bay windows overlooking the grounds.",
+      "Linger on the romantic window seat with backyard views.",
+      "Space for four guests and features a hand-painted floral mural and wrought iron gates.",
+    ];
   }
 
   return (
@@ -88,7 +102,7 @@ const RoomTemplate = (props) => {
           return paragraph;
         })}
         {props.type === "mainMansion" && (
-          <MainMansionRoomLinks rooms={allRooms} />
+          <MainMansionRoomLinks rooms={allRooms} descriptions={descriptions} />
         )}
       </PageBodyContainer>
 

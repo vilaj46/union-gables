@@ -45,43 +45,47 @@ const items = [
         links: [
           {
             label: "Jane Room",
-            url: "/rooms/jane-room",
+            url: "/rooms/jane",
           },
           {
             label: "Annie Room",
-            url: "/rooms/annie-room",
+            url: "/rooms/annie",
           },
           {
             label: "Bill Room",
-            url: "/rooms/bill-room",
+            url: "/rooms/bill",
           },
           {
             label: "edward Room",
-            url: "/rooms/edward-room",
+            url: "/rooms/edward",
           },
           {
             label: "Kate Room",
-            url: "/rooms/kate-room",
+            url: "/rooms/kate",
           },
           {
             label: "Cindy Room",
-            url: "/rooms/cindy-room",
+            url: "/rooms/cindy",
+          },
+          {
+            label: "Bruce Room",
+            url: "/rooms/bruce",
           },
           {
             label: "Linda Room",
-            url: "/rooms/linda-room",
+            url: "/rooms/linda",
           },
           {
             label: "Jody Room",
-            url: "/rooms/jody-room",
+            url: "/rooms/jody",
           },
           {
             label: "Tom Room",
-            url: "/rooms/tom-room",
+            url: "/rooms/tom",
           },
           {
             label: "Michael Room",
-            url: "/rooms/michael-room",
+            url: "/rooms/michael",
           },
         ],
       },
