@@ -23,6 +23,8 @@ const NewPageImage = (props) => {
   const filter =
     props.dark === props.alt ? "brightness(50%)" : "brightness(100%)";
 
+  const cN = props.type ? props.type : "";
+
   return (
     <ImageContainer
       alt={props.alt}
@@ -37,6 +39,7 @@ const NewPageImage = (props) => {
         filter,
       }}
       fluid={props.data.node.childImageSharp.fluid}
+      className={cN}
     />
   );
 };

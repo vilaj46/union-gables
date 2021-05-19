@@ -2,7 +2,6 @@ import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
 // Sub Components
-import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import RoomSlides from "./RoomSlides";
 import MainMansionRoomLinks from "./MainMansionRoomLinks";
@@ -94,10 +93,10 @@ const RoomTemplate = (props) => {
 
   return (
     <FontContainer>
-      <Header />
+      {/* <Header /> */}
       <PageBodyContainer>
         <MainPageTitle>{props.title}</MainPageTitle>
-        <RoomSlides rooms={rooms} alts={props.alts} />
+        <RoomSlides rooms={rooms} alts={props.alts} type={props.type} />
         {props.paragraphs.map((paragraph) => {
           return paragraph;
         })}

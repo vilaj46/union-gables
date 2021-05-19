@@ -4,9 +4,20 @@ import styled from "styled-components";
 // Shared Components
 import NewPageImage from "../Shared/NewPageImage";
 
+const Container = styled.div`
+  padding-bottom: 50px;
+  position: relative;
+`;
+
 const DotContainer = styled.div`
   display: flex;
   justify-content: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  // left: 50%;
+  // right: 50%;
+  // transition: transformX(-50%);
 `;
 
 const Dot = styled.i`
@@ -44,8 +55,13 @@ const RoomSlides = (props) => {
   };
 
   return (
-    <React.Fragment>
-      <NewPageImage data={rooms[num]} alt={alts[num]} />
+    <Container>
+      <NewPageImage
+        data={rooms[num]}
+        alt={alts[num]}
+        type={props.type}
+        extraBottomPadding={true}
+      />
       <DotContainer>
         {rooms.map((i, index) => {
           if (index === num) {
@@ -63,7 +79,7 @@ const RoomSlides = (props) => {
           }
         })}
       </DotContainer>
-    </React.Fragment>
+    </Container>
   );
 };
 

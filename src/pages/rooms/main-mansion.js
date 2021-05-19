@@ -1,6 +1,7 @@
 import * as React from "react";
 
 // Components
+import Header from "../../styledComponents/Header/Header";
 import RoomTemplate from "../../styledComponents/Rooms/RoomTemplate";
 
 // Shared Components
@@ -14,6 +15,7 @@ const MainMansion = () => {
   const paragraphs = [api.Paragraph1, api.Paragraph2];
   return (
     <FontContainer>
+      <Header />
       <PageBodyContainer>
         <RoomTemplate
           title={api.title}

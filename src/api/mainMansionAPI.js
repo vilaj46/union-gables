@@ -1,7 +1,5 @@
 import * as React from "react";
 
-// import FontContainer from "../../styledComponents/Shared/FontContainer";
-// import PageBodyContainer from "../../styledComponents/Shared/PageBodyContainer";
 import PageParagraph from "../styledComponents/Shared/PageParagraph";
 import PageParagraphLink from "../styledComponents/Shared/PageParagraphLink";
 
