@@ -53,8 +53,7 @@ const Text = styled.p`
 `;
 
 const DescriptionContainer = styled.div`
-  width: 40%;
-  height: 30%;
+  width: 50%;
   position: absolute;
   top: 50%;
   right: -3000px;
@@ -66,7 +65,7 @@ const DescriptionContainer = styled.div`
   transition: all 0.5s ease-in-out;
 
   ${ImageContainer}:hover & {
-    right: 10%;
+    right: 1%;
   }
 `;
 
@@ -86,6 +85,11 @@ const ReadMore = styled(Link)`
   text-align: center;
   text-transform: uppercase;
   cursor: pointer;
+
+  &:hover {
+    background-color: #680727;
+    color: #ffffff;
+  }
 `;
 
 const MainMansionRoomLinks = ({ rooms, descriptions }) => {
