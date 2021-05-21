@@ -6,7 +6,7 @@ import PageParagraphLink from "../styledComponents/Shared/PageParagraphLink";
 // Paragraphs
 
 const Paragraph1 = (
-  <PageParagraph>
+  <PageParagraph key="mainMansionParagraph1">
     Discover the Main Mansion room that suits your stay in Saratoga Springs.
     Each of our{" "}
     <PageParagraphLink href="/rooms">spacious rooms</PageParagraphLink> are
@@ -20,7 +20,7 @@ const Paragraph1 = (
 );
 
 const Paragraph2 = (
-  <PageParagraph center={true}>
+  <PageParagraph center={true} key="mainMansionParagraph2">
     Find your room at Union Gables Inn.
   </PageParagraph>
 );

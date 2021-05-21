@@ -1,14 +1,9 @@
 import * as React from "react";
 
-import MainPageTitle from "../styledComponents/Shared/MainPageTitle";
 import PageSubTitle from "../styledComponents/Shared/PageSubTitle";
-import FontContainer from "../styledComponents/Shared/FontContainer";
-import BottomPadding from "../styledComponents/Shared/BottomPadding";
-import PageBodyContainer from "../styledComponents/Shared/PageBodyContainer";
 import PageParagraph from "../styledComponents/Shared/PageParagraph";
 import PageSubParagraph from "../styledComponents/Shared/PageSubParagraph";
 import PageParagraphLink from "../styledComponents/Shared/PageParagraphLink";
-import NewPageImages from "../styledComponents/Shared/NewPageImages";
 import RedCircle from "../styledComponents/Shared/RedCircle";
 
 // Paragraphs

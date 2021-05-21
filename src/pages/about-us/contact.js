@@ -7,7 +7,6 @@ import Header from "../../styledComponents/Header/Header";
 import MainPageTitle from "../../styledComponents/Shared/MainPageTitle";
 import FontContainer from "../../styledComponents/Shared/FontContainer";
 import PageBodyContainer from "../../styledComponents/Shared/PageBodyContainer";
-import HorizontalRule from "../../styledComponents/Shared/HorizontalRule";
 import Footer from "../../styledComponents/Footer/Footer";
 
 const ContactNow = () => {

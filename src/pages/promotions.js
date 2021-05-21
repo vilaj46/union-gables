@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useStaticQuery, graphql } from "gatsby";
+// import { useStaticQuery, graphql } from "gatsby";
 
 // Components
 import Header from "../styledComponents/Header/Header";
@@ -16,33 +16,33 @@ import PageBodyContainer from "../styledComponents/Shared/PageBodyContainer";
 // import HorizontalRule from "../styledComponents/Shared/HorizontalRule";
 
 const Promotions = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allFile(
-        filter: {
-          extension: { eq: "jpg" }
-          relativeDirectory: { eq: "amenities" }
-        }
-      ) {
-        edges {
-          node {
-            base
-            childImageSharp {
-              fluid(quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-              fixed(quality: 100) {
-                ...GatsbyImageSharpFixed
-              }
-            }
-          }
-        }
-      }
-    }
-  `);
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     allFile(
+  //       filter: {
+  //         extension: { eq: "jpg" }
+  //         relativeDirectory: { eq: "amenities" }
+  //       }
+  //     ) {
+  //       edges {
+  //         node {
+  //           base
+  //           childImageSharp {
+  //             fluid(quality: 100) {
+  //               ...GatsbyImageSharpFluid
+  //             }
+  //             fixed(quality: 100) {
+  //               ...GatsbyImageSharpFixed
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // `);
 
-  // Images
-  const { edges } = data.allFile;
+  // // Images
+  // const { edges } = data.allFile;
 
   return (
     <FontContainer>

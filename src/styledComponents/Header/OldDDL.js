@@ -55,11 +55,9 @@ const ContentContainer = styled.ul`
   margin-left: -16px;
   background-color: rgba(255, 255, 255, 0.5);
   top: 30px;
-  padding-left: 0; // not sure why this was even there.
 
   ${Container}:hover & {
-    display: flex;
-    flex-direction: column;
+    display: block;
   }
 
   @media screen and (max-width: 815px) {
@@ -74,9 +72,9 @@ const DownLinkContainer = styled(Link)`
   text-decoration: none;
   display: block;
   text-align: left;
+  margin-left: -40px;
   white-space: nowrap;
   position: relative;
-  width: 100%;
 
   @media screen and (max-width: 900px) {
     padding: 7px 8px;
@@ -151,7 +149,6 @@ const RightArrow = styled.i`
   border-top: 5px solid black;
   margin-left: 5px;
   margin-bottom: 3px;
-  margin-left: auto;
 
   transform: rotate(270deg);
 
@@ -167,27 +164,32 @@ const TextContainer = styled.div`
   height: 100%;
 `;
 
-const NewDownContainer = styled.div`
-  display: flex;
-  position: relative;
-  z-index: -1;
-`;
-
 const SideLinksContainer = styled.ul`
   display: none;
   position: absolute;
-  top: 0;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   margin-left: -16px;
   background-color: rgba(255, 255, 255, 0.5);
-  left: 200px;
+  left: 216px;
   top: 0;
 
-  ${NewDownContainer}:hover & {
+  ${DownLinkContainer}:hover & {
     display: block;
   }
+
+  // @media screen and (max-width: 1140px) {
+  //   font-size: 0.8rem;
+  // }
+
+  // @media screen and (max-width: 1080px) {
+  //   font-size: 0.7rem;
+  // }
+
+  // @media screen and (max-width: 815px) {
+  //   padding: 5px 8px;
+  // }
 `;
 
 const NewNavContainer = styled.div`
@@ -200,6 +202,7 @@ const NewNavContainer = styled.div`
   margin: 0;
   padding: 0;
   width: auto;
+  z-index: -1;
 
   ${Container}:hover & {
     color: #b25a75;
@@ -207,6 +210,26 @@ const NewNavContainer = styled.div`
 
   &:active {
     text-decoration: underline;
+  }
+`;
+
+const NewDownContainer = styled.div`
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  margin-left: -40px;
+  white-space: nowrap;
+  position: relative;
+
+  @media screen and (max-width: 900px) {
+    padding: 7px 8px;
+  }
+
+  &:hover {
+    color: #790028;
+    background-color: #ffffff;
   }
 `;
 
@@ -236,26 +259,32 @@ const DropDownList = ({ item }) => {
               sideLinks = [];
             }
             return (
-              <NewDownContainer key={link.url}>
+              <NewDownContainer>
                 <DownLinkContainer
+                  key={link.url}
                   to={link.url}
                   activeStyle={{ backgroundColor: "#AA4465", color: "white" }}
                 >
                   {link.label}
-
-                  {sideLinks.length > 0 && <RightArrow />}
                 </DownLinkContainer>
-
-                <SideLinksContainer>
-                  {sideLinks.map((link) => {
-                    return (
-                      <DownLinkContainer2 to={link.url} key={link.url}>
-                        {link.label}
-                      </DownLinkContainer2>
-                    );
-                  })}
-                </SideLinksContainer>
               </NewDownContainer>
+              // <DownLinkContainer
+              // key={link.url}
+              // to={link.url}
+              // activeStyle={{ backgroundColor: "#AA4465", color: "white" }}
+              // >
+              //   {link.label}
+              //   {sideLinks.length > 0 && <RightArrow />}
+              //   <SideLinksContainer>
+              //     {sideLinks.map((link) => {
+              //       return (
+              //         <DownLinkContainer2 to={link.url} key={link.url}>
+              //           {link.label}
+              //         </DownLinkContainer2>
+              //       );
+              //     })}
+              //   </SideLinksContainer>
+              // </DownLinkContainer>
             );
           })}
         </ContentContainer>
@@ -263,5 +292,54 @@ const DropDownList = ({ item }) => {
     </Container>
   );
 };
+
+// const DropDownList = ({ item }) => {
+//   const { text, links } = item;
+
+//   return (
+//     <Container>
+//       <NavItemContainer
+//         activeStyle={{ textDecoration: "underline" }}
+//         to={item.url}
+//       >
+//         <TextContainer>
+//           {text}
+//           <DownArrow />
+//         </TextContainer>
+//       </NavItemContainer>
+//       <ContentContainer>
+//         {links.map((link) => {
+//           let sideLinks;
+//           try {
+//             if (link.links.length > 0) {
+//               sideLinks = link.links;
+//             }
+//           } catch (err) {
+//             sideLinks = [];
+//           }
+//           return (
+//             <DownLinkContainer
+//               key={link.url}
+//               to={link.url}
+//               activeStyle={{ backgroundColor: "#AA4465", color: "white" }}
+//             >
+//               {link.label}
+//               {sideLinks.length > 0 && <RightArrow />}
+//               <SideLinksContainer>
+//                 {sideLinks.map((link) => {
+//                   return (
+//                     <DownLinkContainer2 to={link.url} key={link.url}>
+//                       {link.label}
+//                     </DownLinkContainer2>
+//                   );
+//                 })}
+//               </SideLinksContainer>
+//             </DownLinkContainer>
+//           );
+//         })}
+//       </ContentContainer>
+//     </Container>
+//   );
+// };
 
 export default DropDownList;

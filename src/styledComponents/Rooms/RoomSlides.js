@@ -57,14 +57,14 @@ const RoomSlides = (props) => {
           if (index === num) {
             return (
               <LargerDot
-                key={i}
+                key={index}
                 number={index}
                 onClick={() => onClick(index)}
               />
             );
           } else {
             return (
-              <Dot key={i} number={index} onClick={() => onClick(index)} />
+              <Dot key={index} number={index} onClick={() => onClick(index)} />
             );
           }
         })}

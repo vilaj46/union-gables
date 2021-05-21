@@ -112,6 +112,7 @@ const MainMansionRoomLinks = ({ rooms, descriptions }) => {
             <ImageContainer
               onMouseEnter={() => mouseEnter(k)}
               onMouseLeave={mouseLeave}
+              key={k}
             >
               <TextContainer>
                 <Text>{k}</Text>
