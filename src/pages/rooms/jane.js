@@ -11,28 +11,7 @@ import PageBodyContainer from "../../styledComponents/Shared/PageBodyContainer";
 import api from "../../api/janeAPI";
 
 const Jane = () => {
-  const alts = [
-    "Jane Room Office Desk, TV, Fire Place",
-    "Jane Room King Bed",
-    "Jane Room Bathroom and Bathtub",
-    "Jane Room Lounge Chairs",
-  ];
   const paragraphs = [api.Paragraph1, api.Paragraph2, api.Paragraph3];
-  const amenities = [
-    '43" flat-screen television',
-    "Air conditioning",
-    "Complimentary high-speed wireless internet",
-    "Gas fireplace",
-    "Hair dryer",
-    "Iron & ironing board",
-
-    "King sleigh bed",
-    "Luxurious linens",
-    "Mini-refrigerator",
-    "Robes",
-    "Soaking tub",
-    "Tiled shower",
-  ];
   return (
     <FontContainer>
       <Header />
@@ -40,9 +19,9 @@ const Jane = () => {
         <RoomTemplate
           title={api.title}
           type="janeRoom"
-          alts={alts}
+          alts={api.alts}
           paragraphs={paragraphs}
-          amenities={amenities}
+          amenities={api.amenities}
         />
       </PageBodyContainer>
     </FontContainer>

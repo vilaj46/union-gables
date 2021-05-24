@@ -35,6 +35,31 @@ const Paragraph3 = (
 // Text
 const title = "Jane Room";
 
+// Amenities
+const amenities = [
+  '43" flat-screen television',
+  "Air conditioning",
+  "Complimentary high-speed wireless internet",
+  "Gas fireplace",
+  "Hair dryer",
+  "Iron & ironing board",
+
+  "King sleigh bed",
+  "Luxurious linens",
+  "Mini-refrigerator",
+  "Robes",
+  "Soaking tub",
+  "Tiled shower",
+];
+
+// Alts
+const alts = [
+  "Jane Room Office Desk, TV, Fire Place",
+  "Jane Room King Bed",
+  "Jane Room Bathroom and Bathtub",
+  "Jane Room Lounge Chairs",
+];
+
 const api = {
   // Paragraphs
   Paragraph1,
@@ -43,6 +68,12 @@ const api = {
 
   // Text
   title,
+
+  // Amenities
+  amenities,
+
+  // Alts
+  alts,
 };
 
 export default api;
