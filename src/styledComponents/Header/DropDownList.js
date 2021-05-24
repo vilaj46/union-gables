@@ -182,11 +182,20 @@ const SideLinksContainer = styled.ul`
   z-index: 1;
   margin-left: -16px;
   background-color: rgba(255, 255, 255, 0.5);
-  left: 200px;
+  // left: 195px;
+  right: -112%;
   top: 0;
 
   ${NewDownContainer}:hover & {
     display: block;
+  }
+
+  @media screen and (max-width: 900px) {
+    right: -122%;
+  }
+
+  @media screen and (max-width: 815px) {
+    right: -125%;
   }
 `;
 

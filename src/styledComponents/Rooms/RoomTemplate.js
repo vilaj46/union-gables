@@ -5,6 +5,8 @@ import { useStaticQuery, graphql } from "gatsby";
 import Footer from "../Footer/Footer";
 import RoomSlides from "./RoomSlides";
 import MainMansionRoomLinks from "./MainMansionRoomLinks";
+import BookNowButton from "./BookNowButton";
+import Amenities from "./Amenities";
 
 // Shared Components
 import FontContainer from "../../styledComponents/Shared/FontContainer";
@@ -91,18 +93,21 @@ const RoomTemplate = (props) => {
     ];
   }
 
+  const showAmenities = shouldShowAmenities(props.amenities);
+
   return (
     <FontContainer>
-      {/* <Header /> */}
       <PageBodyContainer>
         <MainPageTitle>{props.title}</MainPageTitle>
         <RoomSlides rooms={rooms} alts={props.alts} type={props.type} />
         {props.paragraphs.map((paragraph) => {
           return paragraph;
         })}
+        <BookNowButton />
         {props.type === "mainMansion" && (
           <MainMansionRoomLinks rooms={allRooms} descriptions={descriptions} />
         )}
+        {showAmenities && <Amenities amenities={props.amenities} />}
       </PageBodyContainer>
 
       <BottomPadding />
@@ -111,5 +116,17 @@ const RoomTemplate = (props) => {
     </FontContainer>
   );
 };
+
+function shouldShowAmenities(amenities) {
+  if (amenities) {
+    if (amenities.length > 0) {
+      return true;
+    } else {
+      return false;
+    }
+  } else {
+    return false;
+  }
+}
 
 export default RoomTemplate;
