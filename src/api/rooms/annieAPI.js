@@ -5,7 +5,7 @@ import PageParagraph from "../../styledComponents/Shared/PageParagraph";
 // Paragraphs
 
 const Paragraph1 = (
-  <PageParagraph center={true} key="annieParagraph1">
+  <PageParagraph key="annieParagraph1">
     Stay in this partially rounded room in the turret on the west side of the
     mansion. The Annie Room was historically known as the “Guest Room” due to
     its location at the top of the staircase and separate entrance from the
@@ -14,7 +14,7 @@ const Paragraph1 = (
 );
 
 const Paragraph2 = (
-  <PageParagraph center={true} key="annieParagraph2">
+  <PageParagraph key="annieParagraph2">
     Enjoy large windows in this sophisticated and romantic room, featuring
     elegant marble top tables, wall-to-wall oriental carpets, and antique
     furnishings. Sleep soundly in a king bed with luxury sheets or wrap yourself

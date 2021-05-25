@@ -5,7 +5,7 @@ import PageParagraph from "../../styledComponents/Shared/PageParagraph";
 // Paragraphs
 
 const Paragraph1 = (
-  <PageParagraph center={true} key="bruceParagraph1">
+  <PageParagraph key="bruceParagraph1">
     Uniquely decorated with the style from the Adirondacks, the Bruce Room is
     bright and open with a vaulted ceiling. Experience a comfortable retreat to
     Saratoga Springs on the third level of the mansion with hardwood floors, a
@@ -14,7 +14,7 @@ const Paragraph1 = (
 );
 
 const Paragraph2 = (
-  <PageParagraph center={true} key="bruceParagraph2">
+  <PageParagraph key="bruceParagraph2">
     In addition to the antique décor, the Bruce Room has an HD flat-screen
     television, an in-room refrigerator, and air conditioning. This room has a
     private bathroom with a shower, plus cozy robes.

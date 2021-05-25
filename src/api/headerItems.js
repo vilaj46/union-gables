@@ -95,7 +95,7 @@ const items = [
         links: [
           {
             label: "Henry Suite",
-            url: "/rooms/henry-suite",
+            url: "/rooms/henry",
           },
         ],
       },

@@ -5,7 +5,7 @@ import PageParagraph from "../../styledComponents/Shared/PageParagraph";
 // Paragraphs
 
 const Paragraph1 = (
-  <PageParagraph center={true} key="cindyParagraph1">
+  <PageParagraph key="cindyParagraph1">
     Perfect for families, this suite boasts two adjacent bedrooms with space for
     four guests. One large room features a queen-sized sleigh bed and hardwood
     floors, while the other room offers two extra-long twin beds with
@@ -14,7 +14,7 @@ const Paragraph1 = (
 );
 
 const Paragraph2 = (
-  <PageParagraph center={true} key="cindyParagraph2">
+  <PageParagraph key="cindyParagraph2">
     Sit out on the enclosed screened-in porch or relax in the queen bedroom with
     a movie on the HD flat-screen TV and the warmth of the gas fireplace stove.
     The Cindy Room has been modernized with a number of amenities, including
@@ -24,7 +24,7 @@ const Paragraph2 = (
 );
 
 const Paragraph3 = (
-  <PageParagraph center={true} key="cindyParagraph3">
+  <PageParagraph key="cindyParagraph3">
     Pets are allowed in this room for a one-time fee.
   </PageParagraph>
 );

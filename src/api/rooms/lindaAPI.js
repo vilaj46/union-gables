@@ -5,7 +5,7 @@ import PageParagraph from "../../styledComponents/Shared/PageParagraph";
 // Paragraphs
 
 const Paragraph1 = (
-  <PageParagraph center={true} key="lindaParagraph1">
+  <PageParagraph key="lindaParagraph1">
     Discover our most captivating octagon-shaped room in the turret of the
     mansion. Located on the third level, the romantic and charming Linda Room is
     beautifully decorated with Victorian antiques, elegant carpeting, and a
@@ -14,7 +14,7 @@ const Paragraph1 = (
 );
 
 const Paragraph2 = (
-  <PageParagraph center={true} key="lindaParagraph2">
+  <PageParagraph key="lindaParagraph2">
     In addition to a private bathroom with a shower, the Linda Room has a
     separate sitting area with a natural gas fireplace and an HD flat-screen
     television. The room also has an in-room refrigerator, complimentary

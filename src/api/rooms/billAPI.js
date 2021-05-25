@@ -5,7 +5,7 @@ import PageParagraph from "../../styledComponents/Shared/PageParagraph";
 // Paragraphs
 
 const Paragraph1 = (
-  <PageParagraph center={true} key="billParagraph1">
+  <PageParagraph key="billParagraph1">
     Choose the sophisticated and romantic Bill Room, featuring a private porch
     overlooking the front of the Inn. Located on the second level, this airy
     rooms faces southeast for the oval bay windows to fill the room with
@@ -14,7 +14,7 @@ const Paragraph1 = (
 );
 
 const Paragraph2 = (
-  <PageParagraph center={true} key="billParagraph2">
+  <PageParagraph key="billParagraph2">
     Enjoy the room’s spacious sitting area, furnished with antiques and boasting
     a natural gas fireplace. In addition to a king-sized sleigh bed, the Bill
     Room boasts a large bathroom with a tub-shower and numerous modern
@@ -24,7 +24,7 @@ const Paragraph2 = (
 );
 
 const Paragraph3 = (
-  <PageParagraph center={true} key="billParagraph3">
+  <PageParagraph key="billParagraph3">
     Pets are allowed in this room for a one-time fee.{" "}
   </PageParagraph>
 );

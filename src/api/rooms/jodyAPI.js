@@ -5,7 +5,7 @@ import PageParagraph from "../../styledComponents/Shared/PageParagraph";
 // Paragraphs
 
 const Paragraph1 = (
-  <PageParagraph center={true} key="jodyParagraph1">
+  <PageParagraph key="jodyParagraph1">
     Fall in love with the intimate and quaint Jody Room with bay windows
     overlooking the pool and lawn with sunlight streaming in from the southeast.
     This charming room offers a king-sized bed with luxury sheets, a comfortable
@@ -14,7 +14,7 @@ const Paragraph1 = (
 );
 
 const Paragraph2 = (
-  <PageParagraph center={true} key="jodyParagraph2">
+  <PageParagraph key="jodyParagraph2">
     Choose the historic ambiance and antique furnishings of Union Gables Inn
     without sacrificing the modern amenities that today’s travelers want. The
     Jody Room comes with complimentary wireless internet, an HD flat-screen TV,

@@ -15,7 +15,7 @@ const Paragraph1 = (
 );
 
 const Paragraph2 = (
-  <PageParagraph center={true} key="kateParagraph2">
+  <PageParagraph key="kateParagraph2">
     With space to work and play, it’s easy to set up your laptop at the antique
     desk or lounge in the sitting area with a movie on the HD flat-screen TV.
     The Kate Room has a private bathroom with a shower and cozy robes to wrap up
@@ -24,7 +24,7 @@ const Paragraph2 = (
 );
 
 const Paragraph3 = (
-  <PageParagraph center={true} key="kateParagraph3">
+  <PageParagraph key="kateParagraph3">
     Pets are allowed in this room for a one-time fee.{" "}
   </PageParagraph>
 );

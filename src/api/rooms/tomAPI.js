@@ -5,7 +5,7 @@ import PageParagraph from "../../styledComponents/Shared/PageParagraph";
 // Paragraphs
 
 const Paragraph1 = (
-  <PageParagraph center={true} key="tomParagraph1">
+  <PageParagraph key="tomParagraph1">
     Enjoy the sunlight in winters and the view of the lawn in summers from the
     romantic window seat adjacent to the natural gas fireplace. Southern-facing
     and located on the third level of the mansion, the Tom Room boasts a cozy
@@ -14,7 +14,7 @@ const Paragraph1 = (
 );
 
 const Paragraph2 = (
-  <PageParagraph center={true} key="tomParagraph2">
+  <PageParagraph key="tomParagraph2">
     Perfect for two guests, the Tom Room has a king-sized bed with luxury sheets
     and a private bathroom with a shower. Finished with hardwood floors, this
     room comes equipped with an HD flat-screen television, an in-room

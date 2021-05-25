@@ -5,7 +5,7 @@ import PageParagraph from "../../styledComponents/Shared/PageParagraph";
 // Paragraphs
 
 const Paragraph1 = (
-  <PageParagraph center={true} key="janeParagraph1">
+  <PageParagraph key="janeParagraph1">
     Step back in time to the elegant Jane Room. Located on the first floor of
     the Inn, this room was originally the formal dining room of the mansion
     during its early days, and now with carefully preserved hardwood floors and
@@ -16,7 +16,7 @@ const Paragraph1 = (
 );
 
 const Paragraph2 = (
-  <PageParagraph center={true} key="janeParagraph2">
+  <PageParagraph key="janeParagraph2">
     A few modern adjustments include the original fireplace which has been
     converted to a natural gas fireplace, a newly remodeled bathroom with a
     soaking tub and tiled shower, plus air conditioning, HD cable television,
@@ -26,7 +26,7 @@ const Paragraph2 = (
 );
 
 const Paragraph3 = (
-  <PageParagraph center={true} key="janeParagraph3">
+  <PageParagraph key="janeParagraph3">
     Pets are allowed in this room for a one-time fee.{" "}
   </PageParagraph>
 );

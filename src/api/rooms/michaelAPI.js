@@ -5,7 +5,7 @@ import PageParagraph from "../../styledComponents/Shared/PageParagraph";
 // Paragraphs
 
 const Paragraph1 = (
-  <PageParagraph center={true} key="michaelParagraph1">
+  <PageParagraph key="michaelParagraph1">
     Perfect for four guests, the Michael Room has bright windows with east and
     west exposure on the third level of the mansion. Enjoy the expansive view of
     the pool and gardens on one side of the mansion, and some of the historic
@@ -14,7 +14,7 @@ const Paragraph1 = (
 );
 
 const Paragraph2 = (
-  <PageParagraph center={true} key="michaelParagraph2">
+  <PageParagraph key="michaelParagraph2">
     Uniquely decorated with a hand-painted floral mural and wrought iron gates,
     the Michael Room features two queen-sized beds and a private bathroom with a
     shower. Relax in the fully-carpeted sitting areas with a gas fireplace stove

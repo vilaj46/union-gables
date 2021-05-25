@@ -5,7 +5,7 @@ import PageParagraph from "../../styledComponents/Shared/PageParagraph";
 // Paragraphs
 
 const Paragraph1 = (
-  <PageParagraph center={true} key="edwardParagraph1">
+  <PageParagraph key="edwardParagraph1">
     Enjoy a relaxing stay in Saratoga Springs in the Edward Room, located in the
     main mansion of Union Gables Inn. The bright and comfortable ambiance shines
     through the room’s romantic Victorian windows and luxurious oriental
@@ -15,7 +15,7 @@ const Paragraph1 = (
 );
 
 const Paragraph2 = (
-  <PageParagraph center={true} key="edwardParagraph2">
+  <PageParagraph key="edwardParagraph2">
     Sleep in comfort in a king-sized sleigh bed, tucked in with luxury sheets
     and soft pillows. The Edward Room comes with a private bathroom with a
     shower, as well as modern amenities like an HD flat-screen television,
