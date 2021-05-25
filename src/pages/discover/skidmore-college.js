@@ -67,6 +67,7 @@ const SkidmoreCollege = () => {
         <NewPageImages
           images={[edges[1], edges[3]]}
           alts={["Bruce Room", "Pool and Lounge Chairs"]}
+          extraBottomPadding={true}
         />
 
         {api.Section4}

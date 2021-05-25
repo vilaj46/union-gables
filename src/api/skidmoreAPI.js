@@ -29,8 +29,8 @@ const Section2 = (
 
 const Section3 = (
   <React.Fragment>
-    <PageSubTitle>Visiting Campus</PageSubTitle>
-    <PageParagraph>
+    <PageSubTitle extraBottomPadding={true}>Visiting Campus</PageSubTitle>
+    <PageParagraph extraBottomPadding={true}>
       <PageSubParagraph>
         Drive just 7 minutes from Union Gables Inn to Skidmore College!
       </PageSubParagraph>
@@ -57,7 +57,7 @@ const Section3 = (
       <PageSubParagraph>
         Wear comfortable shoes for walking around campus.
       </PageSubParagraph>
-      <PageSubParagraph>
+      <PageSubParagraph last={true}>
         Visiting the Skidmore Boathouse, Van Lennep Riding Center, or Castle
         Diamond? See directions to other{" "}
         <PageParagraphLink
@@ -74,7 +74,7 @@ const Section3 = (
 
 const Section4 = (
   <React.Fragment>
-    <PageSubTitle>Perfect for Parents</PageSubTitle>
+    <PageSubTitle extraBottomPadding={true}>Perfect for Parents</PageSubTitle>
     <PageParagraph>
       <PageSubParagraph>
         Our historic Queen Anne mansion is over 100 years old and situated just
