@@ -36,6 +36,8 @@ const Amenities = (props) => {
           {props.amenities.map((amen, index) => {
             if (index < half) {
               return <Item key={amen}>{amen}</Item>;
+            } else {
+              return <React.Fragment></React.Fragment>;
             }
           })}
         </List>
@@ -43,6 +45,8 @@ const Amenities = (props) => {
           {props.amenities.map((amen, index) => {
             if (index >= half) {
               return <Item key={amen}>{amen}</Item>;
+            } else {
+              return <React.Fragment></React.Fragment>;
             }
           })}
         </List>

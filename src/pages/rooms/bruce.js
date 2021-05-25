@@ -8,17 +8,17 @@ import RoomTemplate from "../../styledComponents/Rooms/RoomTemplate";
 import FontContainer from "../../styledComponents/Shared/FontContainer";
 import PageBodyContainer from "../../styledComponents/Shared/PageBodyContainer";
 
-import api from "../../api/rooms/kateAPI";
+import api from "../../api/rooms/bruceAPI";
 
-const Kate = () => {
-  const paragraphs = [api.Paragraph1, api.Paragraph2, api.Paragraph3];
+const Bruce = () => {
+  const paragraphs = [api.Paragraph1, api.Paragraph2];
   return (
     <FontContainer>
       <Header />
       <PageBodyContainer>
         <RoomTemplate
           title={api.title}
-          type="kateRoom"
+          type="bruceRoom"
           alts={api.alts}
           paragraphs={paragraphs}
           amenities={api.amenities}
@@ -28,4 +28,4 @@ const Kate = () => {
   );
 };
 
-export default Kate;
+export default Bruce;

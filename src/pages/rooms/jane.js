@@ -8,7 +8,7 @@ import RoomTemplate from "../../styledComponents/Rooms/RoomTemplate";
 import FontContainer from "../../styledComponents/Shared/FontContainer";
 import PageBodyContainer from "../../styledComponents/Shared/PageBodyContainer";
 
-import api from "../../api/janeAPI";
+import api from "../../api/rooms/janeAPI";
 
 const Jane = () => {
   const paragraphs = [api.Paragraph1, api.Paragraph2, api.Paragraph3];

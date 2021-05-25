@@ -51,6 +51,7 @@ const RoomSlides = (props) => {
         alt={alts[num]}
         type={props.type}
         removeContain={true}
+        paddingAround={true}
       />
       <DotContainer>
         {rooms.map((i, index) => {
