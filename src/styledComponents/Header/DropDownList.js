@@ -8,7 +8,6 @@ const Container = styled.li`
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
-  padding: 14px 16px;
 
   &:hover {
     background-color: #ffffff;
@@ -26,7 +25,6 @@ const Container = styled.li`
 
 // Bottom portion is navLink.
 const NavItemContainer = styled(Link)`
-  display: block;
   color: white;
   text-align: center;
   text-decoration: none;
@@ -36,6 +34,7 @@ const NavItemContainer = styled(Link)`
   padding: 0;
   width: auto;
   z-index: 1;
+  width: 100%;
 
   ${Container}:hover & {
     color: #b25a75;
@@ -52,7 +51,6 @@ const ContentContainer = styled.ul`
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  margin-left: -16px;
   background-color: rgba(255, 255, 255, 0.5);
   top: 30px;
   padding-left: 0; // not sure why this was even there.
@@ -165,6 +163,7 @@ const TextContainer = styled.div`
   justtify-content: space-evenly;
   width: 100%;
   height: 100%;
+  padding: 14px 16px;
 `;
 
 const NewDownContainer = styled.div`
@@ -200,15 +199,11 @@ const SideLinksContainer = styled.ul`
 `;
 
 const NewNavContainer = styled.div`
-  display: block;
   color: white;
   text-align: center;
   text-decoration: none;
-  height: 100%;
   color: #ffffff;
-  margin: 0;
-  padding: 0;
-  width: auto;
+  display: flex;
 
   ${Container}:hover & {
     color: #b25a75;
