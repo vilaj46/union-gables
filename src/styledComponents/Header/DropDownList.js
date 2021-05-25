@@ -258,7 +258,14 @@ const DropDownList = ({ item }) => {
                 <SideLinksContainer>
                   {sideLinks.map((link) => {
                     return (
-                      <DownLinkContainer2 to={link.url} key={link.url}>
+                      <DownLinkContainer2
+                        to={link.url}
+                        key={link.url}
+                        activeStyle={{
+                          backgroundColor: "#AA4465",
+                          color: "white",
+                        }}
+                      >
                         {link.label}
                       </DownLinkContainer2>
                     );
