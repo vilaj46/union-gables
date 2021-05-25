@@ -26,7 +26,7 @@ const ImageContainer = styled.div`
 `;
 
 const TextContainer = styled.div`
-  background: rgba(42, 5, 17, 0.5);
+  background: rgba(42, 5, 17, 0.7);
   width: 40%;
   height: 30%;
   position: absolute;
@@ -37,7 +37,7 @@ const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transition: all 0.5s ease-in-out;
+  transition: all 1s ease-in-out;
 
   ${ImageContainer}:hover & {
     transform: translateX(-3000px);
@@ -62,7 +62,7 @@ const DescriptionContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transition: all 0.5s ease-in-out;
+  transition: all 1s ease-in-out;
 
   ${ImageContainer}:hover & {
     right: 1%;
@@ -96,12 +96,14 @@ const MainMansionRoomLinks = ({ rooms, descriptions }) => {
   const keys = Object.keys(rooms);
   const [dark, setDark] = React.useState("");
 
-  const mouseEnter = (k) => {
-    setDark(k);
-  };
+  const mouseEnter = (e, k) => {
+    e.stopPropagation();
 
-  const mouseLeave = () => {
-    setDark("");
+    const cl4ss = e.target.classList[0];
+
+    if (cl4ss.includes("ImageContainer") && dark !== k) {
+      setDark(k);
+    }
   };
 
   return (
@@ -109,11 +111,7 @@ const MainMansionRoomLinks = ({ rooms, descriptions }) => {
       <Container>
         {keys.map((k, index) => {
           return (
-            <ImageContainer
-              onMouseEnter={() => mouseEnter(k)}
-              onMouseLeave={mouseLeave}
-              key={k}
-            >
+            <ImageContainer onMouseEnter={(e) => mouseEnter(e, k)} key={k}>
               <TextContainer>
                 <Text>{k}</Text>
                 <Text>Room</Text>
