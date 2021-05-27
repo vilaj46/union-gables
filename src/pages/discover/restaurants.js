@@ -1,42 +1,102 @@
 import * as React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 
 // Components
 import Header from "../../styledComponents/Header/Header";
 import Footer from "../../styledComponents/Footer/Footer";
+import RestaurantLinks from "../../styledComponents/Restaurants/RestaurantLinks";
 
 // Shared Components
-import PageTitle from "../../styledComponents/Shared/PageTitle";
-// import PageSubTitle from "../../styledComponents/Shared/PageSubTitle";
-// import PageImages from "../../styledComponents/Shared/PageImages";
-// import PageParagraph from "../../styledComponents/Shared/PageParagraph";
+import MainPageTitle from "../../styledComponents/Shared/MainPageTitle";
+import NewPageImages from "../../styledComponents/Shared/NewPageImages";
 import FontContainer from "../../styledComponents/Shared/FontContainer";
 import PageBodyContainer from "../../styledComponents/Shared/PageBodyContainer";
-// import HorizontalRule from "../../styledComponents/Shared/HorizontalRule";
+import HorizontalRule from "../../styledComponents/Shared/HorizontalRule";
 
 import BottomPadding from "../../styledComponents/Shared/BottomPadding";
+import api from "../../api/restaurantsAPI";
 
-// Images
-// import mainImage from "../../images/saratogaPerformingArts.jpg";
-// import mainImage1 from "../../images/saratogaPerformingArts1.jpg";
-// import mainImage2 from "../../images/saratogaPerformingArts2.jpg";
-// import mainImage3 from "../../images/saratogaPerformingArts3.jpg";
+const Resaurants = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allFile(
+        filter: {
+          extension: { eq: "jpg" }
+          relativeDirectory: { eq: "restaurants" }
+        }
+      ) {
+        edges {
+          node {
+            base
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+              fixed(quality: 100) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
 
-const title = "Places to Eat in Saratoga Springs, NY";
+  // Images
+  const { edges } = data.allFile;
+  const pork = edges[0];
+  const table = edges[1];
+  const wine = edges[2];
+  const pasta = edges[3];
+  const chef = edges[4];
+  const cheese = edges[5];
 
-// const splitImages = [mainImage, mainImage1];
-// const splitImages2 = [mainImage2, mainImage3];
+  const horse = edges[6];
+  const benedict = edges[7];
+  const concert = edges[8];
 
-const SaratogaPerformingArts = () => {
   return (
     <FontContainer>
       <Header />
-      <title>Saratoga Restaurants Page!</title>
-      <PageTitle>{title}</PageTitle>
-      <PageBodyContainer></PageBodyContainer>
+      <PageBodyContainer>
+        <MainPageTitle>{api.title}</MainPageTitle>
+
+        {api.Section1}
+
+        <NewPageImages
+          images={[table, wine]}
+          alts={["Table and Wine Glasses", "Wine and Steak"]}
+          extraBottomPadding={true}
+        />
+
+        {api.Section2}
+
+        <NewPageImages
+          images={[chef, cheese]}
+          alts={["Chef Seasoning Appetizers", "Cheese Board"]}
+          extraBottomPadding={true}
+        />
+
+        {api.Section3}
+
+        <NewPageImages
+          images={[pasta, pork]}
+          alts={["Seafood Linguine", "Pork Loin"]}
+          extraBottomPadding={true}
+        />
+
+        {api.Section4}
+
+        <HorizontalRule halfMargin={true} />
+
+        {api.Section5}
+
+        <RestaurantLinks images={[horse, benedict, concert]} />
+      </PageBodyContainer>
       <BottomPadding />
       <Footer />
     </FontContainer>
   );
 };
 
-export default SaratogaPerformingArts;
+export default Resaurants;

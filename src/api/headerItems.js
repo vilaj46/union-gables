@@ -123,7 +123,7 @@ const items = [
       },
       {
         label: "Dining Guide",
-        url: "/dining-guide",
+        url: "/discover/restaurants",
       },
       {
         label: "Saratoga Race Course",

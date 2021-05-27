@@ -104,7 +104,7 @@ const ReadMore = styled(Link)`
   }
 `;
 
-const ThingsLinks = ({ images }) => {
+const RestaurantLinks = ({ images }) => {
   const imageObjects = separateImages(images);
   const keys = Object.keys(imageObjects);
   const [dark, setDark] = React.useState("");
@@ -167,7 +167,7 @@ const separateImages = (images) => {
 
   images.forEach((img) => {
     const { base } = img.node;
-    if (base === "breakfast.jpg") {
+    if (base === "benedict.jpg") {
       obj.breakfast = {
         data: img,
         alt: "Eggs Benedict and Potatoes",
@@ -176,23 +176,23 @@ const separateImages = (images) => {
         href: "/about-us/breakfast",
         title: "Fresh Gourmet Breakfasts",
       };
-    } else if (base === "daytime.jpg") {
+    } else if (base === "concert.jpg") {
       obj.daytime = {
         data: img,
-        alt: "Daytime Union Gables Inn",
+        alt: "Crowd and Concert",
         description:
-          "Take a tour of Union Gables Inn's unique rooms and beautiful grounds.",
-        href: "/gallery",
-        title: "Photo Gallery",
+          "There's always something happening in Saratoga Springs. See what's on this season!",
+        href: "/discover/festivals-and-events",
+        title: "Saratoga Events",
       };
     } else {
       obj.treats = {
         data: img,
-        alt: "Woof Dog Treats",
+        alt: "Thoroughbred Horse Racing",
         description:
-          "Select rooms are pet friendly and perfect for you and your pooch. See our pet policy!",
-        href: "/about-us/pet-friendly",
-        title: "Designated Pet-Friendly Rooms",
+          "Get your heart racing at the oldest racetrack in the country.",
+        href: "/discover/race-course",
+        title: `Thorough-${" "}bred Racing`,
       };
     }
   });
@@ -200,4 +200,4 @@ const separateImages = (images) => {
   return obj;
 };
 
-export default ThingsLinks;
+export default RestaurantLinks;
