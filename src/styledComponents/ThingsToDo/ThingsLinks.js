@@ -3,26 +3,37 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 
 // Shared Components
-import FontContainer from "../../styledComponents/Shared/FontContainer";
-import NewPageImage from "../../styledComponents/Shared/NewPageImage";
+import FontContainer from "../Shared/FontContainer";
+import NewPageImage from "../Shared/NewPageImage";
 
 const Container = styled.div`
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+
   overflow-x: hidden;
+
+  @media screen and (max-width: 650px) {
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 
 const ImageContainer = styled.div`
-  width: 32%;
+  width: 33%;
   position: relative;
+  margin: 0 auto;
 
-  @media screen and (max-width: 900px) {
-    width: 49%;
+  @media screen and (max-width: 730px) {
+    width: 55%;
   }
 
-  @media screen and (max-width: 570px) {
+  @media screen and (max-width: 650px) {
     width: 75%;
+  }
+
+  @media screen and (max-width: 520px) {
+    width: 85%;
   }
 `;
 
@@ -93,46 +104,50 @@ const ReadMore = styled(Link)`
   }
 `;
 
-const MainMansionRoomLinks = ({ rooms, descriptions }) => {
-  const keys = Object.keys(rooms);
+const ThingsLinks = ({ images }) => {
+  const imageObjects = separateImages(images);
+  const keys = Object.keys(imageObjects);
   const [dark, setDark] = React.useState("");
 
   const mouseEnter = (e, k) => {
     e.stopPropagation();
 
     const cl4ss = e.target.classList[0];
-
     if (cl4ss.includes("ImageContainer") && dark !== k) {
       setDark(k);
     }
   };
 
+  console.log(dark);
+
   return (
     <FontContainer>
       <Container>
-        {keys.map((k, index) => {
+        {keys.map((k) => {
           return (
             <ImageContainer
-              onMouseLeave={() => setDark("")}
-              onMouseEnter={(e) => mouseEnter(e, k)}
+              onMouseEnter={(e) => mouseEnter(e, imageObjects[k].alt)}
               key={k}
+              onMouseLeave={() => setDark("")}
             >
               <TextContainer>
-                <Text>{k}</Text>
-                <Text>Room</Text>
+                <Text>{imageObjects[k].title}</Text>
               </TextContainer>
+
               <DescriptionContainer
                 style={{
-                  pointerEvents: `${dark !== k ? "none" : "auto"}`,
+                  pointerEvents: `${
+                    dark !== imageObjects[k].alt ? "none" : "auto"
+                  }`,
                 }}
               >
-                <Description>{descriptions[index]}</Description>
-                <ReadMore to={`/rooms/${k}`}>Read More</ReadMore>
+                <Description>{imageObjects[k].description}</Description>
+                <ReadMore to={imageObjects[k].href}>Read More</ReadMore>
               </DescriptionContainer>
 
               <NewPageImage
-                data={rooms[k][0]}
-                alt={k}
+                data={imageObjects[k].data}
+                alt={imageObjects[k].alt}
                 removeContain={true}
                 paddingAround={true}
                 dimensions={{
@@ -149,4 +164,42 @@ const MainMansionRoomLinks = ({ rooms, descriptions }) => {
   );
 };
 
-export default MainMansionRoomLinks;
+const separateImages = (images) => {
+  const obj = {};
+
+  images.forEach((img) => {
+    const { base } = img.node;
+    if (base === "breakfast.jpg") {
+      obj.breakfast = {
+        data: img,
+        alt: "Eggs Benedict and Potatoes",
+        description:
+          "Never the same two days in a row, learn more about our famous breakfast prepared fresh daily.",
+        href: "/about-us/breakfast",
+        title: "Fresh Gourmet Breakfasts",
+      };
+    } else if (base === "daytime.jpg") {
+      obj.daytime = {
+        data: img,
+        alt: "Daytime Union Gables Inn",
+        description:
+          "Take a tour of Union Gables Inn's unique rooms and beautiful grounds.",
+        href: "/gallery",
+        title: "Photo Gallery",
+      };
+    } else {
+      obj.treats = {
+        data: img,
+        alt: "Woof Dog Treats",
+        description:
+          "Select rooms are pet friendly and perfect for you and your pooch. See our pet policy!",
+        href: "/about-us/pet-friendly",
+        title: "Designated Pet-Friendly Rooms",
+      };
+    }
+  });
+
+  return obj;
+};
+
+export default ThingsLinks;

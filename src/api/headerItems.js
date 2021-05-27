@@ -114,12 +114,12 @@ const items = [
   },
   {
     text: "Saratoga Springs",
-    url: "/saratoga-springs",
+    url: "/discover/things-to-do",
     description: "Saratoga Springs",
     links: [
       {
         label: "Saratoga Events",
-        url: "/saratoga-events",
+        url: "/discover/festivals-and-events",
       },
       {
         label: "Dining Guide",

@@ -158,12 +158,17 @@ const PromotionLinks = ({ images }) => {
             <CustomContainer
               onMouseEnter={(e) => mouseEnter(e, imageObjects[k].alt)}
               key={k}
+              onMouseLeave={() => setDark("")}
             >
               <TextContainer>
                 <Text>{imageObjects[k].title}</Text>
               </TextContainer>
 
-              <DescriptionContainer>
+              <DescriptionContainer
+                onMouseEnter={(e) => mouseEnter(e, imageObjects[k].alt)}
+                key={k}
+                onMouseLeave={() => setDark("")}
+              >
                 <Description>{imageObjects[k].description}</Description>
                 <ReadMore to={imageObjects[k].href}>Read More</ReadMore>
               </DescriptionContainer>
