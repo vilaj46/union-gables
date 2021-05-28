@@ -127,23 +127,23 @@ const items = [
       },
       {
         label: "Saratoga Race Course",
-        url: "/saratoga-race-course",
+        url: "/discover/race-course",
       },
       {
         label: "Saratoga Performing Arts Center",
-        url: "/saratoga-performing-arts-center",
+        url: "/discover/performing-arts",
       },
       {
         label: "Skidmore College",
-        url: "/skidmore-college",
+        url: "/discover/skidmore-college",
       },
       {
         label: "Saratoga Springs City Center",
-        url: "/saratoga-springs-city-center",
+        url: "/discover/springs-center",
       },
       {
         label: "Saratoga Spa State Park",
-        url: "/saratoga-spa-state-park",
+        url: "/discover/spa-state-park",
       },
     ],
   },
