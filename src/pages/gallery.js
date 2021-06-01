@@ -14,8 +14,7 @@ import FontContainer from "../styledComponents/Shared/FontContainer";
 import BottomPadding from "../styledComponents/Shared/BottomPadding";
 import PageBodyContainer from "../styledComponents/Shared/PageBodyContainer";
 
-// Custom Styling since we cant use styled component.
-// import "./style.css";
+import api from "../api/galleryAPI";
 
 const ImagesContainer = styled.div`
   display: flex;
@@ -71,14 +70,14 @@ const Gallery = () => {
     <FontContainer>
       <Header />
       <PageBodyContainer>
-        <MainPageTitle>Photo Gallery</MainPageTitle>
-        <PageParagraph></PageParagraph>
+        <MainPageTitle>{api.title}</MainPageTitle>
+        {api.Section1}
         <ImagesContainer>
           {images.map((img) => {
             const src = img.data.node.childImageSharp.fluid.src;
             const { alt } = img;
             return (
-              <Image>
+              <Image key={img.data.node.base}>
                 <ImageZoom
                   key={src}
                   image={{

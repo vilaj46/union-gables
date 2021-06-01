@@ -16,6 +16,7 @@ import NewPageImage from "../../styledComponents/Shared/NewPageImage";
 // HomePage Components
 import ThreeReasons from "../../styledComponents/HomePage/ThreeReasons";
 import DiscoverLinks from "../../styledComponents/HomePage/DiscoverLinks";
+import HomePageLinks from "../../styledComponents/HomePage/HomePageLinks";
 
 const HomePage = (props) => {
   const data = useStaticQuery(graphql`
@@ -44,6 +45,10 @@ const HomePage = (props) => {
   const { edges } = data.allFile;
   const jockey = edges[0];
   const statue = edges[1];
+
+  const breakfast = edges[5];
+  const dinner = edges[6];
+  const exterior = edges[7];
 
   return (
     <div>
@@ -88,6 +93,8 @@ const HomePage = (props) => {
 
         {api.Paragraph7}
       </PageBodyContainer>
+
+      <HomePageLinks images={[exterior, breakfast, dinner]} />
 
       <ThreeReasons />
 

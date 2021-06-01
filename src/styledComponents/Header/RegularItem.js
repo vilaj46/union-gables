@@ -2,6 +2,15 @@ import * as React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
 
+const NavItemLink = styled(Link)`
+  color: #ffffff;
+  text-decoration: none;
+
+  &:hover {
+    color: #b25a75;
+  }
+`;
+
 const NavItemContainer = styled.li`
   list-style-type: none;
   text-decoration: none;
@@ -25,15 +34,6 @@ const NavItemContainer = styled.li`
   ${NavItemLink}:hover & {
     color: #b25a75;
   }
-
-  &:hover {
-    color: #b25a75;
-  }
-`;
-
-const NavItemLink = styled(Link)`
-  color: #ffffff;
-  text-decoration: none;
 
   &:hover {
     color: #b25a75;

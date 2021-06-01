@@ -87,7 +87,7 @@ const Paragraph6 = (
 );
 
 const Paragraph7 = (
-  <PageParagraph center={true}>
+  <PageParagraph center={true} extraBottomPadding={true}>
     Glorious Gardens Award and Soroptimist Best Garden Award
   </PageParagraph>
 );

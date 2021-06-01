@@ -19,18 +19,6 @@ const Container = styled.div`
   }
 `;
 
-// const customStyles = {
-//   content: {
-//     width: "50%",
-//     top: "50%",
-//     left: "50%",
-//     right: "auto",
-//     bottom: "auto",
-//     marginRight: "-50%",
-//     transform: "translate(-50%, -50%)",
-//   },
-// };
-
 const customStyles = {
   content: {
     width: "70%",
@@ -39,6 +27,7 @@ const customStyles = {
     left: "50%",
     right: "auto",
     transform: "translate(-50%, -50%)",
+    zIndex: "10",
   },
 };
 
@@ -82,12 +71,14 @@ const MessageButtons = (props) => {
 
   return (
     <div>
-      <Container onClick={openModal}>Covid-19 Updates</Container>
+      <Container onClick={openModal} style={{ zIndex: "100" }}>
+        Covid-19 Updates
+      </Container>
       <Modal
         style={customStyles}
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
-        contentLabel="Example Modal"
+        contentLabel="Corona Virus"
         ariaHideApp={false}
       >
         <ParagraphContainer>

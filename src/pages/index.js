@@ -1,7 +1,9 @@
 import * as React from "react";
 
 /**
- * Change alt in NewPageImages
+ * Fix Header try and get custom image in the header.
+ *
+ * Social media icons need a hover effect.
  */
 
 // Pages
