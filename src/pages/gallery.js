@@ -2,7 +2,7 @@ import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 // import mediumZoom from "medium-zoom";
 import ImageZoom from "react-medium-image-zoom";
-// import styled from "styled-components";
+import styled from "styled-components";
 
 // Components
 import Header from "../styledComponents/Header/Header";
@@ -13,7 +13,10 @@ import MainPageTitle from "../styledComponents/Shared/MainPageTitle";
 import FontContainer from "../styledComponents/Shared/FontContainer";
 import BottomPadding from "../styledComponents/Shared/BottomPadding";
 import PageBodyContainer from "../styledComponents/Shared/PageBodyContainer";
-// import ImageZoom from "../styledComponents/Shared/ImageZoom";
+
+const ImageContainer = styled.div`
+  border: 2px solid black;
+`;
 
 const Gallery = () => {
   const data = useStaticQuery(graphql`
@@ -50,25 +53,27 @@ const Gallery = () => {
       <Header />
       <PageBodyContainer>
         <MainPageTitle>Gallery</MainPageTitle>
-        {images.map((img) => {
-          const src = img.data.node.childImageSharp.fluid.src;
-          const { alt } = img;
-          return (
-            <ImageZoom
-              key={src}
-              image={{
-                src,
-                alt,
-                className: "img",
-                style: { width: "33%", height: "200px", margin: "20px" },
-              }}
-              zoomImage={{
-                src,
-                alt,
-              }}
-            />
-          );
-        })}
+        <ImageContainer>
+          {images.map((img) => {
+            const src = img.data.node.childImageSharp.fluid.src;
+            const { alt } = img;
+            return (
+              <ImageZoom
+                key={src}
+                image={{
+                  src,
+                  alt,
+                  className: "img",
+                  style: { width: "25%", height: "200px", margin: "20px" },
+                }}
+                zoomImage={{
+                  src,
+                  alt,
+                }}
+              />
+            );
+          })}
+        </ImageContainer>
       </PageBodyContainer>
       <BottomPadding />
       <Footer />
