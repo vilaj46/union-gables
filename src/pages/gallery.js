@@ -14,8 +14,27 @@ import FontContainer from "../styledComponents/Shared/FontContainer";
 import BottomPadding from "../styledComponents/Shared/BottomPadding";
 import PageBodyContainer from "../styledComponents/Shared/PageBodyContainer";
 
-const ImageContainer = styled.div`
-  border: 2px solid black;
+// Custom Styling since we cant use styled component.
+// import "./style.css";
+
+const ImagesContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+`;
+
+const Image = styled.div`
+  width: 29%;
+  height: 200px;
+  margin: 5px;
+
+  @media screen and (max-width: 830px) {
+    width: 45%;
+  }
+
+  @media screen and (max-width: 550px) {
+    width: 60%;
+  }
 `;
 
 const Gallery = () => {
@@ -53,27 +72,32 @@ const Gallery = () => {
       <Header />
       <PageBodyContainer>
         <MainPageTitle>Gallery</MainPageTitle>
-        <ImageContainer>
+        <ImagesContainer>
           {images.map((img) => {
             const src = img.data.node.childImageSharp.fluid.src;
             const { alt } = img;
             return (
-              <ImageZoom
-                key={src}
-                image={{
-                  src,
-                  alt,
-                  className: "img",
-                  style: { width: "25%", height: "200px", margin: "20px" },
-                }}
-                zoomImage={{
-                  src,
-                  alt,
-                }}
-              />
+              <Image>
+                <ImageZoom
+                  key={src}
+                  image={{
+                    src,
+                    alt,
+                    style: {
+                      width: "100%",
+                      height: "100%",
+                      display: "block",
+                    },
+                  }}
+                  zoomImage={{
+                    src,
+                    alt,
+                  }}
+                />
+              </Image>
             );
           })}
-        </ImageContainer>
+        </ImagesContainer>
       </PageBodyContainer>
       <BottomPadding />
       <Footer />

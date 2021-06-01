@@ -11,6 +11,10 @@ body {
   color: #333;
 }
 
+.galleryImageContainer {
+  border: 2px solid red;
+}
+
 @font-face {
   font-family: "DroidSans";
   src: url("../fonts/DroidSans.ttf") format("truetype"),
