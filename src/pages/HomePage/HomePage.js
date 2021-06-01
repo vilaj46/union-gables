@@ -46,9 +46,15 @@ const HomePage = (props) => {
   const jockey = edges[0];
   const statue = edges[1];
 
+  // HomePage Rectangle Link Images
   const breakfast = edges[5];
   const dinner = edges[6];
   const exterior = edges[7];
+
+  // 3 Reasons Link Images
+  const room = edges[2];
+  const food = edges[3];
+  const racetrack = edges[4];
 
   return (
     <div>
@@ -58,7 +64,7 @@ const HomePage = (props) => {
         {api.Paragraph1}
 
         <NewPageImage
-          alt="Pool and Garden"
+          alt="Saratoga Springs Union Gables Inn Statue and Pool"
           extraBottomPadding={true}
           data={statue}
         />
@@ -68,7 +74,7 @@ const HomePage = (props) => {
         {api.Paragraph2}
 
         <NewPageImage
-          alt="Race Track"
+          alt="Saratoga Springs Race Track"
           extraBottomPadding={true}
           data={jockey}
         />
@@ -96,7 +102,7 @@ const HomePage = (props) => {
 
       <HomePageLinks images={[exterior, breakfast, dinner]} />
 
-      <ThreeReasons />
+      <ThreeReasons images={[room, food, racetrack]} />
 
       <BottomPadding />
     </div>

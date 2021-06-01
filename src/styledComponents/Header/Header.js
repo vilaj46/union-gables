@@ -20,7 +20,7 @@ const Container = styled.header`
 `;
 
 const BackgroundImage = styled.div`
-  background-image: url(${mainImage});
+  // background-image: url(${mainImage});
   background-size: 100%;
   width: 100%;
   height: 100vh;
@@ -56,7 +56,7 @@ const HideMessagesContainer = styled.div`
   }
 `;
 
-const Header = () => {
+const Header = ({ image = "" }) => {
   const [height, setHeight] = React.useState(0);
   const [loaded, setLoaded] = React.useState(false);
 
@@ -90,10 +90,15 @@ const Header = () => {
     window.addEventListener("resize", handleResize);
   }, [loaded]);
 
+  let customImage = image === "" ? mainImage : image;
+
   return (
     <Container style={{ height: height + "px" }}>
       <Logo />
-      <BackgroundImage id="mainBackgroundImage" />
+      <BackgroundImage
+        id="mainBackgroundImage"
+        style={{ backgroundImage: `url(${customImage})` }}
+      />
       <NavigationPanel />
       <BelowContainer>
         <NavigationHamburger />

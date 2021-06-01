@@ -1,5 +1,4 @@
 import * as React from "react";
-import { useStaticQuery } from "gatsby";
 import styled from "styled-components";
 
 import api from "../../api/homepageAPI";
@@ -84,72 +83,78 @@ const Brightness = styled.div`
   filter: brightness(50%);
 `;
 
-const ThreeReasons = () => {
-  const [reason, setReason] = React.useState(0);
-
-  const data = useStaticQuery(graphql`
-    query {
-      allFile(
-        filter: {
-          extension: { eq: "jpg" }
-          relativeDirectory: { eq: "homePage" }
-        }
-      ) {
-        edges {
-          node {
-            base
-            childImageSharp {
-              fluid(quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-        }
-      }
-    }
-  `);
-
-  // Images
-  const { edges } = data.allFile;
-  const racetrack = edges[2];
-  const room = edges[3];
-  const food = edges[4];
-
-  const reasons = [racetrack, room, food];
-  const alts = ["Steak and Wine", "King Bed Room", "Race Track"];
+const ThreeReasons = ({ images }) => {
+  const [reason, setReason] = React.useState("food");
+  const reasonObjects = createReasons(images);
 
   return (
     <Container>
       <Brightness>
-        <ThreeReasonsBackground alt={alts[reason]} data={reasons[reason]} />
+        <ThreeReasonsBackground
+          alt={reasonObjects[reason].alt}
+          data={reasonObjects[reason].img}
+        />
       </Brightness>
       <CenterText>
         <H3Container>{api.threeReasonsTitle}</H3Container>
-        <ParagraphContainer>{api.threeReasons[reason].text}</ParagraphContainer>
+        <ParagraphContainer>
+          {reasonObjects[reason].description}
+        </ParagraphContainer>
       </CenterText>
 
       <NumbersContainer>
         <ThreeReasonsNumber
           text="1"
-          activated={reason === 0 ? true : false}
-          setReason={setReason}
+          activated={reason === "food" ? true : false}
+          setReason={() => setReason("food")}
           num={0}
         />
         <ThreeReasonsNumber
           text="2"
           num={1}
-          activated={reason === 1 ? true : false}
-          setReason={setReason}
+          activated={reason === "room" ? true : false}
+          setReason={() => setReason("room")}
         />
         <ThreeReasonsNumber
           text="3"
           num={2}
-          activated={reason === 2 ? true : false}
-          setReason={setReason}
+          activated={reason === "racetrack" ? true : false}
+          setReason={() => setReason("racetrack")}
         />
       </NumbersContainer>
     </Container>
   );
+};
+
+const createReasons = (images) => {
+  let obj = {};
+
+  images.forEach((img) => {
+    if (img.node.base === "room.jpg") {
+      obj.room = {
+        description:
+          "Discover romantic and historic rooms with antique furnishings natural gas fireplaces, and luxury linens.",
+        alt: "Saratoga Springs Union Gables Historic Rooms",
+        img,
+      };
+    } else if (img.node.base === "food.jpg") {
+      obj.food = {
+        description:
+          "Easily walk to over 125 restaurants, music venues, bars, museums, galleries, and downtown shopping.",
+        alt: "Saratoga Springs Union Gables Nearby Restaurants",
+        img,
+      };
+    } else {
+      obj.racetrack = {
+        description:
+          "Stay one and a half blocks from the oldest racetrack in the country.",
+        alt: "Saratoga Springs Racetrack",
+        img,
+      };
+    }
+  });
+
+  return obj;
 };
 
 export default ThreeReasons;

@@ -3,6 +3,8 @@ import * as React from "react";
 /**
  * Fix Header try and get custom image in the header.
  *
+ * Figure out how to handle images per page.
+ *
  * Social media icons need a hover effect.
  */
 
