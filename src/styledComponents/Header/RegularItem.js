@@ -21,14 +21,21 @@ const NavItemContainer = styled.li`
   @media screen and (max-width: 815px) {
     padding: 5px 8px;
   }
+
+  ${NavItemLink}:hover & {
+    color: #b25a75;
+  }
+
+  &:hover {
+    color: #b25a75;
+  }
 `;
 
 const NavItemLink = styled(Link)`
   color: #ffffff;
   text-decoration: none;
-  // pointer-events: none;
 
-  ${NavItemContainer}:hover & {
+  &:hover {
     color: #b25a75;
   }
 `;
@@ -70,9 +77,13 @@ const RegularItem = ({ item }) => {
     );
   } else {
     return (
-      <NavItemContainer key={item.url}>
-        <NavItemLink to={item.url}>{item.text}</NavItemLink>
-      </NavItemContainer>
+      <NavItemLink
+        to={item.url}
+        key={item.url}
+        activeStyle={{ textDecoration: "underline" }}
+      >
+        <NavItemContainer>{item.text}</NavItemContainer>
+      </NavItemLink>
     );
   }
 };

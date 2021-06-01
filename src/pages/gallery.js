@@ -71,7 +71,8 @@ const Gallery = () => {
     <FontContainer>
       <Header />
       <PageBodyContainer>
-        <MainPageTitle>Gallery</MainPageTitle>
+        <MainPageTitle>Photo Gallery</MainPageTitle>
+        <PageParagraph></PageParagraph>
         <ImagesContainer>
           {images.map((img) => {
             const src = img.data.node.childImageSharp.fluid.src;
