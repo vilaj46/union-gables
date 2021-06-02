@@ -10,10 +10,12 @@ import MainPageTitle from "../../styledComponents/Shared/MainPageTitle";
 import FontContainer from "../../styledComponents/Shared/FontContainer";
 import PageBodyContainer from "../../styledComponents/Shared/PageBodyContainer";
 import BottomPadding from "../../styledComponents/Shared/BottomPadding";
+import NewPageImage from "../../styledComponents/Shared/NewPageImage";
 
 import api from "../../api/breakfastAPI";
 
-import NewPageImage from "../../styledComponents/Shared/NewPageImage";
+// Utilities
+import ogranizeEdges from "../../utils/organizeEdges";
 
 const Breakfast = () => {
   const data = useStaticQuery(graphql`
@@ -43,21 +45,23 @@ const Breakfast = () => {
 
   // Images
   const { edges } = data.allFile;
-  const toast = edges[0];
-  const benedict = edges[1];
+
+  const images = ogranizeEdges(edges);
 
   return (
     <FontContainer>
-      <Header />
-      <MainPageTitle>{api.title}</MainPageTitle>
+      <Header image={images.eggsbenedict.data.node.childImageSharp.fluid.src} />
       <PageBodyContainer>
+        <MainPageTitle>{api.title}</MainPageTitle>
         {api.Paragraph1}
-
-        <NewPageImage data={benedict} alt="Eggs Benedict" />
 
         {api.Paragraph2}
 
-        <NewPageImage data={toast} alt="Eggs and Toast" />
+        <NewPageImage
+          extraExtraBottomPadding={true}
+          data={images.eggstoast.data}
+          alt={images.eggstoast.alt}
+        />
 
         {api.Paragraph3}
 
@@ -68,7 +72,7 @@ const Breakfast = () => {
           allowFullScreen=""
           frameBorder="0"
           style={{ display: "block", margin: "0 auto" }}
-          title="Tour Video"
+          title="Union Gables Tour Video"
         ></iframe>
       </PageBodyContainer>
       <BottomPadding />

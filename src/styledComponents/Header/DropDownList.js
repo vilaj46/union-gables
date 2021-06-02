@@ -13,14 +13,6 @@ const Container = styled.li`
     background-color: #ffffff;
     cursor: pointer;
   }
-
-  @media screen and (max-width: 815px) {
-    font-size: 0.8rem;
-  }
-
-  @media screen and (max-width: 815px) {
-    padding: 5px 8px;
-  }
 `;
 
 // Bottom portion is navLink.
@@ -37,7 +29,8 @@ const NavItemContainer = styled(Link)`
   width: 100%;
 
   ${Container}:hover & {
-    color: #b25a75;
+    color: #ffffff;
+    background-color: #b25a75;
   }
 
   &:active {
@@ -51,18 +44,13 @@ const ContentContainer = styled.ul`
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 1);
   top: 30px;
   padding-left: 0; // not sure why this was even there.
 
   ${Container}:hover & {
     display: flex;
     flex-direction: column;
-  }
-
-  @media screen and (max-width: 815px) {
-    top: 12px;
-    margin-left: -8px;
   }
 `;
 
@@ -76,13 +64,9 @@ const DownLinkContainer = styled(Link)`
   position: relative;
   width: 100%;
 
-  @media screen and (max-width: 900px) {
-    padding: 7px 8px;
-  }
-
   &:hover {
-    color: #790028;
-    background-color: #ffffff;
+    color: #ffffff;
+    background-color: #b25a75;
   }
 `;
 
@@ -97,26 +81,8 @@ const DownLinkContainer2 = styled(Link)`
   position: relative;
 
   &:hover {
-    color: #790028;
-    background-color: #ffffff;
-  }
-
-  @media screen and (max-width: 1140px) {
-    font-size: 0.8rem;
-    padding: 7px 8px;
-  }
-
-  @media screen and (max-width: 830px) {
-    font-size: 0.8rem;
-    padding: 3.5px 4px;
-  }
-
-  @media screen and (max-width: 680px) {
-    font-size: 0.7rem;
-  }
-
-  @media screen and (max-width: 630px) {
-    font-size: 0.6rem;
+    color: #ffffff;
+    background-color: #b25a75;
   }
 `;
 
@@ -125,14 +91,9 @@ const DownArrow = styled.i`
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-
   border-top: 5px solid #ffffff;
   margin-top: 8px;
   margin-left: 5px;
-
-  ${Container}:hover & {
-    border-top: 5px solid #b25a75;
-  }
 
   @media screen and (max-width: 1400px) {
     margin-top: 5px;
@@ -154,7 +115,7 @@ const RightArrow = styled.i`
   transform: rotate(270deg);
 
   ${DownLinkContainer}:hover & {
-    border-top: 5px solid #b25a75;
+    border-top: 5px solid #ffffff;
   }
 `;
 
@@ -180,21 +141,12 @@ const SideLinksContainer = styled.ul`
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   margin-left: -16px;
-  background-color: rgba(255, 255, 255, 0.5);
-  // left: 195px;
+  background-color: rgba(255, 255, 255, 1);
   right: -112%;
   top: 0;
 
   ${NewDownContainer}:hover & {
     display: block;
-  }
-
-  @media screen and (max-width: 900px) {
-    right: -122%;
-  }
-
-  @media screen and (max-width: 815px) {
-    right: -125%;
   }
 `;
 

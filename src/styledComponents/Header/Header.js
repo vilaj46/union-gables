@@ -14,13 +14,16 @@ const Container = styled.header`
   width: 100%;
   height: 100vh;
 
+  @media screen and (min-width: 1100px) {
+    height: 50vh;
+  }
+
   @media screen and (max-width: 600px) {
     display: flex;
   }
 `;
 
 const BackgroundImage = styled.div`
-  // background-image: url(${mainImage});
   background-size: 100%;
   width: 100%;
   height: 100vh;
@@ -30,6 +33,10 @@ const BackgroundImage = styled.div`
   position: absolute;
   top: 0;
   z-index: -1;
+
+  @media screen and (min-width: 1100px) {
+    height: 50vh;
+  }
 `;
 
 const BelowContainer = styled.div`
@@ -63,9 +70,9 @@ const Header = ({ image = "" }) => {
   React.useEffect(() => {
     if (!loaded) {
       setLoaded(true);
-      if (window.innerWidth < 1675 && window.innerWidth > 1100) {
+      if (window.innerWidth < 1200 && window.innerWidth > 1100) {
         const body = document.querySelector("body");
-        const percent = (57 * body.clientWidth) / 100;
+        const percent = (43 * body.clientWidth) / 100;
         setHeight(percent);
       } else if (window.innerWidth > 1100) {
         setHeight(document.getElementById("mainBackgroundImage").offsetHeight);
@@ -76,9 +83,9 @@ const Header = ({ image = "" }) => {
     }
 
     const handleResize = () => {
-      if (window.innerWidth < 1675 && window.innerWidth > 1100) {
+      if (window.innerWidth < 1200 && window.innerWidth > 1099) {
         const body = document.querySelector("body");
-        const percent = (57 * body.clientWidth) / 100;
+        const percent = (43 * body.clientWidth) / 100;
         setHeight(percent);
       } else if (window.innerWidth > 1100) {
         setHeight(document.getElementById("mainBackgroundImage").offsetHeight);
@@ -94,12 +101,12 @@ const Header = ({ image = "" }) => {
 
   return (
     <Container style={{ height: height + "px" }}>
-      <Logo />
       <BackgroundImage
         id="mainBackgroundImage"
         style={{ backgroundImage: `url(${customImage})` }}
       />
       <NavigationPanel />
+      <Logo />
       <BelowContainer>
         <NavigationHamburger />
         <HideMessagesContainer>
@@ -111,3 +118,17 @@ const Header = ({ image = "" }) => {
 };
 
 export default Header;
+
+// const handleResize = () => {
+//   console.log(window.innerWidth);
+//   if (window.innerWidth < 1675 && window.innerWidth > 1100) {
+//     const body = document.querySelector("body");
+//     const percent = (57 * body.clientWidth) / 100;
+//     setHeight(percent);
+//   } else if (window.innerWidth > 1100) {
+//     setHeight(document.getElementById("mainBackgroundImage").offsetHeight);
+//   } else {
+//     const percent = (63 * window.innerWidth) / 100 - 50;
+//     setHeight(percent);
+//   }
+// };

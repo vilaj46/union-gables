@@ -5,13 +5,6 @@ import PageParagraph from "../styledComponents/Shared/PageParagraph";
 import PageSubParagraph from "../styledComponents/Shared/PageSubParagraph";
 import PageParagraphLink from "../styledComponents/Shared/PageParagraphLink";
 
-// Images
-import food from "../images/homePage/food.jpg";
-import room from "../images/homePage/room.jpg";
-import statue from "../images/homePage/statue.jpg";
-import jockey from "../images/homePage/jockey.jpg";
-import racetrack from "../images/homePage/racetrack.jpg";
-
 // Paragraphs
 const Paragraph1 = (
   <PageParagraph extraBottomPadding={true}>
@@ -130,26 +123,6 @@ const annualFestivalsAndEvents = {
   href: "/discover/festivals-and-events",
 };
 
-// Three Reasons
-
-const threeReasons = [
-  {
-    img: food,
-    text:
-      "Easily walk to over 125 restaurants, music venues, bars, museums, galleries, and downtown shopping.",
-  },
-  {
-    img: room,
-    text:
-      "Discover romantic and historic rooms with antique furnishings natural gas fireplaces, and luxury linens.",
-  },
-  {
-    img: racetrack,
-    text:
-      "Stay one and a half blocks from the oldest racetrack in the country.",
-  },
-];
-
 const threeReasonsTitle = "3 Reasons to Stay with us";
 
 const api = {
@@ -169,13 +142,6 @@ const api = {
   Paragraph6,
   Paragraph7,
 
-  // Images
-  food,
-  room,
-  statue,
-  jockey,
-  racetrack,
-
   // Discover Saratoga Springs
   congressPark,
   saratogaRaceCourse,
@@ -186,7 +152,6 @@ const api = {
 
   // Three Reasons
   threeReasonsTitle,
-  threeReasons,
 };
 
 export default api;

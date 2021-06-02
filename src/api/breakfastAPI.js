@@ -5,23 +5,21 @@ import PageParagraph from "../styledComponents/Shared/PageParagraph";
 import PageSubParagraph from "../styledComponents/Shared/PageSubParagraph";
 import PageParagraphLink from "../styledComponents/Shared/PageParagraphLink";
 
-// Images
-import toast from "../images/breakfast/eggstoast.jpg";
-import benedict from "../images/breakfast/eggsbenedict.jpg";
-
 // Paragraphs
 const Paragraph1 = (
   <PageParagraph extraBottomPadding={true}>
-    <strong>Please note</strong>: Due to COVID-19 precautions, our hot breakfast
-    is temporarily unavailable. We are offering breakfast baskets filled with a
-    pastry, yogurt, fruit, granola bar, nuts, Orange juice or apple juice
-    delivered to the outside of the room in the morning for contact-less
-    delivery.
+    <PageSubParagraph last={true}>
+      <strong>Please note</strong>: Due to COVID-19 precautions, our hot
+      breakfast is temporarily unavailable. We are offering breakfast baskets
+      filled with a pastry, yogurt, fruit, granola bar, nuts, Orange juice or
+      apple juice delivered to the outside of the room in the morning for
+      contact-less delivery.
+    </PageSubParagraph>
   </PageParagraph>
 );
 
 const Paragraph2 = (
-  <PageParagraph>
+  <PageParagraph extraBottomPadding={true}>
     <PageSubParagraph>
       Enjoy daily, complimentary breakfast when you stay with us at Union Gables
       Inn in Saratoga Springs. Breakfast is served at any of our seating areas –
@@ -30,7 +28,7 @@ const Paragraph2 = (
       seating and cool breezes becomes the favored seating for many during the
       warmer months.
     </PageSubParagraph>
-    <PageSubParagraph>
+    <PageSubParagraph last={true}>
       Start your day right with a freshly prepared, locally sourced, and
       made-to-order breakfast prepared by our skillful Cordon Bleu trained Chef.
       Our locally sourced ingredients include eggs from Thomas Poultry Farm,
@@ -75,10 +73,6 @@ const api = {
   Paragraph1,
   Paragraph2,
   Paragraph3,
-
-  // Images
-  benedict,
-  toast,
 };
 
 export default api;

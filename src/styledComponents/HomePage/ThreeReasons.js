@@ -154,6 +154,8 @@ const createReasons = (images) => {
     }
   });
 
+  console.log(obj);
+
   return obj;
 };
 

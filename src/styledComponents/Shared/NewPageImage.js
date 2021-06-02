@@ -16,7 +16,7 @@ const ImageContainer = styled(Img)`
 `;
 
 const NewPageImage = (props) => {
-  const paddingBottom = props.extraBottomPadding ? "50px" : "25px";
+  let paddingBottom = props.extraBottomPadding ? "50px" : "25px";
   const objectFit = props.removeContain ? "fill" : "contain";
   const paddingTop = props.paddingAround ? "20px" : "0px";
 
@@ -24,6 +24,8 @@ const NewPageImage = (props) => {
     props.dark === props.alt ? "brightness(50%)" : "brightness(100%)";
 
   const cN = props.type ? props.type : "";
+
+  paddingBottom = props.extraExtraBottomPadding ? "100px" : paddingBottom;
 
   return (
     <ImageContainer

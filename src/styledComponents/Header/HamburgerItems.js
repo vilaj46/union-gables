@@ -11,10 +11,7 @@ const Container = styled.ul`
   position: absolute;
   margin: 0;
   padding: 0;
-
-  // @media screen and (max-width: 478px) {
-  //   border: 1px solid black;
-  // }
+  background-color: #ffffff;
 `;
 
 const LinkContainer = styled.li`
@@ -45,10 +42,11 @@ const HamburgerLink = styled(Link)`
   text-decoration: none;
   padding: 8px;
   wrap: nowrap;
+  color: #333;
 
   &:hover {
-    color: #b25a75;
-    background-color: #ffffff;
+    color: #ffffff;
+    background-color: #b25a75;
   }
 `;
 

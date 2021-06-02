@@ -14,6 +14,9 @@ import NewPageImages from "../styledComponents/Shared/NewPageImages";
 
 import api from "../api/aboutUsAPI";
 
+// Utilities
+import organizeEdges from "../utils/organizeEdges";
+
 const AboutUs = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -42,14 +45,7 @@ const AboutUs = () => {
 
   // Images
   const { edges } = data.allFile;
-  const lily = edges[0];
-  const billiards = edges[1];
-  const garden = edges[2];
-  const daytime = edges[3];
-  const fireplace = edges[4];
-  const loungechairs = edges[5];
-  const wine = edges[6];
-  const porch = edges[7];
+  const images = organizeEdges(edges);
 
   return (
     <FontContainer>
@@ -59,29 +55,29 @@ const AboutUs = () => {
         {api.Section1}
 
         <NewPageImages
-          images={[billiards, fireplace]}
-          alts={["Billiards", "Fire Place"]}
+          images={[images.billiards.data, images.fireplace.data]}
+          alts={[images.billiards.alt, images.fireplace.alt]}
         />
 
         {api.Section2}
 
         <NewPageImages
-          images={[daytime, wine]}
-          alts={["Daytime Inn", "Wine and Dinner"]}
+          images={[images.daytime.data, images.wine.data]}
+          alts={[images.daytime.alt, images.wine.alt]}
         />
 
         {api.Section3}
 
         <NewPageImages
-          images={[loungechairs, porch]}
-          alts={["Lounge Chairs and Pool", "Porch"]}
+          images={[images.loungechairs.data, images.porch.data]}
+          alts={[images.loungechairs.alt, images.porch.alt]}
         />
 
         {api.Section4}
 
         <NewPageImages
-          images={[lily, garden]}
-          alts={["Lily Flower", "Garden"]}
+          images={[images.lily.data, images.garden.data]}
+          alts={[images.lily.alt, images.garden.alt]}
         />
 
         {api.Section5}

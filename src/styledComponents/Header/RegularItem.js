@@ -7,7 +7,8 @@ const NavItemLink = styled(Link)`
   text-decoration: none;
 
   &:hover {
-    color: #b25a75;
+    color: #ffffff;
+    background-color: #b25a75;
   }
 `;
 
@@ -19,7 +20,8 @@ const NavItemContainer = styled.li`
   color: #ffffff;
 
   &:hover {
-    background-color: #ffffff;
+    color: #ffffff;
+    background-color: #b25a75;
     cursor: pointer;
   }
 
@@ -27,12 +29,10 @@ const NavItemContainer = styled.li`
     font-size: 0.8rem;
   }
 
-  @media screen and (max-width: 815px) {
-    padding: 5px 8px;
-  }
-
   ${NavItemLink}:hover & {
     color: #b25a75;
+    color: #ffffff;
+    background-color: #b25a75;
   }
 
   &:hover {
@@ -56,10 +56,6 @@ const BookNowContainer = styled.li`
 
   @media screen and (max-width: 815px) {
     font-size: 0.8rem;
-  }
-
-  @media screen and (max-width: 815px) {
-    padding: 5px 8px;
   }
 `;
 

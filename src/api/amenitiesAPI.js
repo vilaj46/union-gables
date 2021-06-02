@@ -5,19 +5,6 @@ import PageParagraph from "../styledComponents/Shared/PageParagraph";
 import PageSubParagraph from "../styledComponents/Shared/PageSubParagraph";
 import PageParagraphLink from "../styledComponents/Shared/PageParagraphLink";
 
-// Images
-import pool from "../images/amenities/pool.jpg";
-import lamps from "../images/amenities/lamps.jpg";
-import porch from "../images/amenities/porch.jpg";
-import garden from "../images/amenities/garden.jpg";
-import statue from "../images/amenities/statue.jpg";
-import garden2 from "../images/amenities/garden2.jpg";
-import benedict from "../images/amenities/benedict.jpg";
-import billiards from "../images/amenities/billiards.jpg";
-import fireplace from "../images/amenities/fireplace.jpg";
-import loungechairs from "../images/amenities/loungechairs.jpg";
-import loungechairs2 from "../images/amenities/loungechairs2.jpg";
-
 const Paragraph1 = (
   <PageParagraph>
     <PageSubParagraph>
@@ -181,19 +168,6 @@ const api = {
   Paragraph8,
   Paragraph9,
   Paragraph10,
-
-  // Images
-  billiards,
-  benedict,
-  fireplace,
-  garden,
-  garden2,
-  lamps,
-  loungechairs,
-  loungechairs2,
-  pool,
-  porch,
-  statue,
 };
 
 export default api;

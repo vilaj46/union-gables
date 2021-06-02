@@ -12,17 +12,14 @@ const title = "Historic Lodgings in Saratoga Springs, NY";
 // Sections
 
 const Section1 = (
-  <PageParagraph>
-    Discover our charming lodgings in Saratoga Springs, where historic details
-    are balanced with the delightful offerings of a luxury hotel. Each of our
-    romantic and elegant rooms are unique, with no two decorated alike. Indulge
-    in an oversized hotel room in Saratoga Springs with a natural gas fireplace,
-    antique furnishings, and luxurious linens.
-  </PageParagraph>
-);
-
-const Section2 = (
-  <PageParagraph>
+  <PageParagraph extraBottomPadding={true}>
+    <PageSubParagraph>
+      Discover our charming lodgings in Saratoga Springs, where historic details
+      are balanced with the delightful offerings of a luxury hotel. Each of our
+      romantic and elegant rooms are unique, with no two decorated alike.
+      Indulge in an oversized hotel room in Saratoga Springs with a natural gas
+      fireplace, antique furnishings, and luxurious linens.
+    </PageSubParagraph>
     <PageSubParagraph>
       All of the rooms at Union Gables Inn have a private ensuite bathroom, with
       select rooms offering jetted soaking tubs. Our rooms have been upgraded
@@ -34,7 +31,7 @@ const Section2 = (
       . Select rooms on garden level have private patios and other rooms offer
       airy balconies to admire our sprawling gardens and quiet grounds.
     </PageSubParagraph>
-    <PageSubParagraph>
+    <PageSubParagraph last={true}>
       Explore our variety of rooms, listed by building. Our room options include
       accommodations inside the{" "}
       <PageParagraphLink href="/rooms/main-mansion">
@@ -48,7 +45,7 @@ const Section2 = (
       </PageParagraphLink>
       . Reserve your romantic lodgings in Saratoga Springs, NY today.
     </PageSubParagraph>
-    <PageQuote left={true} halfPadding={true}>
+    <PageQuote left={true} halfPadding={true} extraTopPadding={true}>
       Due to the historic nature of the mansion, Union Gables welcomes children
       twelve and older.
     </PageQuote>
@@ -61,7 +58,6 @@ const api = {
 
   // Sections
   Section1,
-  Section2,
 };
 
 export default api;

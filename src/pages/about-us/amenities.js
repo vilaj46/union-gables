@@ -18,6 +18,9 @@ import HorizontalRule from "../../styledComponents/Shared/HorizontalRule";
 
 import api from "../../api/amenitiesAPI";
 
+// Utilities
+import organizeEdges from "../../utils/organizeEdges";
+
 const Amenities = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -46,33 +49,24 @@ const Amenities = () => {
 
   // Images
   const { edges } = data.allFile;
-  const benedict = edges[0];
-  // const lamps = edges[1];
-  const loungechairs2 = edges[2];
-  const billiards = edges[3];
-  const fireplace = edges[4];
-  const garden = edges[5];
-  const garden2 = edges[6];
-  const loungechairs = edges[7];
-  const porch = edges[8];
-  const statue = edges[9];
-  const pool = edges[10];
+
+  const images = organizeEdges(edges);
 
   return (
     <FontContainer>
-      <Header />
+      <Header image={images.pool.data.node.childImageSharp.fluid.src} />
       <PageBodyContainer>
         <MainPageTitle>{api.title}</MainPageTitle>
         {api.Paragraph1}
 
         <NewPageImages
-          images={[benedict, pool]}
-          alts={["Breakfast Eggs Benedict", "Pool"]}
+          images={[images.benedict.data, images.lamps.data]}
+          alts={[images.benedict.alt, images.lamps.alt]}
         />
 
         <NewPageImages
-          alts={["Billiards Table", "Fireplace"]}
-          images={[billiards, fireplace]}
+          images={[images.billiards.data, images.fireplace.data]}
+          alts={[images.billiards.alt, images.fireplace.alt]}
         />
 
         <PageSubTitle>{api.subTitle1}</PageSubTitle>
@@ -85,9 +79,15 @@ const Amenities = () => {
 
         {api.Paragraph4Half}
 
-        <NewPageImage data={loungechairs} alt="Lounge Chairs" />
+        <NewPageImage
+          data={images.loungechairs.data}
+          alt={images.loungechairs.alt}
+        />
 
-        <NewPageImages alts={["Statue", "Pool"]} images={[statue, pool]} />
+        <NewPageImages
+          images={[images.statue.data, images.pool.data]}
+          alts={[images.statue.alt, images.pool.alt]}
+        />
 
         <PageSubTitle>{api.subTitle3}</PageSubTitle>
 
@@ -102,13 +102,13 @@ const Amenities = () => {
         {api.Paragraph6}
 
         <NewPageImages
-          alts={["Garden View One", "Garden View Two"]}
-          images={[garden, garden2]}
+          images={[images.garden.data, images.garden2.data]}
+          alts={[images.garden.alt, images.garden2.alt]}
         />
 
         <NewPageImages
-          images={[porch, loungechairs2]}
-          alts={["Porch", "Lounge Chairs"]}
+          images={[images.porch.data, images.loungechairs2.data]}
+          alts={[images.porch.alt, images.loungechairs2.alt]}
           extraBottomPadding={true}
         />
 

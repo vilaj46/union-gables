@@ -22,6 +22,9 @@ import PageBodyContainer from "../../styledComponents/Shared/PageBodyContainer";
 
 import api from "../../api/petFriendlyAPI";
 
+// Utilities
+import organizeEdges from "../../utils/organizeEdges";
+
 const PetFriendly = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -49,19 +52,17 @@ const PetFriendly = () => {
   `);
 
   const { edges } = data.allFile;
-  const room1 = edges[0];
-  const room2 = edges[1];
-  const treats = edges[2];
-  const dog = edges[3];
+  const images = organizeEdges(edges);
 
   return (
     <FontContainer>
-      <Header />
+      <Header
+        image={images.dog.data.node.childImageSharp.fluid.src}
+        alt={images.dog.alt}
+      />
       <PageBodyContainer>
         <MainPageTitle>{api.title}</MainPageTitle>
         {api.Paragraph1}
-
-        <NewPageImage data={dog} alt="Dog" />
 
         <PageSubTitle>{api.subTitle1}</PageSubTitle>
         {api.Paragraph2}
@@ -85,8 +86,8 @@ const PetFriendly = () => {
         {api.Paragraph8}
 
         <NewPageImages
-          images={[room1, room2]}
-          alts={["Room with Couch", "Room with Lounges"]}
+          images={[images.room1.data, images.room2.data]}
+          alts={[images.room1.alt, images.room2.alt]}
         />
 
         <PageSubTitle>{api.subTitle2}</PageSubTitle>
@@ -94,7 +95,7 @@ const PetFriendly = () => {
 
         <OurRooms />
 
-        <NewPageImage data={treats} alt="Dog Treats" />
+        <NewPageImage data={images.treats.data} alt={images.treats.alt} />
 
         <PageSemiSubTitle>{api.subTitle3}</PageSemiSubTitle>
         {api.Paragraph10}

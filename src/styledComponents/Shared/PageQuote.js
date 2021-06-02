@@ -14,9 +14,10 @@ const QuoteContainer = styled.em`
 const PageQuote = (props) => {
   const textAlign = props.left ? "left" : "center";
   const paddingBottom = props.halfPadding ? "40px" : "80px";
+  const paddingTop = props.extraTopPadding ? "20px" : "0";
 
   return (
-    <QuoteContainer style={{ textAlign, paddingBottom }}>
+    <QuoteContainer style={{ textAlign, paddingBottom, paddingTop }}>
       {props.children}
     </QuoteContainer>
   );

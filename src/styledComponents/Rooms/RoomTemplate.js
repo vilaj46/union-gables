@@ -65,6 +65,7 @@ const RoomTemplate = (props) => {
     jody = separateRooms(edges, "jody");
     tom = separateRooms(edges, "tom");
     michael = separateRooms(edges, "michael");
+
     allRooms = {
       jane: jane,
       annie: annie,
