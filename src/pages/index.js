@@ -10,11 +10,13 @@ import * as React from "react";
  *
  * Pet Friendly needs bottom links
  *
- * Reviews Page trip advisor link too large
+ * Go over images make sure they are not blurry
+ * Spacing on the main page titles.
+ * Look at hamburger menu
+ * spacing on all rooms texts
+ * add beds to the rooms pages
+ * restyle room format
  *
- * Library Room, Saratoga Room
- * Victoria Room, Wilson Room, Congress Spring, Deer Park Spring
- * State Seal Spring Suite, Charlie Spring Room, Geyser Spring Room
  */
 
 // Pages

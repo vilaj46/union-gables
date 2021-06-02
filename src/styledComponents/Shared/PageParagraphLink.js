@@ -18,7 +18,7 @@ const StyledLink = styled(Link)`
 const PageParagraphLink = (props) => {
   if (props.target) {
     return (
-      <StyledLink to={props.href} target="_blank">
+      <StyledLink to={props.href} target="_blank" style={{ ...props.style }}>
         <strong>{props.children}</strong>
       </StyledLink>
     );
