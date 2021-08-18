@@ -87,6 +87,7 @@ const ThreeReasons = ({ images }) => {
   const [reason, setReason] = React.useState("food");
   const reasonObjects = createReasons(images);
 
+  // Helper functions because we were failing whend deploying.
   const setAlt = (reason) => {
     if (reason && Object.keys(reason).length > 0) {
       return reason.alt;
@@ -96,6 +97,12 @@ const ThreeReasons = ({ images }) => {
   const setImg = (reason) => {
     if (reason && Object.keys(reason).length > 0) {
       return reason.img;
+    }
+  };
+
+  const setDescription = (reason) => {
+    if (reason && Object.keys(reason).length > 0) {
+      return reason.description;
     }
   };
 
@@ -110,7 +117,7 @@ const ThreeReasons = ({ images }) => {
       <CenterText>
         <H3Container>{api.threeReasonsTitle}</H3Container>
         <ParagraphContainer>
-          {reasonObjects[reason].description}
+          {setDescription(reasonObjects[reason].description)}
         </ParagraphContainer>
       </CenterText>
 
