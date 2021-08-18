@@ -91,7 +91,7 @@ const ThreeReasons = ({ images }) => {
     <Container>
       <Brightness>
         <ThreeReasonsBackground
-          alt={reasonObjects[reason].alt}
+          alt={reasonObjects[reason].alt || ""}
           data={reasonObjects[reason].img}
         />
       </Brightness>
@@ -153,9 +153,6 @@ const createReasons = (images) => {
       };
     }
   });
-
-  console.log(obj);
-
   return obj;
 };
 
