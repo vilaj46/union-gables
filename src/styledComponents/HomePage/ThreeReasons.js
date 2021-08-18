@@ -93,12 +93,18 @@ const ThreeReasons = ({ images }) => {
     }
   };
 
+  const setImg = (reason) => {
+    if (reason && Object.keys(reason).length > 0) {
+      return reason.img;
+    }
+  };
+
   return (
     <Container>
       <Brightness>
         <ThreeReasonsBackground
           alt={setAlt(reasonObjects[reason])}
-          data={reasonObjects[reason].img}
+          data={setImg(reasonObjects[reason])}
         />
       </Brightness>
       <CenterText>
