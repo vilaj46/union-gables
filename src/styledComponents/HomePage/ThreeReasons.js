@@ -87,11 +87,17 @@ const ThreeReasons = ({ images }) => {
   const [reason, setReason] = React.useState("food");
   const reasonObjects = createReasons(images);
 
+  const setAlt = (reason) => {
+    if (Object.keys(reason).length > 0) {
+      return reason.alt;
+    }
+  };
+
   return (
     <Container>
       <Brightness>
         <ThreeReasonsBackground
-          alt={reasonObjects[reason].alt || ""}
+          alt={setAlt(reasonObjects[reason])}
           data={reasonObjects[reason].img}
         />
       </Brightness>
