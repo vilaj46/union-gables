@@ -2,6 +2,11 @@ import * as React from "react";
 import BackgroundImage from "gatsby-background-image";
 
 const ThreeReasonsBackground = (props) => {
+  const setFluid = (data) => {
+    if (data && Object.keys(data).length > 0) {
+      return data.node.childImageSharp.fluid;
+    }
+  };
   return (
     <BackgroundImage
       alt={props.alt}
@@ -11,7 +16,7 @@ const ThreeReasonsBackground = (props) => {
         zIndex: "-1",
         minHeight: "450px",
       }}
-      fluid={props.data.node.childImageSharp.fluid}
+      fluid={setFluid(props.data)}
     />
   );
 };

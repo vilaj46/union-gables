@@ -97,6 +97,8 @@ const ThreeReasons = ({ images }) => {
   const setImg = (reason) => {
     if (reason && Object.keys(reason).length > 0) {
       return reason.img;
+    } else {
+      return {};
     }
   };
 
