@@ -117,7 +117,7 @@ const ThreeReasons = ({ images }) => {
       <CenterText>
         <H3Container>{api.threeReasonsTitle}</H3Container>
         <ParagraphContainer>
-          {setDescription(reasonObjects[reason].description)}
+          {setDescription(reasonObjects[reason])}
         </ParagraphContainer>
       </CenterText>
 
