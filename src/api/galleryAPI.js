@@ -10,7 +10,7 @@ const Section1 = (
     <PageSubParagraph>
       Browse through Union Gables Inn's photo gallery to learn more about our
       charming Victorian property in Saratoga Springs. Our{" "}
-      <PageParagraphLink href="about-us">historic hotel</PageParagraphLink> is
+      <PageParagraphLink href="/about-us">historic hotel</PageParagraphLink> is
       over 100 years old and is situated in the heart of Saratoga’s historic
       district. When you stay with us at Union Gables Inn, you can enjoy easy
       access to all of your favorite{" "}

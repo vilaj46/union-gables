@@ -1,7 +1,6 @@
 import * as React from "react";
 
 import PageParagraph from "../../styledComponents/Shared/PageParagraph";
-import PageParagraphLink from "../../styledComponents/Shared/PageParagraphLink";
 
 // Paragraphs
 

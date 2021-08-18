@@ -13,6 +13,11 @@ const Container = styled.div`
   overflow-x: hidden;
   padding-bottom: 100px;
 
+  @media screen and (min-width: 1000px) {
+    width: 70%;
+    margin: 0 auto;
+  }
+
   @media screen and (max-width: 650px) {
     flex-direction: column;
     justify-content: center;
