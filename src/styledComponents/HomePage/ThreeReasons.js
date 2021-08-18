@@ -88,7 +88,7 @@ const ThreeReasons = ({ images }) => {
   const reasonObjects = createReasons(images);
 
   const setAlt = (reason) => {
-    if (Object.keys(reason).length > 0) {
+    if (reason && Object.keys(reason).length > 0) {
       return reason.alt;
     }
   };
