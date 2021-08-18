@@ -56,6 +56,15 @@ const HomePage = (props) => {
   const food = edges[3];
   const racetrack = edges[4];
 
+  const getImage = (keyword) => {
+    for (let i = 0; i < edges.length; i++) {
+      const edge = edges[i];
+      if (edge.node.base.includes(keyword)) {
+        return edge;
+      }
+    }
+  };
+
   return (
     <div>
       <PageBodyContainer>
@@ -66,7 +75,7 @@ const HomePage = (props) => {
         <NewPageImage
           alt="Saratoga Springs Union Gables Inn Statue and Pool"
           extraBottomPadding={true}
-          data={statue}
+          data={getImage("statue")}
         />
 
         <PageSubTitle>{api.subTitle1}</PageSubTitle>
@@ -76,7 +85,7 @@ const HomePage = (props) => {
         <NewPageImage
           alt="Saratoga Springs Race Track"
           extraBottomPadding={true}
-          data={jockey}
+          data={getImage("jockey")}
         />
 
         <PageSubTitle>{api.subTitle2}</PageSubTitle>
@@ -102,7 +111,9 @@ const HomePage = (props) => {
 
       <HomePageLinks images={[exterior, breakfast, dinner]} />
 
-      <ThreeReasons images={[room, food, racetrack]} />
+      <ThreeReasons
+        images={[getImage("room"), getImage("food"), getImage("racetrack")]}
+      />
 
       <BottomPadding />
     </div>
