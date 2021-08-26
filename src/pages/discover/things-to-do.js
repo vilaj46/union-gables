@@ -30,10 +30,10 @@ const SaratogaThingsToDo = () => {
           node {
             base
             childImageSharp {
-              fluid(quality: 100) {
+              fluid(quality: 90) {
                 ...GatsbyImageSharpFluid
               }
-              fixed(quality: 100) {
+              fixed(quality: 90) {
                 ...GatsbyImageSharpFixed
               }
             }
@@ -45,20 +45,6 @@ const SaratogaThingsToDo = () => {
 
   // Images
   const { edges } = data.allFile;
-  const brownhorse1 = edges[2];
-  const brownhorse2 = edges[4];
-  const graduation = edges[0];
-  const downtown = edges[1];
-  const whitehorse = edges[3];
-  const ballet = edges[5];
-  const horseracing1 = edges[6];
-  const horseracing2 = edges[7];
-  const park = edges[8];
-
-  // ThingsToDo Bottom Link Images
-  const breakfast = edges[9];
-  const treats = edges[10];
-  const daytime = edges[11];
 
   return (
     <FontContainer>
@@ -73,7 +59,10 @@ const SaratogaThingsToDo = () => {
         {api.Section2}
 
         <NewPageImages
-          images={[brownhorse1, brownhorse2]}
+          images={[
+            getImage("brownhorse1", edges),
+            getImage("brownhorse2", edges),
+          ]}
           alts={["Horse Racing to Light", "Horse Racing in Mud"]}
         />
 
@@ -81,14 +70,14 @@ const SaratogaThingsToDo = () => {
 
         <NewPageImage
           extraBottomPadding={true}
-          data={graduation}
+          data={getImage("graduation", edges)}
           alt="Skidmore College Graduation"
         />
 
         {api.Section4}
 
         <NewPageImage
-          data={whitehorse}
+          data={getImage("whitehorse", edges)}
           alt="Whie Horse Walking"
           extraBottomPadding={true}
         />
@@ -96,7 +85,7 @@ const SaratogaThingsToDo = () => {
         {api.Section5}
 
         <NewPageImage
-          data={ballet}
+          data={getImage("ballet", edges)}
           alt="Ballet at the Saratoga Performing Arts Center"
           extraBottomPadding={true}
         />
@@ -104,7 +93,7 @@ const SaratogaThingsToDo = () => {
         {api.Section6}
 
         <NewPageImage
-          data={park}
+          data={getImage("park", edges)}
           alt="Saratoga State Park"
           extraBottomPadding={true}
         />
@@ -112,7 +101,7 @@ const SaratogaThingsToDo = () => {
         {api.Section7}
 
         <NewPageImage
-          data={downtown}
+          data={getImage("downtown", edges)}
           alt="Downtown Saratoga Springs"
           extraBottomPadding={true}
         />
@@ -120,7 +109,7 @@ const SaratogaThingsToDo = () => {
         {api.Section8}
 
         <NewPageImage
-          data={horseracing2}
+          data={getImage("horseracing2", edges)}
           alt="Saratoga Polo"
           extraBottomPadding={true}
         />
@@ -128,7 +117,7 @@ const SaratogaThingsToDo = () => {
         {api.Section9}
 
         <NewPageImage
-          data={horseracing1}
+          data={getImage("horseracing1", edges)}
           alt="Saratoga Horse Racing Museum"
           extraBottomPadding={true}
         />
@@ -139,12 +128,28 @@ const SaratogaThingsToDo = () => {
 
         {api.Section11}
 
-        <ThingsLinks images={[breakfast, treats, daytime]} />
+        <ThingsLinks
+          images={[
+            getImage("breakfast", edges),
+            getImage("treats", edges),
+            getImage("daytime", edges),
+          ]}
+        />
       </PageBodyContainer>
       <BottomPadding />
       <Footer />
     </FontContainer>
   );
 };
+
+function getImage(text, edges) {
+  for (let i = 0; i < edges.length; i++) {
+    const { base } = edges[i].node;
+    if (base.includes(text)) {
+      return edges[i];
+    }
+  }
+  return -1;
+}
 
 export default SaratogaThingsToDo;
