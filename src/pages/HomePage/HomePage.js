@@ -43,18 +43,11 @@ const HomePage = (props) => {
 
   // Images
   const { edges } = data.allFile;
-  const jockey = edges[0];
-  const statue = edges[1];
 
   // HomePage Rectangle Link Images
   const breakfast = edges[5];
   const dinner = edges[6];
   const exterior = edges[7];
-
-  // 3 Reasons Link Images
-  const room = edges[2];
-  const food = edges[3];
-  const racetrack = edges[4];
 
   const getImage = (keyword) => {
     for (let i = 0; i < edges.length; i++) {
