@@ -29,10 +29,10 @@ const Resaurants = () => {
           node {
             base
             childImageSharp {
-              fluid(quality: 100) {
+              fluid(quality: 90) {
                 ...GatsbyImageSharpFluid
               }
-              fixed(quality: 100) {
+              fixed(quality: 90) {
                 ...GatsbyImageSharpFixed
               }
             }
@@ -44,17 +44,6 @@ const Resaurants = () => {
 
   // Images
   const { edges } = data.allFile;
-  const pork = edges[0];
-  const table = edges[1];
-  const wine = edges[2];
-  const pasta = edges[3];
-  const chef = edges[4];
-  const cheese = edges[5];
-
-  const horse = edges[6];
-  const benedict = edges[7];
-  const concert = edges[8];
-
   return (
     <FontContainer>
       <Header />
@@ -64,7 +53,7 @@ const Resaurants = () => {
         {api.Section1}
 
         <NewPageImages
-          images={[table, wine]}
+          images={[getImage("table", edges), getImage("wine", edges)]}
           alts={["Table and Wine Glasses", "Wine and Steak"]}
           extraBottomPadding={true}
         />
@@ -72,7 +61,7 @@ const Resaurants = () => {
         {api.Section2}
 
         <NewPageImages
-          images={[chef, cheese]}
+          images={[getImage("chef", edges), getImage("cheese", edges)]}
           alts={["Chef Seasoning Appetizers", "Cheese Board"]}
           extraBottomPadding={true}
         />
@@ -80,7 +69,7 @@ const Resaurants = () => {
         {api.Section3}
 
         <NewPageImages
-          images={[pasta, pork]}
+          images={[getImage("pasta", edges), getImage("pork", edges)]}
           alts={["Seafood Linguine", "Pork Loin"]}
           extraBottomPadding={true}
         />
@@ -91,12 +80,28 @@ const Resaurants = () => {
 
         {api.Section5}
 
-        <RestaurantLinks images={[horse, benedict, concert]} />
+        <RestaurantLinks
+          images={[
+            getImage("horse", edges),
+            getImage("benedict", edges),
+            getImage("concert", edges),
+          ]}
+        />
       </PageBodyContainer>
       <BottomPadding />
       <Footer />
     </FontContainer>
   );
 };
+
+function getImage(text, edges) {
+  for (let i = 0; i < edges.length; i++) {
+    const { base } = edges[i].node;
+    if (base.includes(text)) {
+      return edges[i];
+    }
+  }
+  return -1;
+}
 
 export default Resaurants;
