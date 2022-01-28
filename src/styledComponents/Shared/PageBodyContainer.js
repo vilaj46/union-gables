@@ -8,6 +8,10 @@ const Container = styled.div`
   @media screen and (max-width: 300px) {
     padding-top: 25px;
   }
+
+  @media screen and (max-width: 500px) {
+    padding-top: 30px;
+  }
 `;
 
 const PageBodyContainer = ({ children }) => {

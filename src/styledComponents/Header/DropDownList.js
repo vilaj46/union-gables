@@ -13,6 +13,10 @@ const Container = styled.li`
     background-color: #ffffff;
     cursor: pointer;
   }
+
+  @media screen and (max-width: 860px) {
+    font-size: 0.8rem;
+  }
 `;
 
 // Bottom portion is navLink.
@@ -52,6 +56,11 @@ const ContentContainer = styled.ul`
     display: flex;
     flex-direction: column;
   }
+
+  @media screen and (max-width: 860px) {
+    top: 15px;
+  }
+
 `;
 
 const DownLinkContainer = styled(Link)`
@@ -68,6 +77,10 @@ const DownLinkContainer = styled(Link)`
     color: #ffffff;
     background-color: #b25a75;
   }
+
+  @media screen and (max-width: 860px) {
+    padding: 7px 8px;
+  }
 `;
 
 const DownLinkContainer2 = styled(Link)`
@@ -83,6 +96,10 @@ const DownLinkContainer2 = styled(Link)`
   &:hover {
     color: #ffffff;
     background-color: #b25a75;
+  }
+
+  @media screen and (max-width: 860px) {
+    padding: 7px 8px;
   }
 `;
 
@@ -125,6 +142,10 @@ const TextContainer = styled.div`
   width: 100%;
   height: 100%;
   padding: 14px 16px;
+  
+  @media screen and (max-width: 860px) {
+    padding: 7px 8px;
+  }
 `;
 
 const NewDownContainer = styled.div`

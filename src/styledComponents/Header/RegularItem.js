@@ -25,6 +25,11 @@ const NavItemContainer = styled.li`
     cursor: pointer;
   }
 
+  @media screen and (max-width: 860px) {
+    padding: 7px 8px;
+    font-size: 0.8rem;
+  }
+
   @media screen and (max-width: 815px) {
     font-size: 0.8rem;
   }
@@ -54,7 +59,8 @@ const BookNowContainer = styled.li`
     cursor: pointer;
   }
 
-  @media screen and (max-width: 815px) {
+  @media screen and (max-width: 860px) {
+    padding: 7px 8px;
     font-size: 0.8rem;
   }
 `;
