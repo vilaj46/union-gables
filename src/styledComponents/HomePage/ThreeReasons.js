@@ -29,7 +29,7 @@ const H3Container = styled.h3`
 
   @media screen and (max-width: 731px) {
     font-weight: 200;
-    padding-top: 50px;
+    // padding-top: 50px;
     padding-bottom: 25px;
     margin: 0;
   }
@@ -66,17 +66,20 @@ const NumbersContainer = styled.div`
   z-index: 2;
 
   @media screen and (max-width: 731px) {
-    padding-bottom: 50px;
+    padding-top: 50px;
   }
 `;
 
-const CenterText = styled.div`
-  height: 50%;
-  text-align: center;
-  z-index: 1;
+const Center = styled.div`
   position: absolute;
-  top: 0;
+  z-index: 1;
   width: 100%;
+`;
+
+const CenterText = styled.div`
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 `;
 
 const Brightness = styled.div`
@@ -116,14 +119,35 @@ const ThreeReasons = ({ images }) => {
           data={setImg(reasonObjects[reason])}
         />
       </Brightness>
-      <CenterText>
-        <H3Container>{api.threeReasonsTitle}</H3Container>
-        <ParagraphContainer>
-          {setDescription(reasonObjects[reason])}
-        </ParagraphContainer>
-      </CenterText>
-
-      <NumbersContainer>
+      <Center>
+        <CenterText>
+          <H3Container>{api.threeReasonsTitle}</H3Container>
+          <ParagraphContainer>
+            {setDescription(reasonObjects[reason])}
+          </ParagraphContainer>
+          <NumbersContainer>
+            <ThreeReasonsNumber
+              text="1"
+              activated={reason === "food" ? true : false}
+              setReason={() => setReason("food")}
+              num={0}
+            />
+            <ThreeReasonsNumber
+              text="2"
+              num={1}
+              activated={reason === "room" ? true : false}
+              setReason={() => setReason("room")}
+            />
+            <ThreeReasonsNumber
+              text="3"
+              num={2}
+              activated={reason === "racetrack" ? true : false}
+              setReason={() => setReason("racetrack")}
+            />
+          </NumbersContainer>
+        </CenterText>
+      </Center>
+      {/* <NumbersContainer>
         <ThreeReasonsNumber
           text="1"
           activated={reason === "food" ? true : false}
@@ -142,7 +166,7 @@ const ThreeReasons = ({ images }) => {
           activated={reason === "racetrack" ? true : false}
           setReason={() => setReason("racetrack")}
         />
-      </NumbersContainer>
+      </NumbersContainer> */}
     </Container>
   );
 };

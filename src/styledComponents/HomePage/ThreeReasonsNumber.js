@@ -14,7 +14,7 @@ const ButtonContainer = styled.div`
     opacity: 0.6;
   }
 
-  @media screen and (max-width: 731px) {
+  @media screen and (max-width: 550px) {
     height: 65px;
     width: 65px;
     display: flex;
@@ -33,7 +33,7 @@ const ActivatedContainer = styled.div`
     opacity: 0.6;
   }
 
-  @media screen and (max-width: 731px) {
+  @media screen and (max-width: 550px) {
     height: 65px;
     width: 65px;
     display: flex;
@@ -46,7 +46,7 @@ const Button = styled.div`
   margin: auto;
   font-size: 72px;
 
-  @media screen and (max-width: 731px) {
+  @media screen and (max-width: 550px) {
     font-size: 40px;
   }
 `;
